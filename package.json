@@ -1,0 +1,11 @@
+{
+  "name": "meu-proximo-passo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Exploração educativa de interesses e caminhos de formação em Manaus.",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "serve": "python3 -m http.server 3000 --directory dist"
+  }
+}

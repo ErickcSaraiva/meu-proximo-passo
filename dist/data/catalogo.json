@@ -1,0 +1,1167 @@
+{
+  "version": "1.1.2",
+  "updatedAt": "2026-11-05",
+  "scope": "Catálogo educativo e não exaustivo. Curso e localização identificados em fontes oficiais; não representa edital ou inscrição aberta.",
+  "sources": [
+    {
+      "id": "ufam-manaus",
+      "institution": "UFAM",
+      "title": "Cursos de Graduação — Campus Manaus (tabela oficial, PDF)",
+      "url": "https://edoc.ufam.edu.br/bitstream/123456789/967/5/TABELA%20CURSOS%20COM%20CODGO%20E_MEC%20CAPITAL.pdf",
+      "consultedAt": "2026-11-04",
+      "confirms": "Nome, grau de formação e localização dos cursos listados no Campus Manaus.",
+      "limitation": "Documento institucional sem confirmação de seleção vigente. Os números de vagas e turnos do documento não foram reproduzidos."
+    },
+    {
+      "id": "ufam-graduacao",
+      "institution": "UFAM",
+      "title": "Portal UFAM — Graduação",
+      "url": "https://ufam.edu.br/graduacao/",
+      "consultedAt": "2026-11-04",
+      "confirms": "Relação institucional de cursos e unidades acadêmicas, cruzada com a tabela específica do Campus Manaus.",
+      "limitation": "A página também inclui cursos do interior; somente cursos cruzados com a tabela de Manaus foram associados à cidade."
+    },
+    {
+      "id": "ifam-tecnicos-cmc",
+      "institution": "IFAM",
+      "title": "Campus Manaus Centro — Cursos de nível técnico",
+      "url": "https://www2.ifam.edu.br/campus/cmc/cursos/tecnico",
+      "consultedAt": "2026-11-04",
+      "confirms": "Informática e Meio Ambiente listados entre os cursos técnicos do Campus Manaus Centro.",
+      "limitation": "Consultar o edital para confirmar modalidade de ingresso, pré-requisitos, turmas e oferta atual."
+    },
+    {
+      "id": "ifam-informatica",
+      "institution": "IFAM",
+      "title": "Campus Manaus Centro — Informática",
+      "url": "https://www2.ifam.edu.br/campus/cmc/cursos/tecnico/informatica",
+      "consultedAt": "2026-11-04",
+      "confirms": "Curso técnico em Informática no CMC e perfil de suporte e manutenção de hardware e software.",
+      "limitation": "A página apresenta informações de integrado e subsequente; o edital vigente deve confirmar quais formas estão abertas."
+    },
+    {
+      "id": "ifam-meio-ambiente",
+      "institution": "IFAM",
+      "title": "Campus Manaus Centro — Meio Ambiente",
+      "url": "https://www2.ifam.edu.br/campus/cmc/cursos/tecnico/meio-ambiente",
+      "consultedAt": "2026-11-04",
+      "confirms": "Página do curso técnico em Meio Ambiente vinculada ao Campus Manaus Centro.",
+      "limitation": "Forma de oferta e ingresso atual precisam ser conferidos no edital do campus."
+    },
+    {
+      "id": "ifam-tecnologos",
+      "institution": "IFAM",
+      "title": "PROEN — Cursos superiores de tecnologia e campi ofertantes",
+      "url": "https://www2.ifam.edu.br/pro-reitorias/ensino/proen/guia-de-cursos/tecnologia",
+      "consultedAt": "2026-11-04",
+      "confirms": "Análise e Desenvolvimento de Sistemas e Produção Publicitária no Manaus Centro; Logística no Manaus Distrito Industrial.",
+      "limitation": "A relação não comprova inscrições abertas. Cursos de outros municípios foram excluídos das ofertas locais."
+    },
+    {
+      "id": "ifam-ads",
+      "institution": "IFAM",
+      "title": "PROEN — Desenvolvimento de Sistemas",
+      "url": "https://www2.ifam.edu.br/pro-reitorias/ensino/proen/guia-de-cursos/tecnologia/desenvolvimento-de-sistemas",
+      "consultedAt": "2026-11-04",
+      "confirms": "Curso superior de tecnologia, perfil de Análise e Desenvolvimento de Sistemas e campus Manaus Centro.",
+      "limitation": "O título da página usa Desenvolvimento de Sistemas; a listagem institucional usa Análise e Desenvolvimento de Sistemas. A denominação do edital deve prevalecer."
+    },
+    {
+      "id": "ifam-publicidade",
+      "institution": "IFAM",
+      "title": "PROEN — Produção Publicitária",
+      "url": "https://www2.ifam.edu.br/pro-reitorias/ensino/proen/guia-de-cursos/tecnologia/producao-publicitaria/",
+      "consultedAt": "2026-11-04",
+      "confirms": "Produção Publicitária como graduação tecnológica no campus Manaus Centro.",
+      "limitation": "Consultar seleção e matriz curricular atuais; não equivale automaticamente a um bacharelado em Publicidade e Propaganda."
+    },
+    {
+      "id": "ifam-logistica",
+      "institution": "IFAM",
+      "title": "PROEN — Logística",
+      "url": "https://www2.ifam.edu.br/pro-reitorias/ensino/proen/guia-de-cursos/tecnologia/logistica",
+      "consultedAt": "2026-11-04",
+      "confirms": "Logística como graduação tecnológica no campus Manaus Distrito Industrial.",
+      "limitation": "A página institucional não confirma seleção aberta no momento da consulta."
+    },
+    {
+      "id": "uea-direito",
+      "institution": "UEA",
+      "title": "Escola de Direito — cursos ativos e endereço em Manaus",
+      "url": "https://uea.edu.br/index.php/escola-de-direito/",
+      "consultedAt": "2026-11-04",
+      "confirms": "Bacharelado em Direito e unidade na Rua Major Gabriel, Centro, Manaus.",
+      "limitation": "Verificar edital vigente para formas de ingresso e condições da oferta."
+    },
+    {
+      "id": "uninorte-unidades",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — unidades e endereços em Manaus",
+      "url": "https://vest.uninorte.com.br/emec",
+      "consultedAt": "2026-11-05",
+      "confirms": "Localização das unidades Centro, Cidade Nova, Djalma Batista e Zona Leste em Manaus.",
+      "limitation": "O endereço da unidade não comprova a oferta de qualquer curso; foi cruzado com a página do curso e a relação de coordenações."
+    },
+    {
+      "id": "uninorte-coordenacoes",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — cursos por unidade na relação de coordenações",
+      "url": "https://www.uninorte.com.br/coordenacoes/",
+      "consultedAt": "2026-11-05",
+      "confirms": "Vínculo dos nove cursos adicionados à unidade Centro, cruzado com as respectivas páginas e com a localização da unidade.",
+      "limitation": "Relação institucional, sem confirmação de turma ou matrícula aberta. Não reproduzimos dados de coordenadores."
+    },
+    {
+      "id": "uninorte-enfermagem",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — Enfermagem",
+      "url": "https://vest.uninorte.com.br/cursos/manaus/uninorte-centro/bacharelado-em-enfermagem/3.20_3.7.1",
+      "consultedAt": "2026-11-05",
+      "confirms": "Enfermagem — Bacharelado. Localização cruzada com coordenações e endereço da unidade Centro, Manaus.",
+      "limitation": "Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado."
+    },
+    {
+      "id": "uninorte-administracao",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — Administração",
+      "url": "https://vest.uninorte.com.br/cursos/manaus/uninorte-centro/bacharelado-em-administracao/3.20_3.2.1",
+      "consultedAt": "2026-11-05",
+      "confirms": "Administração — Bacharelado. Localização cruzada com coordenações e endereço da unidade Centro, Manaus.",
+      "limitation": "Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado."
+    },
+    {
+      "id": "uninorte-direito",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — Direito",
+      "url": "https://vest.uninorte.com.br/cursos/manaus/uninorte-centro/bacharelado-em-direito/3.20_3.4.1",
+      "consultedAt": "2026-11-05",
+      "confirms": "Direito — Bacharelado. Localização cruzada com coordenações e endereço da unidade Centro, Manaus.",
+      "limitation": "Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado."
+    },
+    {
+      "id": "uninorte-fisioterapia",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — Fisioterapia",
+      "url": "https://vest.uninorte.com.br/cursos/manaus/uninorte-centro/bacharelado-em-fisioterapia/3.20_3.9.1",
+      "consultedAt": "2026-11-05",
+      "confirms": "Fisioterapia — Bacharelado. Localização cruzada com coordenações e endereço da unidade Centro, Manaus.",
+      "limitation": "Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado."
+    },
+    {
+      "id": "uninorte-farmacia",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — Farmácia",
+      "url": "https://www.uninorte.com.br/graduacao/cursos/escola-de-ciencias-da-saude/farmacia/",
+      "consultedAt": "2026-11-05",
+      "confirms": "Farmácia — Bacharelado. Localização cruzada com coordenações e endereço da unidade Centro, Manaus.",
+      "limitation": "Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado. A página institucional contém informações históricas; esta referência não confirma oferta vigente."
+    },
+    {
+      "id": "uninorte-contabeis",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — Ciências Contábeis",
+      "url": "https://www.uninorte.com.br/graduacao/cursos/escola-de-humanas/ciencias-contabeis/",
+      "consultedAt": "2026-11-05",
+      "confirms": "Ciências Contábeis — Bacharelado. Localização cruzada com coordenações e endereço da unidade Centro, Manaus.",
+      "limitation": "Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado. A página institucional contém informações históricas; esta referência não confirma oferta vigente."
+    },
+    {
+      "id": "uninorte-pedagogia",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — Pedagogia",
+      "url": "https://www.uninorte.com.br/graduacao/cursos/escola-de-humanas/pedagogia-licenciatura/",
+      "consultedAt": "2026-11-05",
+      "confirms": "Pedagogia — Licenciatura. Localização cruzada com coordenações e endereço da unidade Centro, Manaus.",
+      "limitation": "Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado. A página institucional contém informações históricas; esta referência não confirma oferta vigente."
+    },
+    {
+      "id": "uninorte-logistica",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — Logística",
+      "url": "https://www.uninorte.com.br/graduacao/cursos/escola-de-humanas/tecnologia-em-logistica/",
+      "consultedAt": "2026-11-05",
+      "confirms": "Logística — Tecnólogo. Localização cruzada com coordenações e endereço da unidade Centro, Manaus.",
+      "limitation": "Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado. A página institucional contém informações históricas; esta referência não confirma oferta vigente."
+    },
+    {
+      "id": "uninorte-design",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — Design Gráfico",
+      "url": "https://www.uninorte.com.br/graduacao/cursos/escola-de-humanas/tecnologia-em-design-grafico/",
+      "consultedAt": "2026-11-05",
+      "confirms": "Design Gráfico — Tecnólogo. Localização cruzada com coordenações e endereço da unidade Centro, Manaus.",
+      "limitation": "Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado. A página institucional contém informações históricas; esta referência não confirma oferta vigente."
+    },
+    {
+      "id": "uninorte-computacao",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — Bacharelado em Ciência da Computação",
+      "url": "https://vest.uninorte.com.br/cursos/manaus/uninorte-centro/bacharelado-em-ciencia-da-computacao/11.3.79.1",
+      "consultedAt": "2026-11-05",
+      "confirms": "Página institucional do bacharelado e sua relação com desenvolvimento de software.",
+      "limitation": "A rota da página menciona Manaus/Centro, mas o conteúdo não informa unidade ou modalidade atuais. A localização foi cruzada com os registros institucionais históricos abaixo."
+    },
+    {
+      "id": "uninorte-computacao-centro-2022",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — referência histórica de Computação em Manaus (2022)",
+      "url": "https://www.uninorte.com.br/wp-content/uploads/2022/07/EDITAL-CI%C3%8ANCIA-DA-COMPUTA%C3%87%C3%83O.pdf",
+      "consultedAt": "2026-11-05",
+      "confirms": "Edital docente de 2022.2 identifica Bacharelado em Ciência da Computação, unidade Centro e endereço em Manaus.",
+      "limitation": "Documento histórico de contratação docente. Não é edital de ingresso de estudantes e não confirma turmas atuais."
+    },
+    {
+      "id": "uninorte-computacao-djalma-2025",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — referência histórica de Computação na Djalma Batista (2025.1)",
+      "url": "https://www.uninorte.com.br/uninorte-djalma-batista-divulga-edital-de-contratacao-docente-para-2025-1/",
+      "consultedAt": "2026-11-05",
+      "confirms": "Publicação de 10/12/2024 relaciona Ciência da Computação à seleção docente para 2025.1 no campus Djalma Batista.",
+      "limitation": "Referência histórica. Em conjunto com o endereço oficial da unidade em Manaus, confirma vínculo local, sem confirmar unidade, modalidade ou ingresso atuais."
+    },
+    {
+      "id": "uninorte-ads",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — Análise e Desenvolvimento de Sistemas, Manaus/Cidade Nova",
+      "url": "https://vest.uninorte.com.br/cursos/manaus/uninorte-cidade-nova/tecnologia-em-analise-e-desenvolvimento-de-sistemas/3.7_3.40.1",
+      "consultedAt": "2026-11-05",
+      "confirms": "A página identifica ADS como graduação tecnológica, cidade Manaus e unidade Cidade Nova.",
+      "limitation": "O portal oferece opções presencial e EAD; confirme a modalidade escolhida, a unidade efetiva e as condições atuais de ingresso."
+    },
+    {
+      "id": "uninorte-listagem-graduacao",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — catálogo oficial de graduação (consulta de verificação)",
+      "url": "https://vest.uninorte.com.br/",
+      "consultedAt": "2026-11-05",
+      "confirms": "Catálogo oficial usado para pesquisar os cursos de graduação.",
+      "limitation": "Não foi localizada confirmação específica da graduação em Engenharia de Software nesta consulta. A ausência na pesquisa não comprova que o curso não exista."
+    },
+    {
+      "id": "uninorte-es-especializacao",
+      "institution": "UNINORTE",
+      "title": "UNINORTE — especialização em Engenharia de Software (não confirma graduação)",
+      "url": "https://pos.uninorte.com.br/PSPos_UniNorte/curso/298/12112/3/especializacao-em-engenharia-de-software/Manaus-AM",
+      "consultedAt": "2026-11-05",
+      "confirms": "A página encontrada descreve uma especialização em Engenharia de Software.",
+      "limitation": "Esta fonte confirma uma formação de pós-graduação, não uma graduação para ingresso após o ensino médio. Não foi usada para confirmar a graduação solicitada."
+    }
+  ],
+  "offers": [
+    {
+      "id": "ufam-computacao",
+      "course": "Ciência da Computação",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ifam-ads",
+      "course": "Análise e Desenvolvimento de Sistemas",
+      "type": "Tecnólogo",
+      "institution": "IFAM",
+      "campus": "Manaus Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ifam-tecnologos",
+        "ifam-ads"
+      ],
+      "note": "Há variação de nome entre as páginas oficiais. Confira a denominação no edital atual."
+    },
+    {
+      "id": "ufam-civil",
+      "course": "Engenharia Civil",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ifam-informatica",
+      "course": "Informática",
+      "type": "Técnico",
+      "institution": "IFAM",
+      "campus": "Manaus Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ifam-tecnicos-cmc",
+        "ifam-informatica"
+      ]
+    },
+    {
+      "id": "ufam-enfermagem",
+      "course": "Enfermagem",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ufam-fisioterapia",
+      "course": "Fisioterapia",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ufam-farmacia",
+      "course": "Farmácia",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ufam-design",
+      "course": "Design",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ufam-jornalismo",
+      "course": "Comunicação Social — Jornalismo",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ifam-publicidade",
+      "course": "Produção Publicitária",
+      "type": "Tecnólogo",
+      "institution": "IFAM",
+      "campus": "Manaus Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ifam-publicidade"
+      ]
+    },
+    {
+      "id": "ufam-administracao",
+      "course": "Administração",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ufam-contabeis",
+      "course": "Ciências Contábeis",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ifam-logistica",
+      "course": "Logística",
+      "type": "Tecnólogo",
+      "institution": "IFAM",
+      "campus": "Manaus Distrito Industrial",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ifam-logistica"
+      ]
+    },
+    {
+      "id": "ufam-pedagogia",
+      "course": "Pedagogia",
+      "type": "Licenciatura",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ufam-servico-social",
+      "course": "Serviço Social",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "uea-direito",
+      "course": "Direito",
+      "type": "Bacharelado",
+      "institution": "UEA",
+      "campus": "Escola de Direito — Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-direito"
+      ]
+    },
+    {
+      "id": "ufam-florestal",
+      "course": "Engenharia Florestal",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ufam-biologia",
+      "course": "Ciências Biológicas",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ufam-biologia-licenciatura",
+      "course": "Ciências Biológicas",
+      "type": "Licenciatura",
+      "institution": "UFAM",
+      "campus": "Campus Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-manaus",
+        "ufam-graduacao"
+      ]
+    },
+    {
+      "id": "ifam-meio-ambiente",
+      "course": "Meio Ambiente",
+      "type": "Técnico",
+      "institution": "IFAM",
+      "campus": "Manaus Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ifam-tecnicos-cmc",
+        "ifam-meio-ambiente"
+      ]
+    },
+    {
+      "id": "uninorte-enfermagem",
+      "course": "Enfermagem",
+      "type": "Bacharelado",
+      "institution": "UNINORTE",
+      "campus": "Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uninorte-enfermagem",
+        "uninorte-coordenacoes",
+        "uninorte-unidades"
+      ],
+      "note": "Modalidade: Presencial. Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado."
+    },
+    {
+      "id": "uninorte-administracao",
+      "course": "Administração",
+      "type": "Bacharelado",
+      "institution": "UNINORTE",
+      "campus": "Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uninorte-administracao",
+        "uninorte-coordenacoes",
+        "uninorte-unidades"
+      ],
+      "note": "Modalidade atual a confirmar com a instituição. Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado."
+    },
+    {
+      "id": "uninorte-direito",
+      "course": "Direito",
+      "type": "Bacharelado",
+      "institution": "UNINORTE",
+      "campus": "Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uninorte-direito",
+        "uninorte-coordenacoes",
+        "uninorte-unidades"
+      ],
+      "note": "Modalidade: Presencial. Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado."
+    },
+    {
+      "id": "uninorte-fisioterapia",
+      "course": "Fisioterapia",
+      "type": "Bacharelado",
+      "institution": "UNINORTE",
+      "campus": "Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uninorte-fisioterapia",
+        "uninorte-coordenacoes",
+        "uninorte-unidades"
+      ],
+      "note": "Modalidade: Presencial ou semipresencial, conforme a opção da instituição. Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado."
+    },
+    {
+      "id": "uninorte-farmacia",
+      "course": "Farmácia",
+      "type": "Bacharelado",
+      "institution": "UNINORTE",
+      "campus": "Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uninorte-farmacia",
+        "uninorte-coordenacoes",
+        "uninorte-unidades"
+      ],
+      "note": "Modalidade atual a confirmar com a instituição. Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado. A página institucional contém informações históricas; esta referência não confirma oferta vigente."
+    },
+    {
+      "id": "uninorte-contabeis",
+      "course": "Ciências Contábeis",
+      "type": "Bacharelado",
+      "institution": "UNINORTE",
+      "campus": "Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uninorte-contabeis",
+        "uninorte-coordenacoes",
+        "uninorte-unidades"
+      ],
+      "note": "Modalidade: Presencial, conforme a página institucional. Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado. A página institucional contém informações históricas; esta referência não confirma oferta vigente."
+    },
+    {
+      "id": "uninorte-pedagogia",
+      "course": "Pedagogia",
+      "type": "Licenciatura",
+      "institution": "UNINORTE",
+      "campus": "Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uninorte-pedagogia",
+        "uninorte-coordenacoes",
+        "uninorte-unidades"
+      ],
+      "note": "Modalidade atual a confirmar com a instituição. Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado. A página institucional contém informações históricas; esta referência não confirma oferta vigente."
+    },
+    {
+      "id": "uninorte-logistica",
+      "course": "Logística",
+      "type": "Tecnólogo",
+      "institution": "UNINORTE",
+      "campus": "Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uninorte-logistica",
+        "uninorte-coordenacoes",
+        "uninorte-unidades"
+      ],
+      "note": "Modalidade: Presencial, conforme a página institucional. Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado. A página institucional contém informações históricas; esta referência não confirma oferta vigente."
+    },
+    {
+      "id": "uninorte-design",
+      "course": "Design Gráfico",
+      "type": "Tecnólogo",
+      "institution": "UNINORTE",
+      "campus": "Centro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uninorte-design",
+        "uninorte-coordenacoes",
+        "uninorte-unidades"
+      ],
+      "note": "Modalidade atual a confirmar com a instituição. Consultar a instituição para confirmar modalidade, turno, unidade de aulas e ingresso no período desejado. A página institucional contém informações históricas; esta referência não confirma oferta vigente. Design Gráfico é graduação tecnológica relacionada à atuação de designer; não equivale ao bacharelado em Design."
+    },
+    {
+      "id": "uninorte-computacao",
+      "course": "Ciência da Computação",
+      "type": "Bacharelado",
+      "institution": "UNINORTE",
+      "campus": "Unidade de aulas a confirmar",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uninorte-computacao",
+        "uninorte-computacao-centro-2022",
+        "uninorte-computacao-djalma-2025",
+        "uninorte-unidades"
+      ],
+      "note": "Curso e vínculo com Manaus identificados em fontes oficiais, incluindo registros históricos de 2022 (Centro) e 2025.1 (Djalma Batista). A unidade de aulas, modalidade, turmas e ingresso atuais precisam ser confirmados com a UNINORTE. Não há confirmação de inscrições abertas."
+    },
+    {
+      "id": "uninorte-ads",
+      "course": "Análise e Desenvolvimento de Sistemas (ADS)",
+      "type": "Tecnólogo",
+      "institution": "UNINORTE",
+      "campus": "Cidade Nova",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uninorte-ads"
+      ],
+      "note": "A página oficial apresenta opções presencial e EAD. Confira a modalidade escolhida, o local das atividades presenciais, as turmas e o ingresso atuais. Não confundir tecnólogo, que é graduação, com curso técnico."
+    },
+    {
+      "id": "uninorte-engenharia-software",
+      "course": "Engenharia de Software",
+      "type": "Graduação a confirmar",
+      "institution": "UNINORTE",
+      "campus": "Unidade e oferta local a confirmar",
+      "city": "Manaus",
+      "status": "pendente",
+      "sources": [
+        "uninorte-listagem-graduacao",
+        "uninorte-es-especializacao"
+      ],
+      "note": "Graduação sugerida para inclusão pelo estudante; curso, grau, modalidade e unidade em Manaus ainda precisam de confirmação em fonte oficial específica. Foi encontrada uma especialização em Engenharia de Software, que é pós-graduação e não equivale à graduação. Este cartão não confirma uma oferta disponível."
+    }
+  ],
+  "professions": [
+    {
+      "id": "desenvolvimento-software",
+      "name": "Desenvolvedor(a) de software",
+      "area": "tecnologia",
+      "description": "Transforma problemas do dia a dia em aplicativos, sites e outros sistemas digitais.",
+      "activities": [
+        "Conversar com pessoas para entender o que um sistema precisa fazer",
+        "Escrever e testar código",
+        "Corrigir erros e melhorar a acessibilidade de aplicações"
+      ],
+      "environments": [
+        "Empresas de tecnologia",
+        "Equipes de sistemas em escolas, hospitais e indústrias",
+        "Projetos próprios ou trabalho remoto"
+      ],
+      "training": "Graduações em Ciência da Computação ou Análise e Desenvolvimento de Sistemas são caminhos possíveis. Cursos práticos e projetos ajudam a experimentar a área. Tecnólogo é uma graduação; não é o mesmo que curso técnico.",
+      "relatedCourses": [
+        "Ciência da Computação — bacharelado",
+        "Análise e Desenvolvimento de Sistemas — tecnólogo",
+        "Engenharia de Software — graduação da UNINORTE pendente de confirmação"
+      ],
+      "offers": [
+        "ufam-computacao",
+        "ifam-ads",
+        "uninorte-computacao",
+        "uninorte-ads",
+        "uninorte-engenharia-software"
+      ],
+      "tryIt": "Desenhe em papel as telas de um aplicativo que ajudaria sua escola."
+    },
+    {
+      "id": "engenharia-civil",
+      "name": "Engenheiro(a) civil",
+      "area": "tecnologia",
+      "description": "Planeja e acompanha construções e estruturas, pensando em segurança, uso dos espaços e materiais.",
+      "activities": [
+        "Estudar projetos e calcular estruturas",
+        "Planejar etapas de uma obra",
+        "Acompanhar qualidade e uso de materiais"
+      ],
+      "environments": [
+        "Construtoras e canteiros de obras",
+        "Escritórios de projetos",
+        "Órgãos de infraestrutura e pesquisa"
+      ],
+      "training": "O caminho específico é o bacharelado em Engenharia Civil, com formação técnica e prática supervisionada. Um curso técnico em Edificações tem outro nível de formação e atribuições; não forma engenheiros.",
+      "relatedCourses": [
+        "Engenharia Civil — bacharelado",
+        "Edificações — técnico (formação relacionada, não equivalente)"
+      ],
+      "offers": [
+        "ufam-civil"
+      ],
+      "tryIt": "Observe uma praça e esboce uma melhoria para a circulação das pessoas."
+    },
+    {
+      "id": "tecnico-informatica",
+      "name": "Técnico(a) em Informática",
+      "area": "tecnologia",
+      "description": "Ajuda a instalar, manter e dar suporte a computadores e sistemas usados por pessoas e organizações.",
+      "activities": [
+        "Identificar falhas de hardware e software",
+        "Instalar e configurar programas",
+        "Orientar usuários sobre o uso de equipamentos"
+      ],
+      "environments": [
+        "Escolas e laboratórios",
+        "Empresas de suporte técnico",
+        "Setores de informática de organizações"
+      ],
+      "training": "Curso técnico em Informática. A forma integrada combina ensino médio e formação técnica; a subsequente é destinada a quem concluiu o ensino médio. Confira os requisitos no edital. Não se confunde com uma graduação em computação.",
+      "relatedCourses": [
+        "Informática — técnico"
+      ],
+      "offers": [
+        "ifam-informatica"
+      ],
+      "tryIt": "Crie um pequeno guia para ajudar alguém a organizar arquivos no computador."
+    },
+    {
+      "id": "enfermagem",
+      "name": "Enfermeiro(a)",
+      "area": "saude",
+      "description": "Planeja e realiza cuidados de enfermagem, acolhendo pessoas e promovendo a saúde.",
+      "activities": [
+        "Acompanhar as necessidades de cuidado",
+        "Participar de ações de prevenção",
+        "Organizar o trabalho de uma equipe de enfermagem"
+      ],
+      "environments": [
+        "Unidades básicas de saúde",
+        "Hospitais e clínicas",
+        "Projetos de saúde em comunidades"
+      ],
+      "training": "Bacharelado em Enfermagem. O curso técnico em Enfermagem forma outra categoria profissional, com atribuições próprias, e não equivale ao bacharelado.",
+      "relatedCourses": [
+        "Enfermagem — bacharelado"
+      ],
+      "offers": [
+        "ufam-enfermagem",
+        "uninorte-enfermagem"
+      ],
+      "tryIt": "Pesquise uma campanha pública de prevenção e identifique como ela orienta a população."
+    },
+    {
+      "id": "fisioterapia",
+      "name": "Fisioterapeuta",
+      "area": "saude",
+      "description": "Trabalha com o movimento e a funcionalidade do corpo para prevenir e tratar limitações.",
+      "activities": [
+        "Avaliar movimentos e necessidades funcionais",
+        "Planejar atividades de reabilitação",
+        "Acompanhar a evolução de pessoas em tratamento"
+      ],
+      "environments": [
+        "Clínicas de reabilitação",
+        "Hospitais",
+        "Centros esportivos e atendimento domiciliar"
+      ],
+      "training": "Bacharelado em Fisioterapia. Educação Física e outros cursos de saúde estudam temas relacionados, mas não substituem a formação em Fisioterapia.",
+      "relatedCourses": [
+        "Fisioterapia — bacharelado"
+      ],
+      "offers": [
+        "ufam-fisioterapia",
+        "uninorte-fisioterapia"
+      ],
+      "tryIt": "Converse com um profissional sobre como ele adapta o cuidado para diferentes pessoas."
+    },
+    {
+      "id": "farmacia",
+      "name": "Farmacêutico(a)",
+      "area": "saude",
+      "description": "Estuda medicamentos e participa do cuidado com seu uso adequado, da produção e do controle de qualidade.",
+      "activities": [
+        "Orientar sobre o uso de medicamentos dentro de sua atuação",
+        "Acompanhar processos de qualidade",
+        "Participar de pesquisas e análises laboratoriais"
+      ],
+      "environments": [
+        "Farmácias e hospitais",
+        "Laboratórios",
+        "Indústrias farmacêuticas e instituições de pesquisa"
+      ],
+      "training": "Bacharelado em Farmácia. Cursos de outras áreas de laboratório ou química podem dialogar com o tema, mas não formam farmacêuticos.",
+      "relatedCourses": [
+        "Farmácia — bacharelado"
+      ],
+      "offers": [
+        "ufam-farmacia",
+        "uninorte-farmacia"
+      ],
+      "tryIt": "Explore materiais educativos oficiais sobre descarte correto de medicamentos."
+    },
+    {
+      "id": "design",
+      "name": "Designer",
+      "area": "comunicacao",
+      "description": "Cria soluções visuais e produtos que tornam informações e experiências mais claras e úteis.",
+      "activities": [
+        "Pesquisar necessidades de quem usará um produto",
+        "Criar identidades visuais e interfaces",
+        "Testar ideias com desenhos e protótipos"
+      ],
+      "environments": [
+        "Estúdios e agências",
+        "Equipes de produtos digitais",
+        "Indústrias e projetos independentes"
+      ],
+      "training": "Bacharelado em Design é um dos caminhos. As ênfases variam entre os cursos. Oficinas e portfólios permitem experimentar, mas não tornam cursos diferentes automaticamente equivalentes.",
+      "relatedCourses": [
+        "Design — bacharelado",
+        "Design Gráfico — tecnólogo (formação relacionada, não equivalente ao bacharelado)"
+      ],
+      "offers": [
+        "ufam-design",
+        "uninorte-design"
+      ],
+      "tryIt": "Redesenhe um cartaz da escola para deixá-lo mais fácil de ler."
+    },
+    {
+      "id": "jornalismo",
+      "name": "Jornalista",
+      "area": "comunicacao",
+      "description": "Investiga fatos, escuta diferentes pessoas e produz informações de interesse público.",
+      "activities": [
+        "Pesquisar e checar informações",
+        "Entrevistar pessoas",
+        "Produzir reportagens em texto, áudio ou vídeo"
+      ],
+      "environments": [
+        "Redações e portais de notícias",
+        "Rádio e televisão",
+        "Projetos de comunicação e jornalismo independente"
+      ],
+      "training": "Bacharelado em Jornalismo é um caminho de formação na área. Produção Publicitária tem outro objetivo: criar comunicação publicitária. Os dois cursos não são equivalentes.",
+      "relatedCourses": [
+        "Comunicação Social — Jornalismo — bacharelado"
+      ],
+      "offers": [
+        "ufam-jornalismo"
+      ],
+      "tryIt": "Escolha uma notícia sobre sua cidade e compare como duas fontes apresentam os fatos."
+    },
+    {
+      "id": "producao-publicitaria",
+      "name": "Produtor(a) publicitário(a)",
+      "area": "comunicacao",
+      "description": "Desenvolve peças e projetos de comunicação para apresentar ideias, serviços ou campanhas.",
+      "activities": [
+        "Planejar uma campanha e seu público",
+        "Produzir roteiros e peças de divulgação",
+        "Organizar etapas de uma produção de áudio ou vídeo"
+      ],
+      "environments": [
+        "Agências de comunicação",
+        "Produtoras de conteúdo",
+        "Equipes de comunicação de organizações"
+      ],
+      "training": "Graduação tecnológica em Produção Publicitária. É formação superior voltada a um campo de atuação. Não equivale automaticamente ao bacharelado em Publicidade e Propaganda.",
+      "relatedCourses": [
+        "Produção Publicitária — tecnólogo"
+      ],
+      "offers": [
+        "ifam-publicidade"
+      ],
+      "tryIt": "Crie o roteiro de uma campanha para incentivar o cuidado com os espaços da escola."
+    },
+    {
+      "id": "administracao",
+      "name": "Administrador(a)",
+      "area": "negocios",
+      "description": "Organiza pessoas, processos e recursos para ajudar uma organização a alcançar seus objetivos.",
+      "activities": [
+        "Planejar projetos e acompanhar tarefas",
+        "Analisar processos e custos",
+        "Apoiar decisões sobre equipes e recursos"
+      ],
+      "environments": [
+        "Empresas de diferentes setores",
+        "Órgãos públicos",
+        "Organizações sociais e negócios próprios"
+      ],
+      "training": "Bacharelado em Administração. Cursos técnicos e tecnológicos de gestão têm objetivos e níveis próprios e não substituem automaticamente esse bacharelado.",
+      "relatedCourses": [
+        "Administração — bacharelado"
+      ],
+      "offers": [
+        "ufam-administracao",
+        "uninorte-administracao"
+      ],
+      "tryIt": "Planeje um evento escolar com tarefas, responsáveis e recursos necessários."
+    },
+    {
+      "id": "contabilidade",
+      "name": "Contador(a)",
+      "area": "negocios",
+      "description": "Organiza e interpreta informações contábeis para acompanhar a situação de uma organização.",
+      "activities": [
+        "Registrar movimentações e conferir documentos",
+        "Preparar relatórios contábeis",
+        "Analisar receitas, despesas e patrimônio"
+      ],
+      "environments": [
+        "Escritórios de contabilidade",
+        "Empresas e cooperativas",
+        "Órgãos públicos e auditoria"
+      ],
+      "training": "Bacharelado em Ciências Contábeis. Administração e Economia são áreas próximas, com formações distintas, e não equivalem ao curso de Ciências Contábeis.",
+      "relatedCourses": [
+        "Ciências Contábeis — bacharelado"
+      ],
+      "offers": [
+        "ufam-contabeis",
+        "uninorte-contabeis"
+      ],
+      "tryIt": "Monte uma tabela fictícia de entradas e gastos de uma feira escolar."
+    },
+    {
+      "id": "logistica",
+      "name": "Tecnólogo(a) em Logística",
+      "area": "negocios",
+      "description": "Planeja a circulação e o armazenamento de materiais para que cheguem ao lugar certo.",
+      "activities": [
+        "Organizar estoques e entregas",
+        "Comparar rotas e recursos",
+        "Acompanhar o fluxo de materiais de uma operação"
+      ],
+      "environments": [
+        "Centros de distribuição",
+        "Transportadoras e indústrias",
+        "Operações de comércio e serviços"
+      ],
+      "training": "Graduação tecnológica em Logística. O tecnólogo conclui um curso superior. Cursos técnicos em Logística pertencem a outro nível de ensino.",
+      "relatedCourses": [
+        "Logística — tecnólogo"
+      ],
+      "offers": [
+        "ifam-logistica",
+        "uninorte-logistica"
+      ],
+      "tryIt": "Desenhe o caminho de um produto, desde a produção até chegar a uma loja de Manaus."
+    },
+    {
+      "id": "pedagogia",
+      "name": "Pedagogo(a)",
+      "area": "sociedade",
+      "description": "Participa de processos de ensino e aprendizagem, do planejamento de atividades e do trabalho educativo.",
+      "activities": [
+        "Planejar experiências de aprendizagem",
+        "Acompanhar o desenvolvimento dos estudantes",
+        "Colaborar com equipes e projetos pedagógicos"
+      ],
+      "environments": [
+        "Escolas de educação infantil e anos iniciais",
+        "Equipes de coordenação pedagógica",
+        "Projetos educativos e espaços de educação não escolar"
+      ],
+      "training": "Licenciatura em Pedagogia. Licenciaturas de áreas como Matemática e Biologia são voltadas a outros campos de docência. A etapa de ensino e a habilitação devem ser conferidas no projeto pedagógico do curso.",
+      "relatedCourses": [
+        "Pedagogia — licenciatura"
+      ],
+      "offers": [
+        "ufam-pedagogia",
+        "uninorte-pedagogia"
+      ],
+      "tryIt": "Prepare uma explicação de cinco minutos sobre algo que você sabe e ensine a um colega."
+    },
+    {
+      "id": "servico-social",
+      "name": "Assistente social",
+      "area": "sociedade",
+      "description": "Trabalha com acesso a direitos e políticas sociais, compreendendo as condições de vida das pessoas.",
+      "activities": [
+        "Escutar demandas de pessoas e famílias",
+        "Orientar sobre serviços e direitos",
+        "Participar do planejamento de ações sociais"
+      ],
+      "environments": [
+        "Serviços de assistência social",
+        "Hospitais e escolas",
+        "Órgãos públicos e organizações sociais"
+      ],
+      "training": "Bacharelado em Serviço Social. Trabalho voluntário e cursos livres podem ampliar a experiência, mas não substituem essa formação específica.",
+      "relatedCourses": [
+        "Serviço Social — bacharelado"
+      ],
+      "offers": [
+        "ufam-servico-social"
+      ],
+      "tryIt": "Pesquise quais serviços públicos de apoio à comunidade existem no seu bairro."
+    },
+    {
+      "id": "direito",
+      "name": "Advogado(a)",
+      "area": "sociedade",
+      "description": "Analisa questões jurídicas e atua na orientação e defesa de direitos de pessoas e organizações.",
+      "activities": [
+        "Pesquisar normas e casos",
+        "Redigir documentos jurídicos",
+        "Dialogar com clientes e participar de soluções de conflitos"
+      ],
+      "environments": [
+        "Escritórios de advocacia",
+        "Departamentos jurídicos",
+        "Organizações de defesa de direitos"
+      ],
+      "training": "Bacharelado em Direito é a formação de base. O diploma, sozinho, não habilita automaticamente para todas as carreiras jurídicas. Consulte os requisitos atuais de habilitação e ingresso nos órgãos responsáveis.",
+      "relatedCourses": [
+        "Direito — bacharelado"
+      ],
+      "offers": [
+        "uea-direito",
+        "uninorte-direito"
+      ],
+      "tryIt": "Escolha um direito previsto no Estatuto da Criança e do Adolescente e converse sobre sua aplicação na escola."
+    },
+    {
+      "id": "engenharia-florestal",
+      "name": "Engenheiro(a) florestal",
+      "area": "natureza",
+      "description": "Planeja o uso e a conservação de recursos florestais, considerando aspectos ambientais e sociais.",
+      "activities": [
+        "Estudar florestas e seus recursos",
+        "Planejar recuperação de áreas",
+        "Acompanhar projetos de manejo e conservação"
+      ],
+      "environments": [
+        "Projetos de conservação",
+        "Empresas e órgãos ambientais",
+        "Instituições de pesquisa e atividades de campo"
+      ],
+      "training": "Bacharelado em Engenharia Florestal. Ciências Biológicas e cursos técnicos ambientais são relacionados, mas possuem formação e atribuições diferentes.",
+      "relatedCourses": [
+        "Engenharia Florestal — bacharelado"
+      ],
+      "offers": [
+        "ufam-florestal"
+      ],
+      "tryIt": "Observe a arborização de uma rua e anote perguntas sobre o cuidado com aquelas árvores."
+    },
+    {
+      "id": "biologia",
+      "name": "Biólogo(a)",
+      "area": "natureza",
+      "description": "Investiga os seres vivos e suas relações com o ambiente, contribuindo para pesquisa e conservação.",
+      "activities": [
+        "Observar e estudar espécies e ecossistemas",
+        "Organizar dados de pesquisas",
+        "Participar de ações de conservação e educação ambiental"
+      ],
+      "environments": [
+        "Laboratórios e instituições de pesquisa",
+        "Unidades de conservação",
+        "Consultorias e projetos ambientais"
+      ],
+      "training": "Ciências Biológicas pode ser bacharelado ou licenciatura. A licenciatura se volta também à docência na educação básica. As habilitações e possibilidades de atuação dependem da formação cursada e dos requisitos profissionais aplicáveis.",
+      "relatedCourses": [
+        "Ciências Biológicas — bacharelado",
+        "Ciências Biológicas — licenciatura (ênfase também em docência)"
+      ],
+      "offers": [
+        "ufam-biologia",
+        "ufam-biologia-licenciatura"
+      ],
+      "tryIt": "Observe a biodiversidade de um espaço próximo sem coletar nem manipular animais ou plantas."
+    },
+    {
+      "id": "tecnico-meio-ambiente",
+      "name": "Técnico(a) em Meio Ambiente",
+      "area": "natureza",
+      "description": "Apoia o acompanhamento das condições ambientais e ações para reduzir impactos no ambiente.",
+      "activities": [
+        "Organizar registros de monitoramento ambiental",
+        "Apoiar o gerenciamento de resíduos",
+        "Participar de atividades de educação ambiental"
+      ],
+      "environments": [
+        "Indústrias e empresas de consultoria",
+        "Órgãos e projetos ambientais",
+        "Equipes de saneamento e gestão de resíduos"
+      ],
+      "training": "Curso técnico em Meio Ambiente. É formação técnica de nível médio, diferente de uma graduação em Biologia ou Engenharia Florestal. Consulte no edital a forma de oferta e seus pré-requisitos.",
+      "relatedCourses": [
+        "Meio Ambiente — técnico"
+      ],
+      "offers": [
+        "ifam-meio-ambiente"
+      ],
+      "tryIt": "Mapeie os tipos de resíduos produzidos em uma atividade da escola e proponha uma melhoria."
+    }
+  ],
+  "pending": [
+    {
+      "title": "Ingresso e oferta no próximo período",
+      "detail": "Inscrições abertas, turmas, vagas, turnos, pré-requisitos e calendários precisam ser confirmados nos editais vigentes de cada instituição. A verificação aqui confirma que o curso e a localização constam na fonte consultada."
+    },
+    {
+      "title": "Nome do curso de sistemas do IFAM",
+      "detail": "A listagem usa Análise e Desenvolvimento de Sistemas, enquanto a página individual usa Desenvolvimento de Sistemas. O grau tecnológico e o campus Manaus Centro coincidem. Confira o nome no edital e no projeto pedagógico atuais."
+    },
+    {
+      "title": "Outros cursos e instituições",
+      "detail": "O catálogo não cobre todas as possibilidades de Manaus. Ofertas sem cruzamento de curso, grau e município não foram adicionadas como confirmadas. A antiga página de cursos da EST/UEA retornou erro 404 nesta consulta; cursos dessa página não foram incluídos como ofertas verificadas."
+    },
+    {
+      "title": "Requisitos para exercer uma profissão",
+      "detail": "Este catálogo apresenta caminhos educativos. Habilitações, registros, atribuições e requisitos de carreira devem ser conferidos nos órgãos profissionais e nos documentos de cada curso. Cursos relacionados não são automaticamente equivalentes."
+    },
+    {
+      "title": "UNINORTE: confirmação do próximo período e ampliação do catálogo",
+      "detail": "Os nove cursos adicionados têm referências institucionais de curso, grau e unidade em Manaus. Modalidade, unidade efetiva das aulas, turmas e ingresso devem ser confirmados diretamente. Ciência da Computação foi acrescentada após cruzamento com referências históricas de 2022 e 2025.1 em Manaus. A unidade de aulas, modalidade, turmas e ingresso atuais ainda precisam ser confirmados. Engenharia Civil, Jornalismo e Publicidade e Propaganda apareceram nas relações oficiais, mas não foram incluídos como ofertas confirmadas nesta atualização por faltar cruzar explicitamente todos os dados de formação. Este recorte não contém todos os cursos da UNINORTE."
+    },
+    {
+      "title": "UNINORTE — graduação em Engenharia de Software",
+      "detail": "O curso foi solicitado pelo estudante e aparece no catálogo como pendente. Ainda não foi encontrada fonte oficial específica que confirme grau, modalidade e oferta local da graduação. A página de especialização encontrada é de pós-graduação e não foi tratada como equivalente. Um documento PBU hospedado pela UNINORTE reúne várias instituições: sua seção da UNINORTE não foi usada para confirmar Engenharia de Software, pois as ocorrências encontradas do nome estavam em outras seções. A pendência pode ser resolvida com página oficial do curso ou documento institucional específico."
+    }
+  ]
+}

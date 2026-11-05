@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#164b4a">
+    <meta name="description" content="Explore seus interesses, conheça profissões e descubra caminhos de formação em Manaus. Uma atividade educativa gratuita, sem cadastro.">
+    <meta name="referrer" content="no-referrer">
+    <title>Meu Próximo Passo — explore seus caminhos</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/theme.css">
+    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/theme.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Meu Próximo Passo, início">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="currentColor"/><path d="m13 27 5-12 10-3-5 12Z" fill="#d5f5df"/><path d="m18 15 5 9-10 3Z" fill="#72c7b0"/><circle cx="20" cy="20" r="2" fill="#164b4a"/></svg>
+          <span>meu próximo<span class="brand-second">passo<span class="brand-dot">.</span></span></span>
+        </a>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#inicio" data-nav="inicio">Início</a>
+          <a href="#questionario" data-nav="questionario">Meus interesses</a>
+          <a href="#profissoes" data-nav="profissoes">Profissões e cursos</a>
+          <a href="#sobre" data-nav="sobre">Sobre</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Tema escuro" aria-pressed="false" title="Mudar para o tema escuro">
+          <svg data-theme-sun viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          <svg data-theme-moon hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M20.5 13a8.5 8.5 0 0 1-9.5-9.5A8.5 8.5 0 1 0 20.5 13Z"/></svg>
+          <span data-theme-label>Claro</span>
+        </button>
+        <a class="button button-small header-cta" href="#questionario">Começar agora <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+    <main id="conteudo" tabindex="-1">
+      <div class="container loading" role="status">Preparando seus próximos caminhos…</div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p><strong>Meu Próximo Passo<span class="brand-dot">.</span></strong><br><span>Possibilidades para descobrir. Tempo para escolher.</span></p>
+        <nav aria-label="Links de apoio"><a href="#sobre">Sobre e privacidade</a><a href="#fontes">Fontes e instituições</a></nav>
+        <p class="footer-local">Feito para explorar em Manaus, AM.<br>Atividade educativa · Sem cadastro</p>
+      </div>
+    </footer>
+    <noscript><p class="noscript">Ative o JavaScript para responder ao questionário e pesquisar no catálogo. Nenhuma conta é necessária.</p></noscript>
+  </body>
+</html>
