@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "updatedAt": "2026-11-07",
   "scope": "Catálogo educativo e não exaustivo. Curso e localização identificados em fontes oficiais; não representa edital ou inscrição aberta.",
   "sources": [
@@ -389,6 +389,78 @@
       "consultedAt": "2026-11-07",
       "confirms": "A seção Nilton Lins/Parque das Laranjeiras, na página 11, relaciona os dez cursos deste recorte com seus graus. O objeto do edital se refere a instituições de ensino superior estabelecidas em Manaus.",
       "limitation": "Documento do processo seletivo 2027, publicado em 2026 e disponibilizado no portal institucional. A existência do registro não significa inscrição aberta, bolsa garantida ou turma confirmada. Não reproduzimos valores, vagas, prazos de seleção ou percentuais de bolsas."
+    },
+    {
+      "id": "uea-esat",
+      "institution": "UEA",
+      "title": "UEA — ESAT: cursos, graus e endereço em Manaus",
+      "url": "https://uea.edu.br/index.php/escola-superior-de-artes-e-turismo/",
+      "confirms": "Relaciona bacharelados e licenciaturas em Dança, Música e Teatro à ESAT, na Avenida Leonardo Malcher, 1728, Praça 14 de Janeiro, Manaus.",
+      "limitation": "Lista institucional; confirme habilitação, modalidade e ingresso no edital atual. A referência a Produção Audiovisual como tecnológico não foi confundida com o bacharelado de oferta especial descrito em resolução própria.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "uea-artes-phe-2027",
+      "institution": "UEA",
+      "title": "UEA — ingresso em Artes: Prova de Habilidade Específica, acesso 2027",
+      "url": "https://uea.edu.br/index.php/2026/08/27/vestibular-e-sis-uea-aplica-prova-de-habilidade-especifica-neste-domingo-30-8/",
+      "confirms": "Notícia de 27/08/2026 descreve a prova de habilidades para Dança, Música e Teatro na ESAT; diferencia Canto, Instrumento e Regência nos dois graus de Música.",
+      "limitation": "Referência ao Vestibular/SIS 2026, acesso 2027, com avaliação já realizada. Não indica inscrição aberta nem fixa regras para processos futuros; consulte o edital do período pretendido.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "uea-cursos-esat",
+      "institution": "UEA",
+      "title": "UEA — catálogo por unidade: seção da ESAT",
+      "url": "https://cursos1.uea.edu.br/index.php?mode=unidade",
+      "confirms": "A seção específica da ESAT distingue as formações artísticas e seus graus, cruzada com o endereço de Manaus no portal da unidade.",
+      "limitation": "O catálogo reúne capital e interior. Só a seção da ESAT foi usada para as Artes. A listagem não confirma oferta anual ou seleção vigente.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "uea-teatro-bacharelado",
+      "institution": "UEA",
+      "title": "UEA — Teatro, bacharelado: apresentação do curso",
+      "url": "https://cursos1.uea.edu.br/index.php?curso=90&dest=info",
+      "confirms": "Identifica Teatro como bacharelado e apresenta formação e campos de atuação cênica. O vínculo com a ESAT em Manaus foi cruzado no portal da unidade.",
+      "limitation": "A página contém também informações históricas. Não foi usada para afirmar reconhecimento atualizado, regras profissionais ou ingresso aberto.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "uea-sistemas-ppc-2026",
+      "institution": "UEA",
+      "title": "UEA — Sistemas de Informação: PPC da EST disponibilizado em 2026",
+      "url": "https://est.uea.edu.br/wp-content/uploads/2026/04/PPC_SI_2025_Versao_Final.pdf",
+      "confirms": "O projeto identifica o bacharelado em Sistemas de Informação e sua vinculação à Escola Superior de Tecnologia da UEA, em Manaus.",
+      "limitation": "O documento apresenta dados pedagógicos e versões históricas. Confirma curso, grau e unidade; não confirma inscrições, turmas ou condições atuais de ingresso.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "uea-audiovisual-criacao",
+      "institution": "UEA",
+      "title": "UEA — Resolução 064/2023: criação do bacharelado em Produção Audiovisual",
+      "url": "https://xfiles.uea.edu.br/data/legislacao/ato/p22122.pdf",
+      "confirms": "Identifica bacharelado em Produção Audiovisual, de oferta especial, presencial modular, vinculado à ESAT em Manaus.",
+      "limitation": "Documento de criação de uma oferta especial. Não confirma abertura de novas turmas nem periodicidade de ingresso; não é equivalente à referência tecnológica do catálogo geral.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "uea-audiovisual-ppc-2024",
+      "institution": "UEA",
+      "title": "UEA — Resolução 044/2024: PPC do bacharelado em Produção Audiovisual",
+      "url": "https://xfiles.uea.edu.br/data/legislacao/ato/p23300.pdf",
+      "confirms": "Aprova o projeto do bacharelado de oferta especial na ESAT, em Manaus. O documento descreve uma oferta de entrada única.",
+      "limitation": "Referência histórica de oferta especial. Não apresentar como curso com entrada anual garantida. A continuidade e novos processos precisam de confirmação institucional.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "uea-matricula-2026",
+      "institution": "UEA",
+      "title": "UEA — Edital 006/2026: cursos e unidades na matrícula de acesso 2026",
+      "url": "https://selecao2.uea.edu.br/xfiles/data/xselecao/36598.pdf",
+      "confirms": "As instruções de matrícula relacionam cursos artísticos à ESAT e também registram o bacharelado em Produção Audiovisual nessa unidade.",
+      "limitation": "Matrícula de uma chamada específica de 2026, já passada. Não foram reproduzidos dados pessoais, vagas ou calendários. Não confirma ingresso disponível hoje.",
+      "consultedAt": "2026-11-07"
     }
   ],
   "offers": [
@@ -1494,6 +1566,186 @@
       "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
       "historical": true,
       "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "uea-musica-canto-bach",
+      "course": "Música — Canto",
+      "type": "Bacharelado",
+      "institution": "UEA",
+      "campus": "Escola Superior de Artes e Turismo — ESAT, Praça 14 de Janeiro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esat",
+        "uea-cursos-esat",
+        "uea-artes-phe-2027"
+      ],
+      "note": "O processo de ingresso 2026/acesso 2027 previu Prova de Habilidade Específica para Dança, Música e Teatro. Consulte o edital do período desejado para conferir etapas, habilitação, modalidade, unidade e ingresso. Esta referência não significa inscrições abertas."
+    },
+    {
+      "id": "uea-musica-canto-lic",
+      "course": "Música — Canto",
+      "type": "Licenciatura",
+      "institution": "UEA",
+      "campus": "Escola Superior de Artes e Turismo — ESAT, Praça 14 de Janeiro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esat",
+        "uea-cursos-esat",
+        "uea-artes-phe-2027"
+      ],
+      "note": "O processo de ingresso 2026/acesso 2027 previu Prova de Habilidade Específica para Dança, Música e Teatro. Consulte o edital do período desejado para conferir etapas, habilitação, modalidade, unidade e ingresso. Esta referência não significa inscrições abertas."
+    },
+    {
+      "id": "uea-musica-instrumento-bach",
+      "course": "Música — Instrumento",
+      "type": "Bacharelado",
+      "institution": "UEA",
+      "campus": "Escola Superior de Artes e Turismo — ESAT, Praça 14 de Janeiro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esat",
+        "uea-cursos-esat",
+        "uea-artes-phe-2027"
+      ],
+      "note": "O processo de ingresso 2026/acesso 2027 previu Prova de Habilidade Específica para Dança, Música e Teatro. Consulte o edital do período desejado para conferir etapas, habilitação, modalidade, unidade e ingresso. Esta referência não significa inscrições abertas."
+    },
+    {
+      "id": "uea-musica-instrumento-lic",
+      "course": "Música — Instrumento",
+      "type": "Licenciatura",
+      "institution": "UEA",
+      "campus": "Escola Superior de Artes e Turismo — ESAT, Praça 14 de Janeiro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esat",
+        "uea-cursos-esat",
+        "uea-artes-phe-2027"
+      ],
+      "note": "O processo de ingresso 2026/acesso 2027 previu Prova de Habilidade Específica para Dança, Música e Teatro. Consulte o edital do período desejado para conferir etapas, habilitação, modalidade, unidade e ingresso. Esta referência não significa inscrições abertas."
+    },
+    {
+      "id": "uea-musica-regencia-bach",
+      "course": "Música — Regência",
+      "type": "Bacharelado",
+      "institution": "UEA",
+      "campus": "Escola Superior de Artes e Turismo — ESAT, Praça 14 de Janeiro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esat",
+        "uea-cursos-esat",
+        "uea-artes-phe-2027"
+      ],
+      "note": "O processo de ingresso 2026/acesso 2027 previu Prova de Habilidade Específica para Dança, Música e Teatro. Consulte o edital do período desejado para conferir etapas, habilitação, modalidade, unidade e ingresso. Esta referência não significa inscrições abertas."
+    },
+    {
+      "id": "uea-musica-regencia-lic",
+      "course": "Música — Regência",
+      "type": "Licenciatura",
+      "institution": "UEA",
+      "campus": "Escola Superior de Artes e Turismo — ESAT, Praça 14 de Janeiro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esat",
+        "uea-cursos-esat",
+        "uea-artes-phe-2027"
+      ],
+      "note": "O processo de ingresso 2026/acesso 2027 previu Prova de Habilidade Específica para Dança, Música e Teatro. Consulte o edital do período desejado para conferir etapas, habilitação, modalidade, unidade e ingresso. Esta referência não significa inscrições abertas."
+    },
+    {
+      "id": "uea-danca-bach",
+      "course": "Dança",
+      "type": "Bacharelado",
+      "institution": "UEA",
+      "campus": "Escola Superior de Artes e Turismo — ESAT, Praça 14 de Janeiro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esat",
+        "uea-cursos-esat",
+        "uea-artes-phe-2027"
+      ],
+      "note": "O processo de ingresso 2026/acesso 2027 previu Prova de Habilidade Específica para Dança, Música e Teatro. Consulte o edital do período desejado para conferir etapas, habilitação, modalidade, unidade e ingresso. Esta referência não significa inscrições abertas."
+    },
+    {
+      "id": "uea-danca-lic",
+      "course": "Dança",
+      "type": "Licenciatura",
+      "institution": "UEA",
+      "campus": "Escola Superior de Artes e Turismo — ESAT, Praça 14 de Janeiro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esat",
+        "uea-cursos-esat",
+        "uea-artes-phe-2027"
+      ],
+      "note": "O processo de ingresso 2026/acesso 2027 previu Prova de Habilidade Específica para Dança, Música e Teatro. Consulte o edital do período desejado para conferir etapas, habilitação, modalidade, unidade e ingresso. Esta referência não significa inscrições abertas."
+    },
+    {
+      "id": "uea-teatro-bach",
+      "course": "Teatro",
+      "type": "Bacharelado",
+      "institution": "UEA",
+      "campus": "Escola Superior de Artes e Turismo — ESAT, Praça 14 de Janeiro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esat",
+        "uea-teatro-bacharelado",
+        "uea-artes-phe-2027"
+      ],
+      "note": "O processo de ingresso 2026/acesso 2027 previu Prova de Habilidade Específica para Dança, Música e Teatro. Consulte o edital do período desejado para conferir etapas, habilitação, modalidade, unidade e ingresso. Esta referência não significa inscrições abertas."
+    },
+    {
+      "id": "uea-teatro-lic",
+      "course": "Teatro",
+      "type": "Licenciatura",
+      "institution": "UEA",
+      "campus": "Escola Superior de Artes e Turismo — ESAT, Praça 14 de Janeiro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esat",
+        "uea-cursos-esat",
+        "uea-artes-phe-2027"
+      ],
+      "note": "O processo de ingresso 2026/acesso 2027 previu Prova de Habilidade Específica para Dança, Música e Teatro. Consulte o edital do período desejado para conferir etapas, habilitação, modalidade, unidade e ingresso. Esta referência não significa inscrições abertas."
+    },
+    {
+      "id": "uea-audiovisual-bach-especial",
+      "course": "Produção Audiovisual",
+      "type": "Bacharelado",
+      "institution": "UEA",
+      "campus": "Escola Superior de Artes e Turismo — ESAT, Praça 14 de Janeiro",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-audiovisual-criacao",
+        "uea-audiovisual-ppc-2024",
+        "uea-matricula-2026"
+      ],
+      "note": "Referência histórica de bacharelado em oferta especial, presencial modular. O PPC de 2024 descreve entrada única: não há confirmação de novas turmas ou entrada anual. O portal também relaciona uma formação tecnológica; são referências distintas, sem equivalência automática. Confirme a formação e o ingresso diretamente com a UEA.",
+      "historical": true,
+      "referencePeriod": "Oferta especial · PPC de 2024"
+    },
+    {
+      "id": "uea-sistemas-informacao",
+      "course": "Sistemas de Informação",
+      "type": "Bacharelado",
+      "institution": "UEA",
+      "campus": "Escola Superior de Tecnologia — EST",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-sistemas-ppc-2026"
+      ],
+      "note": "Curso e vínculo com a EST em Manaus identificados no projeto pedagógico. Confirme edital de ingresso, modalidade e unidade efetiva das aulas para o período pretendido."
     }
   ],
   "professions": [
@@ -1529,7 +1781,8 @@
         "fametro-ads",
         "fametro-sistemas",
         "unip-computacao",
-        "unip-ads"
+        "unip-ads",
+        "uea-sistemas-informacao"
       ],
       "tryIt": "Desenhe em papel as telas de um aplicativo que ajudaria sua escola."
     },
@@ -1992,6 +2245,178 @@
         "ifam-meio-ambiente"
       ],
       "tryIt": "Mapeie os tipos de resíduos produzidos em uma atividade da escola e proponha uma melhoria."
+    },
+    {
+      "id": "musica",
+      "name": "Músico(a)",
+      "area": "comunicacao",
+      "description": "Interpreta e cria experiências musicais com a voz, instrumentos ou a condução de grupos.",
+      "activities": [
+        "Ensaiar repertórios e desenvolver escuta e técnica musical",
+        "Interpretar músicas em apresentações ou gravações",
+        "Criar arranjos e colaborar com outros artistas"
+      ],
+      "environments": [
+        "Palcos, centros culturais e projetos comunitários",
+        "Estúdios e produções de áudio e vídeo",
+        "Grupos musicais e trabalho artístico independente"
+      ],
+      "training": "A aprendizagem pode começar em grupos, oficinas e cursos de música. Na graduação, Canto, Instrumento e Regência são caminhos com focos próprios. O bacharelado e a licenciatura têm objetivos diferentes; para explorar o ensino de Música, veja também Professor(a) de Artes e confira a formação exigida para a atuação pretendida.",
+      "relatedCourses": [
+        "Música — Canto — bacharelado",
+        "Música — Instrumento — bacharelado",
+        "Música — Regência — bacharelado"
+      ],
+      "offers": [
+        "uea-musica-canto-bach",
+        "uea-musica-instrumento-bach",
+        "uea-musica-regencia-bach"
+      ],
+      "searchTerms": [
+        "música",
+        "musicista",
+        "cantor",
+        "cantora",
+        "instrumentista",
+        "regente"
+      ],
+      "tryIt": "Escolha uma música e compare duas interpretações. Anote o que muda no ritmo, na voz e nos instrumentos. Você também pode criar uma pequena sequência de sons com objetos do cotidiano."
+    },
+    {
+      "id": "teatro",
+      "name": "Ator ou atriz",
+      "area": "comunicacao",
+      "description": "Dá vida a personagens e histórias usando voz, corpo, imaginação e trabalho em grupo.",
+      "activities": [
+        "Estudar textos e experimentar formas de interpretar uma cena",
+        "Ensaiar com direção e equipe artística",
+        "Participar de apresentações, gravações e processos de criação coletiva"
+      ],
+      "environments": [
+        "Teatros, espaços culturais e grupos artísticos",
+        "Produções de cinema, televisão e conteúdos digitais",
+        "Projetos culturais e iniciativas comunitárias"
+      ],
+      "training": "Grupos, oficinas e cursos livres permitem conhecer a linguagem teatral. O bacharelado em Teatro é um caminho de formação artística. A licenciatura em Teatro se volta à formação docente e aparece em Professor(a) de Artes; os dois graus não devem ser tratados como equivalentes. Confira os requisitos da atividade que deseja exercer.",
+      "relatedCourses": [
+        "Teatro — bacharelado",
+        "Teatro — licenciatura (caminho relacionado ao ensino)"
+      ],
+      "offers": [
+        "uea-teatro-bach"
+      ],
+      "searchTerms": [
+        "teatro",
+        "atriz",
+        "ator",
+        "atuação",
+        "artes cênicas"
+      ],
+      "tryIt": "Com colegas, interprete um pequeno diálogo inventado de duas formas diferentes. Observe como tom de voz, pausas e gestos mudam a história, respeitando o conforto de todos."
+    },
+    {
+      "id": "danca",
+      "name": "Artista da dança",
+      "area": "comunicacao",
+      "description": "Pesquisa e cria movimentos para se expressar e construir apresentações individuais ou coletivas.",
+      "activities": [
+        "Experimentar movimentos e desenvolver preparação corporal",
+        "Ensaiar e participar da criação de coreografias",
+        "Pesquisar diferentes linguagens e expressões culturais da dança"
+      ],
+      "environments": [
+        "Companhias, coletivos e espaços de dança",
+        "Teatros, centros culturais e festivais",
+        "Projetos comunitários e produções artísticas"
+      ],
+      "training": "Vivências em grupos, oficinas e cursos livres podem iniciar a exploração. O bacharelado em Dança é um caminho de formação artística. A licenciatura em Dança tem foco na formação docente; veja também Professor(a) de Artes. Preparação corporal e atividades práticas devem respeitar as condições de cada pessoa.",
+      "relatedCourses": [
+        "Dança — bacharelado",
+        "Dança — licenciatura (caminho relacionado ao ensino)"
+      ],
+      "offers": [
+        "uea-danca-bach"
+      ],
+      "searchTerms": [
+        "dança",
+        "dançarino",
+        "dançarina",
+        "bailarino",
+        "bailarina",
+        "coreografia"
+      ],
+      "tryIt": "Assista a uma apresentação de dança e observe como os movimentos contam ideias. Se desejar, imagine uma sequência curta e confortável de gestos para representar uma emoção."
+    },
+    {
+      "id": "ensino-artes",
+      "name": "Professor(a) de Artes",
+      "area": "sociedade",
+      "description": "Planeja experiências de aprendizagem em linguagens artísticas, como Música, Teatro ou Dança.",
+      "activities": [
+        "Planejar aulas e atividades de criação e apreciação artística",
+        "Apresentar diferentes repertórios e contextos culturais",
+        "Acompanhar aprendizagens e adaptar atividades para diferentes estudantes"
+      ],
+      "environments": [
+        "Escolas de educação básica, conforme a formação e os requisitos da função",
+        "Projetos educativos em espaços culturais",
+        "Oficinas e iniciativas de educação não formal"
+      ],
+      "training": "As licenciaturas em Música, Teatro e Dança formam professores em linguagens específicas. Escolha a linguagem que deseja estudar e confira os requisitos para a função e a etapa de ensino pretendidas. Bacharelado artístico e licenciatura têm objetivos próprios; estudar uma linguagem não equivale automaticamente à formação em todas as Artes.",
+      "relatedCourses": [
+        "Música — Canto, Instrumento ou Regência — licenciatura",
+        "Teatro — licenciatura",
+        "Dança — licenciatura"
+      ],
+      "offers": [
+        "uea-musica-canto-lic",
+        "uea-musica-instrumento-lic",
+        "uea-musica-regencia-lic",
+        "uea-teatro-lic",
+        "uea-danca-lic"
+      ],
+      "searchTerms": [
+        "ensino de artes",
+        "educação artística",
+        "música",
+        "teatro",
+        "dança",
+        "professor",
+        "professora"
+      ],
+      "tryIt": "Planeje com colegas uma atividade artística de cinco minutos. Defina o que gostariam de ensinar, como apresentar a proposta e como garantir que todos possam participar."
+    },
+    {
+      "id": "producao-audiovisual",
+      "name": "Produtor(a) audiovisual",
+      "area": "comunicacao",
+      "description": "Ajuda a transformar uma ideia em vídeos e outras produções que combinam imagens e sons.",
+      "activities": [
+        "Planejar roteiro, recursos e etapas de uma produção",
+        "Organizar gravações e colaborar com equipes de imagem e som",
+        "Acompanhar edição, finalização e formas de apresentar o conteúdo"
+      ],
+      "environments": [
+        "Produtoras, estúdios e equipes de comunicação",
+        "Projetos de cinema, televisão e conteúdo digital",
+        "Instituições culturais, projetos educativos e trabalho independente"
+      ],
+      "training": "Projetos práticos, oficinas e cursos de audiovisual ajudam a conhecer a área. Existem formações superiores com graus e propostas diferentes. A referência da UEA abaixo é um bacharelado de oferta especial, com documentação de uma turma; confirme se haverá novo ingresso. Produção Audiovisual e Produção Publicitária são cursos relacionados à comunicação, com objetivos próprios.",
+      "relatedCourses": [
+        "Produção Audiovisual — bacharelado (UEA: referência de oferta especial)",
+        "Produção Audiovisual — tecnólogo (outro grau; confirmar oferta atual)"
+      ],
+      "offers": [
+        "uea-audiovisual-bach-especial"
+      ],
+      "searchTerms": [
+        "audiovisual",
+        "cinema",
+        "vídeo",
+        "filme",
+        "produção de vídeo"
+      ],
+      "tryIt": "Crie um roteiro de três cenas para explicar uma ideia da escola. Planeje o enquadramento e o som; se gravar pessoas, combine antes a participação e o uso das imagens."
     }
   ],
   "pending": [
@@ -2005,7 +2430,7 @@
     },
     {
       "title": "Outros cursos e instituições",
-      "detail": "O catálogo não cobre todas as possibilidades de Manaus. Ofertas sem cruzamento de curso, grau e município não foram adicionadas como confirmadas. A antiga página de cursos da EST/UEA retornou erro 404 nesta consulta; cursos dessa página não foram incluídos como ofertas verificadas."
+      "detail": "O catálogo não cobre todas as possibilidades de Manaus. A falha na antiga página da EST registrada na consulta inicial foi complementada por documentação do bacharelado em Sistemas de Informação. A ESAT ganhou referências verificadas em Música, Teatro, Dança e Produção Audiovisual; outros cursos e unidades da UEA continuam fora deste recorte."
     },
     {
       "title": "Requisitos para exercer uma profissão",
@@ -2022,6 +2447,14 @@
     {
       "title": "Ampliação de instituições: confirmação para o período de ingresso",
       "detail": "Estácio/Chapada, Fametro/Sede Chapada e Santa Teresa/Vieiralves têm registros locais no edital PBU 2026, publicado em 2025; os cartões sinalizam essa referência histórica. A UNIP foi conferida nas colunas Manaus do manual 2027/1. A Nilton Lins foi cruzada com páginas do Campus Parque das Laranjeiras e relação institucional do PBU 2027/1. Confirme diretamente a oferta atual, a modalidade, as turmas e o local efetivo de aulas. Não associamos automaticamente cursos nacionais nem ofertas do interior a Manaus. A lista é parcial e não indica preferência por instituição."
+    },
+    {
+      "title": "UEA — ingresso em Artes e habilitações",
+      "detail": "Dança, Música e Teatro tiveram Prova de Habilidade Específica no processo 2026/acesso 2027. Isso não confirma inscrições abertas nem regras para o próximo processo. Confirme edital, grau, habilitação, modalidade e unidade antes de se candidatar."
+    },
+    {
+      "title": "UEA — Produção Audiovisual, oferta especial",
+      "detail": "As resoluções 064/2023 e 044/2024 identificam um bacharelado de oferta especial na ESAT em Manaus; o PPC de 2024 descreve entrada única. O portal geral relaciona também uma formação tecnológica. Não tratamos esses registros como equivalentes nem confirmamos novas turmas. O cartão do bacharelado está sinalizado como referência histórica."
     }
   ]
 }

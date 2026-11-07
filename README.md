@@ -2,7 +2,7 @@
 
 Plataforma educativa de exploração profissional para estudantes do ensino médio em Manaus. Primeira versão funcional em português do Brasil, feita com HTML, CSS e JavaScript, sem backend, banco de dados, cadastro, chaves de API ou dependências de execução.
 
-Inclui 18 perguntas, revisão das respostas, resultado transparente com empates, 18 profissões, 76 referências de formação (75 identificadas em fontes oficiais e uma pendente) e 43 fontes. O recorte reúne UFAM, IFAM, UEA, UNINORTE, Estácio, Fametro, UNIP, Universidade Nilton Lins e Faculdade Santa Teresa. Última ampliação em **07/11/2026**; as fontes anteriores mantêm as consultas de 04 e 05/11/2026. Não é um catálogo completo de Manaus, nem uma relação de inscrições abertas.
+Inclui 18 perguntas, revisão das respostas, resultado transparente com empates, 23 profissões, 88 referências de formação (87 identificadas em fontes oficiais e uma pendente) e 51 fontes. O recorte reúne UFAM, IFAM, UEA, UNINORTE, Estácio, Fametro, UNIP, Universidade Nilton Lins e Faculdade Santa Teresa. Última ampliação em **07/11/2026**; as fontes anteriores mantêm as consultas de 04 e 05/11/2026. Não é um catálogo completo de Manaus, nem uma relação de inscrições abertas.
 
 > Este questionário é uma atividade educativa de exploração de interesses. Não é um teste psicológico ou diagnóstico vocacional e não define qual profissão você deve seguir.
 
@@ -163,3 +163,11 @@ Foram acrescentadas 44 referências de formação e 16 fontes para cinco institu
 Estácio/Chapada, Fametro/Sede Chapada e Santa Teresa/Vieiralves usam registros do PBU 2026 de 2025, acompanhados de páginas institucionais quando disponíveis. Os cartões sinalizam **Referência histórica**. A UNIP foi conferida nas colunas Manaus do manual 2027/1; Nilton Lins, no Campus Parque das Laranjeiras. Confirme oferta, modalidade e ingresso atuais diretamente com cada instituição.
 
 A relação de fontes, critérios e aplicação desta atualização está em `docs/ATUALIZACAO-INSTITUICOES.md`. O campo opcional `historical: true` de uma oferta exige `referencePeriod` e `note`: não use apenas um selo para sugerir oferta atual. A graduação em Engenharia de Software da UNINORTE continua pendente de confirmação específica.
+
+## Artes e ampliação da UEA — versão 1.3.0
+
+Foram acrescentadas cinco profissões: Músico(a), Ator ou atriz, Artista da dança, Professor(a) de Artes e Produtor(a) audiovisual. A UEA passou de uma para sete profissões relacionadas, incluindo Sistemas de Informação ligado a desenvolvimento de software. São 12 novas referências e oito fontes oficiais, consultadas em 07/11/2026. A busca aceita palavras-chave editoriais como `música`, `teatro`, `dança` e `cinema`.
+
+Os bacharelados e as licenciaturas da ESAT aparecem como caminhos distintos. O bacharelado em Produção Audiovisual tem aviso de referência histórica de oferta especial, com ingresso futuro a confirmar. A notícia sobre Prova de Habilidade Específica se refere ao processo 2026/acesso 2027; confira sempre o edital do período pretendido. As 18 perguntas e o cálculo continuam os mesmos.
+
+Veja `docs/ATUALIZACAO-ARTES-UEA.md` para entender os vínculos, as fontes e a aplicação do pacote.

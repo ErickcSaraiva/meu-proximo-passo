@@ -121,3 +121,11 @@ As telas usam fragmentos (`#inicio`, `#questionario`, `#profissoes`). O servidor
 ## 10. Uma fala curta para apresentar
 
 “Nossa plataforma ajuda estudantes a explorar interesses sem pedir dados pessoais. Usamos HTML para a estrutura, CSS para o visual e JavaScript para as interações. As 18 perguntas ficam misturadas, com três para cada uma das seis áreas. Cada escolha vale zero, um ou dois; somamos os valores e mostramos a pontuação de zero a seis. Empates são apresentados com transparência e o resultado não define uma profissão. O catálogo é um JSON local com profissões e cursos de Manaus, ligados a fontes oficiais e datas de consulta. Tudo funciona no navegador e pode ser publicado gratuitamente no GitHub Pages.”
+
+## Ampliação em Artes: palavras-chave e contagem dinâmica
+
+Uma profissão pode ter o campo opcional `searchTerms`, uma lista de palavras usadas na busca. Por exemplo, Músico(a) inclui `música` e `instrumentista`; Ator ou atriz inclui `teatro`. `filterProfessions` normaliza nome e palavras-chave, removendo acentos e diferenças de caixa, antes de combinar com área e instituição.
+
+O total no cabeçalho do catálogo vem de `catalog.professions.length`. Assim, cadastrar outra profissão no JSON atualiza a contagem na tela. Isso não altera `QUESTIONS.length`: o catálogo tem 23 profissões e o questionário continua com 18 perguntas e seis áreas de 0 a 6 pontos.
+
+No vínculo `ensino-artes` → `uea-teatro-lic` → `uea-esat`, a profissão aponta para uma oferta de licenciatura, que aponta para uma fonte. O ator ou a atriz têm uma oferta de bacharelado em Teatro. Essa organização apresenta caminhos diferentes e não cria equivalência entre os diplomas.

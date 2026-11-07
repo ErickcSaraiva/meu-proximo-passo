@@ -1,6 +1,6 @@
 # Fontes oficiais e informações pendentes
 
-Consultas em **04/11/2026, 05/11/2026 e 07/11/2026**. Última ampliação: versão 1.2.0. O escopo da verificação é curso, grau e localização na fonte. Não confirma inscrições ou turmas abertas. Datas de consulta não são datas de publicação.
+Consultas em **04/11/2026, 05/11/2026 e 07/11/2026**. Última ampliação: versão 1.3.0. O escopo da verificação é curso, grau e localização na fonte. Não confirma inscrições ou turmas abertas. Datas de consulta não são datas de publicação.
 
 ## Fontes utilizadas
 
@@ -411,3 +411,73 @@ O recorte atual e os limites de cada registro estão em `ATUALIZACAO-INSTITUICOE
 ### Pendências desta ampliação
 
 Confirmar oferta atual, modalidade, turma e unidade efetiva das aulas. Não basta a instituição ter endereço em Manaus: o curso precisa de vínculo local específico. Os cursos e instituições do recorte não esgotam a cidade. Páginas com informação inconsistente ou sem confirmação local não foram usadas, sozinhas, para criar ofertas confirmadas. A graduação em Engenharia de Software da UNINORTE continua pendente.
+
+## UEA: Artes e Sistemas de Informação — 07/11/2026
+
+Os vínculos da ESAT usam a seção e o endereço da unidade em Manaus. As licenciaturas e os bacharelados foram registrados separadamente. Produção Audiovisual tem documentação de bacharelado em oferta especial; o cartão sinaliza o período histórico e a necessidade de confirmar novas turmas. Não inferimos que esse bacharelado substituiu a formação tecnológica relacionada no catálogo geral.
+
+### UEA — ESAT: cursos, graus e endereço em Manaus
+
+[Fonte oficial](https://uea.edu.br/index.php/escola-superior-de-artes-e-turismo/) — consulta: 07/11/2026.
+
+**Identificado:** Relaciona bacharelados e licenciaturas em Dança, Música e Teatro à ESAT, na Avenida Leonardo Malcher, 1728, Praça 14 de Janeiro, Manaus.
+
+**Limite:** Lista institucional; confirme habilitação, modalidade e ingresso no edital atual. A referência a Produção Audiovisual como tecnológico não foi confundida com o bacharelado de oferta especial descrito em resolução própria.
+
+### UEA — ingresso em Artes: Prova de Habilidade Específica, acesso 2027
+
+[Fonte oficial](https://uea.edu.br/index.php/2026/08/27/vestibular-e-sis-uea-aplica-prova-de-habilidade-especifica-neste-domingo-30-8/) — consulta: 07/11/2026.
+
+**Identificado:** Notícia de 27/08/2026 descreve a prova de habilidades para Dança, Música e Teatro na ESAT; diferencia Canto, Instrumento e Regência nos dois graus de Música.
+
+**Limite:** Referência ao Vestibular/SIS 2026, acesso 2027, com avaliação já realizada. Não indica inscrição aberta nem fixa regras para processos futuros; consulte o edital do período pretendido.
+
+### UEA — catálogo por unidade: seção da ESAT
+
+[Fonte oficial](https://cursos1.uea.edu.br/index.php?mode=unidade) — consulta: 07/11/2026.
+
+**Identificado:** A seção específica da ESAT distingue as formações artísticas e seus graus, cruzada com o endereço de Manaus no portal da unidade.
+
+**Limite:** O catálogo reúne capital e interior. Só a seção da ESAT foi usada para as Artes. A listagem não confirma oferta anual ou seleção vigente.
+
+### UEA — Teatro, bacharelado: apresentação do curso
+
+[Fonte oficial](https://cursos1.uea.edu.br/index.php?curso=90&dest=info) — consulta: 07/11/2026.
+
+**Identificado:** Identifica Teatro como bacharelado e apresenta formação e campos de atuação cênica. O vínculo com a ESAT em Manaus foi cruzado no portal da unidade.
+
+**Limite:** A página contém também informações históricas. Não foi usada para afirmar reconhecimento atualizado, regras profissionais ou ingresso aberto.
+
+### UEA — Sistemas de Informação: PPC da EST disponibilizado em 2026
+
+[Fonte oficial](https://est.uea.edu.br/wp-content/uploads/2026/04/PPC_SI_2025_Versao_Final.pdf) — consulta: 07/11/2026.
+
+**Identificado:** O projeto identifica o bacharelado em Sistemas de Informação e sua vinculação à Escola Superior de Tecnologia da UEA, em Manaus.
+
+**Limite:** O documento apresenta dados pedagógicos e versões históricas. Confirma curso, grau e unidade; não confirma inscrições, turmas ou condições atuais de ingresso.
+
+### UEA — Resolução 064/2023: criação do bacharelado em Produção Audiovisual
+
+[Fonte oficial](https://xfiles.uea.edu.br/data/legislacao/ato/p22122.pdf) — consulta: 07/11/2026.
+
+**Identificado:** Identifica bacharelado em Produção Audiovisual, de oferta especial, presencial modular, vinculado à ESAT em Manaus.
+
+**Limite:** Documento de criação de uma oferta especial. Não confirma abertura de novas turmas nem periodicidade de ingresso; não é equivalente à referência tecnológica do catálogo geral.
+
+### UEA — Resolução 044/2024: PPC do bacharelado em Produção Audiovisual
+
+[Fonte oficial](https://xfiles.uea.edu.br/data/legislacao/ato/p23300.pdf) — consulta: 07/11/2026.
+
+**Identificado:** Aprova o projeto do bacharelado de oferta especial na ESAT, em Manaus. O documento descreve uma oferta de entrada única.
+
+**Limite:** Referência histórica de oferta especial. Não apresentar como curso com entrada anual garantida. A continuidade e novos processos precisam de confirmação institucional.
+
+### UEA — Edital 006/2026: cursos e unidades na matrícula de acesso 2026
+
+[Fonte oficial](https://selecao2.uea.edu.br/xfiles/data/xselecao/36598.pdf) — consulta: 07/11/2026.
+
+**Identificado:** As instruções de matrícula relacionam cursos artísticos à ESAT e também registram o bacharelado em Produção Audiovisual nessa unidade.
+
+**Limite:** Matrícula de uma chamada específica de 2026, já passada. Não foram reproduzidos dados pessoais, vagas ou calendários. Não confirma ingresso disponível hoje.
+
+**Pendências:** ingresso futuro, habilitações, regras da prova de habilidades e modalidade de cada formação. A oferta especial de Produção Audiovisual não confirma entrada anual. Outros cursos da UEA continuam fora do recorte. Algumas páginas individuais retornaram erro 502/tempo excedido; essas falhas não foram tratadas como confirmação de oferta. Foram usadas as páginas e os documentos oficiais acima. A graduação em Engenharia de Software da UNINORTE continua pendente.

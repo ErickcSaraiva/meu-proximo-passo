@@ -44,7 +44,7 @@ export function filterProfessions(professions, query = '', area = 'todas', insti
     .map(offer => offer.id));
   return professions.filter(profession =>
     (area === 'todas' || profession.area === area) &&
-    normalizeText(profession.name).includes(normalized) &&
+    normalizeText([profession.name, ...(profession.searchTerms || [])].join(' ')).includes(normalized) &&
     (institution === 'todas' || profession.offers.some(id => matchingOffers.has(id)))
   );
 }
@@ -67,6 +67,7 @@ export function validateCatalog(data) {
     if (offer.historical && (!offer.referencePeriod || !offer.note)) throw new Error('Referência histórica sem período ou explicação.');
   }
   for (const profession of data.professions) {
+    if (profession.searchTerms !== undefined && (!Array.isArray(profession.searchTerms) || !profession.searchTerms.every(term => typeof term === 'string'))) throw new Error('Palavras-chave da profissão inválidas.');
     if (!areaIds.has(profession.area) || !profession.id || !profession.name || !profession.description || !profession.activities?.length || !profession.environments?.length || !profession.training || !profession.relatedCourses?.length || !profession.offers?.every(id => offerIds.has(id))) throw new Error('Profissão inválida ou relação inexistente.');
   }
   return data;

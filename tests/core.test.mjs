@@ -106,15 +106,15 @@ test('busca e área se combinam, filtros podem retornar zero e limpar retorna to
   assert.equal(filterProfessions(catalog.professions, 'técnico', 'natureza').length, 1);
   assert.equal(filterProfessions(catalog.professions, 'designer', 'saude').length, 0);
   assert.equal(filterProfessions(catalog.professions, 'zzzinexistente').length, 0);
-  assert.equal(filterProfessions(catalog.professions, '', 'todas').length, 18);
-  for (const area of AREAS) assert.equal(filterProfessions(catalog.professions, '', area.id).length, 3);
+  assert.equal(filterProfessions(catalog.professions, '', 'todas').length, 23);
+  for (const area of AREAS) assert.ok(filterProfessions(catalog.professions, '', area.id).length >= 3);
 });
 
 test('catálogo contém conteúdo completo, fontes e relações consistentes', () => {
   assert.equal(validateCatalog(catalog), catalog);
-  assert.equal(catalog.professions.length, 18);
-  assert.equal(catalog.offers.length, 76);
-  assert.equal(catalog.sources.length, 43);
+  assert.equal(catalog.professions.length, 23);
+  assert.equal(catalog.offers.length, 88);
+  assert.equal(catalog.sources.length, 51);
   assert.deepEqual(new Set(catalog.offers.filter(o => o.status === 'verificado').map(o => o.type)), new Set(['Técnico', 'Tecnólogo', 'Bacharelado', 'Licenciatura']));
   assert.ok(catalog.offers.every(o => o.city === 'Manaus'));
   assert.ok(catalog.sources.every(s => ['2026-11-04', '2026-11-05', '2026-11-07'].includes(s.consultedAt)));
@@ -145,7 +145,7 @@ test('instituição combina com busca e área; referências históricas continua
   assert.equal(filter('designer', 'saude', 'Fametro').length, 0);
   assert.equal(filter('', 'natureza', 'UNIP').length, 0);
   assert.equal(filter('', 'todas', 'Não cadastrada').length, 0);
-  assert.equal(filter('', 'todas', 'todas').length, 18);
+  assert.equal(filter('', 'todas', 'todas').length, 23);
   assert.equal(filter('biologo', 'natureza', 'Estácio')[0].id, 'biologia');
 });
 
@@ -155,6 +155,47 @@ test('oferta pendente não basta para associar profissão a uma instituição no
   assert.equal(filterProfessions(professions, '', 'todas', 'Instituição', offers).length, 0);
   offers[0].status = 'verificado';
   assert.equal(filterProfessions(professions, '', 'todas', 'Instituição', offers).length, 1);
+});
+
+test('UEA tem sete profissões relacionadas; Artes aparecem em comunicação e educação', () => {
+  const filter = (query = '', area = 'todas') => filterProfessions(catalog.professions, query, area, 'UEA', catalog.offers);
+  assert.deepEqual(new Set(filter().map(p => p.id)), new Set(['direito', 'desenvolvimento-software', 'musica', 'teatro', 'danca', 'ensino-artes', 'producao-audiovisual']));
+  assert.equal(filter('', 'comunicacao').length, 4);
+  assert.equal(filter('', 'sociedade').length, 2);
+  assert.equal(filter('', 'tecnologia')[0].id, 'desenvolvimento-software');
+  assert.equal(filter('', 'natureza').length, 0);
+});
+
+test('busca encontra música, teatro, dança e cinema pelos nomes e palavras-chave', () => {
+  const filter = (query, area = 'todas') => filterProfessions(catalog.professions, query, area, 'UEA', catalog.offers);
+  assert.deepEqual(new Set(filter('  MÚSICA ').map(p => p.id)), new Set(['musica', 'ensino-artes']));
+  assert.equal(filter('teatro', 'comunicacao')[0].id, 'teatro');
+  assert.equal(filter('danca', 'sociedade')[0].id, 'ensino-artes');
+  assert.equal(filter('cinema')[0].id, 'producao-audiovisual');
+  assert.equal(filter('instrumentista')[0].id, 'musica');
+  assert.equal(filter('teatro', 'natureza').length, 0);
+});
+
+test('formações artísticas distinguem bacharelado, licenciatura e oferta especial', () => {
+  const offersFor = id => {
+    const profession = catalog.professions.find(p => p.id === id);
+    return catalog.offers.filter(o => profession.offers.includes(o.id));
+  };
+  assert.equal(offersFor('ensino-artes').length, 5);
+  assert.ok(offersFor('ensino-artes').every(o => o.type === 'Licenciatura'));
+  for (const id of ['musica', 'teatro', 'danca']) assert.ok(offersFor(id).every(o => o.type === 'Bacharelado'));
+  const audiovisual = offersFor('producao-audiovisual')[0];
+  assert.equal(audiovisual.type, 'Bacharelado');
+  assert.equal(audiovisual.historical, true);
+  assert.ok(audiovisual.note.includes('entrada única'));
+});
+
+test('catálogo recusa palavras-chave inválidas que quebrariam a busca', () => {
+  for (const value of ['música', [null], [5]]) {
+    const broken = structuredClone(catalog);
+    broken.professions[0].searchTerms = value;
+    assert.throws(() => validateCatalog(broken));
+  }
 });
 
 test('referência histórica exige período e explicação para não sugerir oferta atual', () => {

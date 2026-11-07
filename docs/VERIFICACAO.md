@@ -1,5 +1,24 @@
 # Verificação da primeira versão
 
+## Artes e ampliação da UEA — 07/11/2026, versão 1.3.0
+
+**24 testes automáticos passaram**, sem falhas. O questionário mantém 18 perguntas e as mesmas regras de resultado, zero e empates. O catálogo tem 23 profissões, 88 referências de formação (87 identificadas em fontes oficiais e uma pendente) e 51 fontes. A UEA tem 13 referências ligadas a sete profissões, incluindo uma referência histórica de oferta especial.
+
+| Verificação | Resultado observado no navegador |
+| --- | --- |
+| Contagem após carregar o catálogo | Cabeçalho e limpeza mostram 23 profissões. A contagem vem do JSON. |
+| Filtro UEA | Sete profissões: Direito, desenvolvimento de software e cinco novos caminhos de Artes. |
+| UEA + Comunicação e Criatividade | Quatro resultados: Músico(a), Ator ou atriz, Artista da dança e Produtor(a) audiovisual. |
+| Busca `música` + UEA | Dois resultados: Músico(a) e Professor(a) de Artes. |
+| Detalhes de Professor(a) de Artes | Cinco ofertas de licenciatura da ESAT, com fontes e localização. |
+| Combinação sem resultados | Busca musical + Saúde exibiu a mensagem amigável; limpar restaurou as 23 profissões. |
+| Produção Audiovisual | Bacharelado com aviso de referência histórica, oferta especial, entrada única e novas turmas a confirmar. |
+| Fontes | Página com 51 fontes; as oito novas consultas usam 07/11/2026 e as anteriores mantêm suas datas. |
+| Tela pequena e teclado | Em quadro de 320 pixels: UEA + Comunicação + `teatro` mostrou um resultado; Enter abriu Ator ou atriz. |
+| Tema escuro no quadro pequeno | Enter no botão de tema mudou para escuro; o detalhe de Teatro mostrou bacharelado. Largura útil e largura do conteúdo: 305 pixels, sem rolagem horizontal. |
+
+Esta rodada manual se concentrou nas mudanças do catálogo. Os cenários do questionário foram cobertos pelos testes de regressão. Quadros responsivos não equivalem a aparelhos físicos ou certificação de acessibilidade. Arquivos de QA e configuração interna da prévia não integram a entrega. A atualização ainda deve ser aplicada no computador e enviada ao GitHub para publicação na Vercel.
+
 ## Ampliação de instituições — 07/11/2026, versão 1.2.0
 
 **20 testes automáticos passaram**, incluindo as regressões do questionário. O catálogo tem 18 profissões, 76 referências de formação (75 identificadas em fontes oficiais e uma pendente), nove instituições e 43 fontes. As verificações manuais desta atualização se concentraram no catálogo.
