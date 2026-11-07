@@ -2,7 +2,7 @@
 
 Plataforma educativa de exploração profissional para estudantes do ensino médio em Manaus. Primeira versão funcional em português do Brasil, feita com HTML, CSS e JavaScript, sem backend, banco de dados, cadastro, chaves de API ou dependências de execução.
 
-Inclui 18 perguntas, revisão das respostas, resultado transparente com empates, 23 profissões, 88 referências de formação (87 identificadas em fontes oficiais e uma pendente) e 51 fontes. O recorte reúne UFAM, IFAM, UEA, UNINORTE, Estácio, Fametro, UNIP, Universidade Nilton Lins e Faculdade Santa Teresa. Última ampliação em **07/11/2026**; as fontes anteriores mantêm as consultas de 04 e 05/11/2026. Não é um catálogo completo de Manaus, nem uma relação de inscrições abertas.
+Inclui 18 perguntas, revisão das respostas, resultado transparente com empates, 24 profissões, 95 referências de formação (94 identificadas em fontes oficiais e uma pendente) e 57 fontes. O recorte reúne UFAM, IFAM, UEA, UNINORTE, Estácio, Fametro, UNIP, Universidade Nilton Lins e Faculdade Santa Teresa. Última ampliação em **07/11/2026**; as fontes anteriores mantêm as consultas de 04 e 05/11/2026. Não é um catálogo completo de Manaus, nem uma relação de inscrições abertas.
 
 > Este questionário é uma atividade educativa de exploração de interesses. Não é um teste psicológico ou diagnóstico vocacional e não define qual profissão você deve seguir.
 
@@ -138,7 +138,7 @@ Não inclua vagas, preços, salários, notas de corte ou promessas de emprego se
 Com Node.js 18 ou mais recente, sem instalar pacotes:
 
 ```bash
-node --test tests/core.test.mjs
+node --test tests/*.test.mjs
 ```
 
 Ou use `npm test`. Os testes verificam cálculo, validação, distribuição das perguntas, empates, resultado zero, alterações, busca com acentos, combinação de filtros, integridade das fontes e compatibilidade dos caminhos relativos. O filtro de instituição se combina com busca e área; considera referências identificadas, inclusive as históricas sinalizadas, e não considera uma oferta pendente como confirmada.
@@ -171,3 +171,11 @@ Foram acrescentadas cinco profissões: Músico(a), Ator ou atriz, Artista da dan
 Os bacharelados e as licenciaturas da ESAT aparecem como caminhos distintos. O bacharelado em Produção Audiovisual tem aviso de referência histórica de oferta especial, com ingresso futuro a confirmar. A notícia sobre Prova de Habilidade Específica se refere ao processo 2026/acesso 2027; confira sempre o edital do período pretendido. As 18 perguntas e o cálculo continuam os mesmos.
 
 Veja `docs/ATUALIZACAO-ARTES-UEA.md` para entender os vínculos, as fontes e a aplicação do pacote.
+
+## Correção da busca — versão 1.3.1
+
+A busca agora combina nomes de profissão, sinônimos, nomes de cursos e siglas cadastradas. `TI` encontra apenas desenvolvimento de software e Informática; `Enfermagem` encontra Enfermeiro(a); `Odontologia` e `Dentista` encontram a nova profissão de Dentista. Siglas curtas exigem palavra inteira, impedindo coincidências com trechos de `artista` ou `logística`. As palavras da consulta podem estar em outra ordem.
+
+Com instituição selecionada, os nomes e as siglas dos cursos vêm apenas das referências identificadas daquela instituição. Assim, ADS + UEA não faz o curso de outra instituição aparecer. Os sinônimos gerais da profissão continuam pesquisáveis. Odontologia ganhou seis referências locais; Enfermagem ganhou uma referência da UEA. O recorte continua parcial e não confirma inscrições abertas.
+
+Use `npm test` ou `node --test tests/*.test.mjs` para executar todos os testes. O arquivo `tests/search.test.mjs` cobre os casos das imagens enviadas, as combinações de filtros e os limites da busca. O guia de aplicação e a explicação do algoritmo estão em `docs/CORRECAO-BUSCA.md`.

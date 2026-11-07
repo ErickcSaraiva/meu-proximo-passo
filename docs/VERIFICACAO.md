@@ -1,5 +1,24 @@
 # Verificação da primeira versão
 
+## Correção da busca — 07/11/2026, versão 1.3.1
+
+**38 testes automáticos passaram**, sem falhas: 24 de integridade e regressão do questionário e 14 voltados à busca. O catálogo passa a 24 profissões, 95 referências de formação (94 identificadas em fontes oficiais e uma pendente) e 57 fontes. As 18 perguntas e o cálculo do questionário continuam iguais.
+
+| Verificação | Resultado observado no navegador |
+| --- | --- |
+| `TI` | Somente Desenvolvedor(a) de software e Técnico(a) em Informática; não aparecem as coincidências indevidas das fotos. |
+| `Enfermagem` | Encontra Enfermeiro(a), pelo nome do curso relacionado. |
+| `Odontologia` e `Dentista` | As duas consultas encontram Dentista. |
+| `ADS` + UEA | Zero resultados neste recorte. A busca não usa cursos de outra instituição para satisfazer a consulta. |
+| Quadro de 320 pixels | `TI` mostrou os dois resultados. Largura útil e largura do conteúdo do catálogo: 305 pixels. |
+| Quadro de 689 pixels | `Enfermagem` + Saúde e Cuidado + UEA mostrou Enfermeiro(a), com largura útil e conteúdo de 674 pixels. |
+| Detalhes de Dentista | Seis cartões de bacharelado: UFAM, UEA, Fametro, Universidade Nilton Lins, Faculdade Santa Teresa e UNINORTE. Fametro e Santa Teresa mantêm o aviso de referência histórica. |
+| Limpar filtros | Restaurou as 24 profissões, o campo vazio e todas as áreas e instituições. |
+| Teclado | Tab da busca levou ao seletor de área com contorno de foco visível. Enter abriu os detalhes de Desenvolvimento de software e Dentista. |
+| Tema no quadro pequeno | Enter alternou para escuro, com `aria-pressed=true`; o detalhe de Desenvolvimento de software manteve os textos dentro da largura disponível. Houve diferença de arredondamento de um pixel na largura total do documento, sem elementos do conteúdo ultrapassando a tela. |
+
+A captura da busca `TI` em tema escuro registra os dois cartões corretos. A conferência responsiva usou quadros no navegador, não aparelhos físicos; não equivale a uma certificação de acessibilidade. Os cenários de zero, empates e revisão do questionário foram cobertos pelos testes de regressão. Arquivos temporários de QA e configuração da prévia não integram a atualização. A publicação depende de aplicar o pacote e enviar o commit ao GitHub.
+
 ## Artes e ampliação da UEA — 07/11/2026, versão 1.3.0
 
 **24 testes automáticos passaram**, sem falhas. O questionário mantém 18 perguntas e as mesmas regras de resultado, zero e empates. O catálogo tem 23 profissões, 88 referências de formação (87 identificadas em fontes oficiais e uma pendente) e 51 fontes. A UEA tem 13 referências ligadas a sete profissões, incluindo uma referência histórica de oferta especial.

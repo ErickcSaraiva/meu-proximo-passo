@@ -37,16 +37,37 @@ export function getInstitutions(offers) {
     .sort((a, b) => a.localeCompare(b, 'pt-BR'));
 }
 
+// Trabalhamos com palavras: "ti" não deve coincidir com "artista".
+// Pontos em siglas são opcionais: T.I. e TI representam a mesma consulta.
+function searchWords(value) {
+  const text = normalizeText(value).replace(/\b(?:[a-z]\.\s*)+[a-z]\.?(?![a-z])/g, term => term.replace(/[.\s]/g, ''));
+  return text.match(/[a-z0-9]+/g) || [];
+}
+const SEARCH_CONNECTORS = new Set(['a', 'as', 'o', 'os', 'de', 'da', 'das', 'do', 'dos', 'e', 'em', 'para', 'por', 'ou', 'com']);
+
 export function filterProfessions(professions, query = '', area = 'todas', institution = 'todas', offers = []) {
-  const normalized = normalizeText(query);
-  const matchingOffers = new Set(offers
-    .filter(offer => offer.institution === institution && offer.status === 'verificado')
-    .map(offer => offer.id));
-  return professions.filter(profession =>
-    (area === 'todas' || profession.area === area) &&
-    normalizeText([profession.name, ...(profession.searchTerms || [])].join(' ')).includes(normalized) &&
-    (institution === 'todas' || profession.offers.some(id => matchingOffers.has(id)))
-  );
+  const terms = searchWords(query).filter(term => !SEARCH_CONNECTORS.has(term));
+  if (normalizeText(query) && !terms.length) return [];
+  const offersById = new Map(offers.map(offer => [offer.id, offer]));
+  // Siglas curtas declaradas no catálogo exigem uma palavra inteira.
+  const shortAliases = new Set([...professions, ...offers].flatMap(item => item.searchTerms || [])
+    .map(alias => searchWords(alias)).filter(words => words.length === 1 && words[0].length <= 2).flat());
+  return professions.filter(profession => {
+    if (area !== 'todas' && profession.area !== area) return false;
+    const linkedOffers = (profession.offers || []).map(id => offersById.get(id)).filter(Boolean);
+    const scopedOffers = institution === 'todas' ? linkedOffers : linkedOffers.filter(offer => offer.institution === institution && offer.status === 'verificado');
+    if (institution !== 'todas' && !scopedOffers.length) return false;
+    if (!terms.length) return true;
+    const feminineName = profession.name.replace(/o\(a\)/gi, 'a').replace(/\(a\)/gi, 'a');
+    const fields = [
+      profession.name.replace(/\([ao]\)/gi, ''), feminineName, ...(profession.searchTerms || []),
+      // Com instituição selecionada, os nomes de curso vêm apenas de suas ofertas.
+      ...(institution === 'todas' ? (profession.relatedCourses || []).map(course => course.split('—')[0]) : []),
+      ...scopedOffers.flatMap(offer => [offer.course, ...(offer.searchTerms || [])])
+    ];
+    const words = fields.filter(Boolean).flatMap(searchWords);
+    return terms.every(term => words.some(word => shortAliases.has(term) ? word === term : word.startsWith(term)));
+  });
 }
 
 export function validateCatalog(data) {
@@ -62,6 +83,7 @@ export function validateCatalog(data) {
     if (!source.id || !source.title || !source.consultedAt || !/^https:\/\//.test(source.url)) throw new Error('Fonte inválida.');
   }
   for (const offer of data.offers) {
+    if (offer.searchTerms !== undefined && (!Array.isArray(offer.searchTerms) || !offer.searchTerms.every(term => typeof term === 'string'))) throw new Error('Palavras-chave do curso inválidas.');
     if (!offer.id || !offer.course || !offer.type || !offer.institution || !offer.campus || offer.city !== 'Manaus' || !offer.sources?.length || !offer.sources.every(id => sourceIds.has(id))) throw new Error('Oferta sem confirmação de curso, fonte ou localização em Manaus.');
     if (!['verificado', 'pendente'].includes(offer.status)) throw new Error('Status de oferta inválido.');
     if (offer.historical && (!offer.referencePeriod || !offer.note)) throw new Error('Referência histórica sem período ou explicação.');

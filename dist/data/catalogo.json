@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.3.1",
   "updatedAt": "2026-11-07",
   "scope": "Catálogo educativo e não exaustivo. Curso e localização identificados em fontes oficiais; não representa edital ou inscrição aberta.",
   "sources": [
@@ -461,6 +461,60 @@
       "confirms": "As instruções de matrícula relacionam cursos artísticos à ESAT e também registram o bacharelado em Produção Audiovisual nessa unidade.",
       "limitation": "Matrícula de uma chamada específica de 2026, já passada. Não foram reproduzidos dados pessoais, vagas ou calendários. Não confirma ingresso disponível hoje.",
       "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "ufam-odontologia",
+      "institution": "UFAM",
+      "title": "UFAM — Odontologia: apresentação e titulação",
+      "url": "https://fao.ufam.edu.br/graduacao/sobre-o-curso.html",
+      "confirms": "A Faculdade de Odontologia identifica o bacharelado em Odontologia e a formação de cirurgião-dentista. A localização foi cruzada com a tabela oficial do Campus Manaus já cadastrada.",
+      "limitation": "Página institucional atualizada em 2024; não é edital de ingresso. Confirme unidade de aulas, modalidade e condições atuais de seleção.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "uea-esa-cursos",
+      "institution": "UEA",
+      "title": "UEA — catálogo por unidade: Enfermagem e Odontologia na ESA",
+      "url": "https://cursos1.uea.edu.br/index.php?mode=unidade",
+      "confirms": "A seção Escola Superior de Ciências da Saúde relaciona Enfermagem e Odontologia como bacharelados. Os nomes foram cruzados com o endereço da ESA em Manaus e o edital de matrícula de 2026.",
+      "limitation": "A página também inclui municípios do interior. Apenas a seção da ESA foi usada para esses cursos. A listagem não confirma seleção aberta.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "uea-esa-localizacao",
+      "institution": "UEA",
+      "title": "UEA — ESA: endereço da unidade em Manaus",
+      "url": "https://uea.edu.br/index.php/escola-superior-de-ciencias-da-saude/",
+      "confirms": "O endereço específico da ESA é Avenida Carvalho Leal, 1777, Cachoeirinha, Manaus. Cruzado com o catálogo por unidade e com o edital de matrícula de acesso 2026.",
+      "limitation": "A página da unidade, sozinha, não comprova todos os cursos de graduação: foram usadas as referências específicas de curso e grau. Não foi usado o endereço geral da reitoria como campus.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "fametro-odontologia",
+      "institution": "Fametro",
+      "title": "Fametro — Odontologia: página institucional do bacharelado",
+      "url": "https://presencial.fametro.edu.br/cursos/odontologia/",
+      "confirms": "A página identifica Odontologia como bacharelado. A referência da Sede/Chapada em Manaus foi cruzada na seção Fametro do PBU 2026, publicado em 2025.",
+      "limitation": "O vínculo de unidade usado no cartão é histórico. Confirme a oferta atual, modalidade e unidade efetiva das aulas. Não são reproduzidos valores, turnos ou vagas.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "santateresa-odontologia",
+      "institution": "Faculdade Santa Teresa",
+      "title": "Santa Teresa — Odontologia: página institucional do curso",
+      "url": "https://faculdadesantateresa.edu.br/curso/odontologia/",
+      "confirms": "Página institucional de Odontologia, cruzada com bacharelado e unidade Vieiralves na seção Santa Teresa do PBU 2026 em Manaus.",
+      "limitation": "O portal reúne outras cidades; a referência local usada é a seção específica de Manaus do documento histórico. Confirme oferta e ingresso atuais.",
+      "consultedAt": "2026-11-07"
+    },
+    {
+      "id": "pbu-2027-odontologia-uninorte",
+      "institution": "Prefeitura de Manaus",
+      "title": "PBU 2027 — Odontologia, UNINORTE/Centro, em Manaus",
+      "url": "https://pbu.universidadeniltonlins.com.br/api/edital-pbu-2027",
+      "consultedAt": "2026-11-07",
+      "confirms": "A seção UNINORTE/Centro do edital municipal publicado em 10/09/2026 relaciona Odontologia como bacharelado. O edital se refere a instituições estabelecidas em Manaus.",
+      "limitation": "Documento de processo específico para 2027; não confirma inscrições abertas, turma ou unidade de aulas atuais. O PDF reúne várias instituições e não foi atribuído integralmente à instituição que o hospeda. Não são reproduzidos valores ou vagas."
     }
   ],
   "offers": [
@@ -475,6 +529,9 @@
       "sources": [
         "ufam-manaus",
         "ufam-graduacao"
+      ],
+      "searchTerms": [
+        "CC"
       ]
     },
     {
@@ -489,7 +546,10 @@
         "ifam-tecnologos",
         "ifam-ads"
       ],
-      "note": "Há variação de nome entre as páginas oficiais. Confira a denominação no edital atual."
+      "note": "Há variação de nome entre as páginas oficiais. Confira a denominação no edital atual.",
+      "searchTerms": [
+        "ADS"
+      ]
     },
     {
       "id": "ufam-civil",
@@ -871,7 +931,10 @@
         "uninorte-computacao-djalma-2025",
         "uninorte-unidades"
       ],
-      "note": "Curso e vínculo com Manaus identificados em fontes oficiais, incluindo registros históricos de 2022 (Centro) e 2025.1 (Djalma Batista). A unidade de aulas, modalidade, turmas e ingresso atuais precisam ser confirmados com a UNINORTE. Não há confirmação de inscrições abertas."
+      "note": "Curso e vínculo com Manaus identificados em fontes oficiais, incluindo registros históricos de 2022 (Centro) e 2025.1 (Djalma Batista). A unidade de aulas, modalidade, turmas e ingresso atuais precisam ser confirmados com a UNINORTE. Não há confirmação de inscrições abertas.",
+      "searchTerms": [
+        "CC"
+      ]
     },
     {
       "id": "uninorte-ads",
@@ -898,7 +961,11 @@
         "uninorte-listagem-graduacao",
         "uninorte-es-especializacao"
       ],
-      "note": "Graduação sugerida para inclusão pelo estudante; curso, grau, modalidade e unidade em Manaus ainda precisam de confirmação em fonte oficial específica. Foi encontrada uma especialização em Engenharia de Software, que é pós-graduação e não equivale à graduação. Este cartão não confirma uma oferta disponível."
+      "note": "Graduação sugerida para inclusão pelo estudante; curso, grau, modalidade e unidade em Manaus ainda precisam de confirmação em fonte oficial específica. Foi encontrada uma especialização em Engenharia de Software, que é pós-graduação e não equivale à graduação. Este cartão não confirma uma oferta disponível.",
+      "searchTerms": [
+        "ES",
+        "EngSoft"
+      ]
     },
     {
       "id": "estacio-computacao",
@@ -915,7 +982,10 @@
       ],
       "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
       "historical": true,
-      "referencePeriod": "PBU 2026 · edital de 2025"
+      "referencePeriod": "PBU 2026 · edital de 2025",
+      "searchTerms": [
+        "CC"
+      ]
     },
     {
       "id": "estacio-civil",
@@ -1091,7 +1161,10 @@
       ],
       "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
       "historical": true,
-      "referencePeriod": "PBU 2026 · edital de 2025"
+      "referencePeriod": "PBU 2026 · edital de 2025",
+      "searchTerms": [
+        "ADS"
+      ]
     },
     {
       "id": "fametro-sistemas",
@@ -1107,7 +1180,10 @@
       ],
       "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
       "historical": true,
-      "referencePeriod": "PBU 2026 · edital de 2025"
+      "referencePeriod": "PBU 2026 · edital de 2025",
+      "searchTerms": [
+        "SI"
+      ]
     },
     {
       "id": "fametro-civil",
@@ -1302,7 +1378,10 @@
       "sources": [
         "unip-manual-2027-tradicionais"
       ],
-      "note": "Curso e unidade identificados nas fontes oficiais indicadas. Confirme oferta, modalidade, local de aulas e ingresso para o período desejado."
+      "note": "Curso e unidade identificados nas fontes oficiais indicadas. Confirme oferta, modalidade, local de aulas e ingresso para o período desejado.",
+      "searchTerms": [
+        "CC"
+      ]
     },
     {
       "id": "unip-ads",
@@ -1315,7 +1394,10 @@
       "sources": [
         "unip-manual-2027-tecnologos"
       ],
-      "note": "Curso e unidade identificados nas fontes oficiais indicadas. Confirme oferta, modalidade, local de aulas e ingresso para o período desejado."
+      "note": "Curso e unidade identificados nas fontes oficiais indicadas. Confirme oferta, modalidade, local de aulas e ingresso para o período desejado.",
+      "searchTerms": [
+        "ADS"
+      ]
     },
     {
       "id": "unip-administracao",
@@ -1745,7 +1827,114 @@
       "sources": [
         "uea-sistemas-ppc-2026"
       ],
-      "note": "Curso e vínculo com a EST em Manaus identificados no projeto pedagógico. Confirme edital de ingresso, modalidade e unidade efetiva das aulas para o período pretendido."
+      "note": "Curso e vínculo com a EST em Manaus identificados no projeto pedagógico. Confirme edital de ingresso, modalidade e unidade efetiva das aulas para o período pretendido.",
+      "searchTerms": [
+        "SI"
+      ]
+    },
+    {
+      "id": "ufam-odontologia",
+      "course": "Odontologia",
+      "type": "Bacharelado",
+      "institution": "UFAM",
+      "campus": "Faculdade de Odontologia — Manaus",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "ufam-odontologia",
+        "ufam-manaus"
+      ],
+      "note": "Curso, grau e vínculo local identificados nas fontes oficiais. Confirme oferta atual, modalidade, local efetivo das aulas e edital de ingresso."
+    },
+    {
+      "id": "uea-odontologia",
+      "course": "Odontologia",
+      "type": "Bacharelado",
+      "institution": "UEA",
+      "campus": "Escola Superior de Ciências da Saúde — ESA, Cachoeirinha",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esa-cursos",
+        "uea-esa-localizacao",
+        "uea-matricula-2026"
+      ],
+      "note": "Curso, grau e vínculo local identificados nas fontes oficiais. Confirme oferta atual, modalidade, local efetivo das aulas e edital de ingresso."
+    },
+    {
+      "id": "fametro-odontologia",
+      "course": "Odontologia",
+      "type": "Bacharelado",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "fametro-odontologia",
+        "pbu-manaus-2026"
+      ],
+      "note": "Referência histórica de curso e unidade no PBU 2026, publicado em 2025. Confirme oferta atual, modalidade, unidade de aulas e ingresso diretamente com a instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "niltonlins-odontologia",
+      "course": "Odontologia",
+      "type": "Bacharelado",
+      "institution": "Universidade Nilton Lins",
+      "campus": "Campus Parque das Laranjeiras",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "niltonlins-laranjeiras",
+        "niltonlins-pbu-2027",
+        "pbu-manaus-2027"
+      ],
+      "note": "Curso, grau e vínculo local identificados nas fontes oficiais. Confirme oferta atual, modalidade, local efetivo das aulas e edital de ingresso."
+    },
+    {
+      "id": "santateresa-odontologia",
+      "course": "Odontologia",
+      "type": "Bacharelado",
+      "institution": "Faculdade Santa Teresa",
+      "campus": "Vieiralves (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "santateresa-odontologia",
+        "pbu-manaus-2026"
+      ],
+      "note": "Referência histórica de curso e unidade no PBU 2026, publicado em 2025. Confirme oferta atual, modalidade, unidade de aulas e ingresso diretamente com a instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "uea-enfermagem",
+      "course": "Enfermagem",
+      "type": "Bacharelado",
+      "institution": "UEA",
+      "campus": "Escola Superior de Ciências da Saúde — ESA, Cachoeirinha",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "uea-esa-cursos",
+        "uea-esa-localizacao",
+        "uea-matricula-2026"
+      ],
+      "note": "Bacharelado relacionado à ESA no catálogo institucional, cruzado com a unidade em Manaus e o edital de matrícula de 2026. Confirme oferta e ingresso no período desejado."
+    },
+    {
+      "id": "uninorte-odontologia",
+      "course": "Odontologia",
+      "type": "Bacharelado",
+      "institution": "UNINORTE",
+      "campus": "Centro — referência PBU 2027",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-2027-odontologia-uninorte"
+      ],
+      "note": "Curso, grau e unidade identificados na seção UNINORTE/Centro do edital PBU 2027, publicado em 2026. Confirme oferta, modalidade, local efetivo das aulas e ingresso atuais."
     }
   ],
   "professions": [
@@ -1784,7 +1973,16 @@
         "unip-ads",
         "uea-sistemas-informacao"
       ],
-      "tryIt": "Desenhe em papel as telas de um aplicativo que ajudaria sua escola."
+      "tryIt": "Desenhe em papel as telas de um aplicativo que ajudaria sua escola.",
+      "searchTerms": [
+        "TI",
+        "tecnologia da informação",
+        "informática",
+        "computação",
+        "programação",
+        "programador",
+        "programadora"
+      ]
     },
     {
       "id": "engenharia-civil",
@@ -1836,7 +2034,14 @@
       "offers": [
         "ifam-informatica"
       ],
-      "tryIt": "Crie um pequeno guia para ajudar alguém a organizar arquivos no computador."
+      "tryIt": "Crie um pequeno guia para ajudar alguém a organizar arquivos no computador.",
+      "searchTerms": [
+        "TI",
+        "tecnologia da informação",
+        "suporte técnico",
+        "computadores",
+        "redes"
+      ]
     },
     {
       "id": "enfermagem",
@@ -1862,7 +2067,8 @@
         "uninorte-enfermagem",
         "estacio-enfermagem",
         "fametro-enfermagem",
-        "niltonlins-enfermagem"
+        "niltonlins-enfermagem",
+        "uea-enfermagem"
       ],
       "tryIt": "Pesquise uma campanha pública de prevenção e identifique como ela orienta a população."
     },
@@ -1947,7 +2153,11 @@
         "uninorte-design",
         "fametro-design"
       ],
-      "tryIt": "Redesenhe um cartaz da escola para deixá-lo mais fácil de ler."
+      "tryIt": "Redesenhe um cartaz da escola para deixá-lo mais fácil de ler.",
+      "searchTerms": [
+        "design",
+        "designer"
+      ]
     },
     {
       "id": "jornalismo",
@@ -1973,7 +2183,11 @@
         "fametro-jornalismo",
         "niltonlins-jornalismo"
       ],
-      "tryIt": "Escolha uma notícia sobre sua cidade e compare como duas fontes apresentam os fatos."
+      "tryIt": "Escolha uma notícia sobre sua cidade e compare como duas fontes apresentam os fatos.",
+      "searchTerms": [
+        "jornalismo",
+        "jornalista"
+      ]
     },
     {
       "id": "producao-publicitaria",
@@ -1997,7 +2211,12 @@
       "offers": [
         "ifam-publicidade"
       ],
-      "tryIt": "Crie o roteiro de uma campanha para incentivar o cuidado com os espaços da escola."
+      "tryIt": "Crie o roteiro de uma campanha para incentivar o cuidado com os espaços da escola.",
+      "searchTerms": [
+        "publicidade",
+        "publicitário",
+        "publicitária"
+      ]
     },
     {
       "id": "administracao",
@@ -2027,7 +2246,12 @@
         "niltonlins-administracao",
         "santateresa-administracao"
       ],
-      "tryIt": "Planeje um evento escolar com tarefas, responsáveis e recursos necessários."
+      "tryIt": "Planeje um evento escolar com tarefas, responsáveis e recursos necessários.",
+      "searchTerms": [
+        "gestão",
+        "administrador",
+        "administradora"
+      ]
     },
     {
       "id": "contabilidade",
@@ -2057,7 +2281,12 @@
         "niltonlins-contabilidade",
         "santateresa-contabilidade"
       ],
-      "tryIt": "Monte uma tabela fictícia de entradas e gastos de uma feira escolar."
+      "tryIt": "Monte uma tabela fictícia de entradas e gastos de uma feira escolar.",
+      "searchTerms": [
+        "contabilidade",
+        "contador",
+        "contadora"
+      ]
     },
     {
       "id": "logistica",
@@ -2113,7 +2342,12 @@
         "unip-pedagogia",
         "niltonlins-pedagogia"
       ],
-      "tryIt": "Prepare uma explicação de cinco minutos sobre algo que você sabe e ensine a um colega."
+      "tryIt": "Prepare uma explicação de cinco minutos sobre algo que você sabe e ensine a um colega.",
+      "searchTerms": [
+        "pedagogia",
+        "pedagogo",
+        "pedagoga"
+      ]
     },
     {
       "id": "servico-social",
@@ -2139,7 +2373,11 @@
         "fametro-servico-social",
         "niltonlins-servico-social"
       ],
-      "tryIt": "Pesquise quais serviços públicos de apoio à comunidade existem no seu bairro."
+      "tryIt": "Pesquise quais serviços públicos de apoio à comunidade existem no seu bairro.",
+      "searchTerms": [
+        "serviço social",
+        "assistência social"
+      ]
     },
     {
       "id": "direito",
@@ -2169,7 +2407,12 @@
         "niltonlins-direito",
         "santateresa-direito"
       ],
-      "tryIt": "Escolha um direito previsto no Estatuto da Criança e do Adolescente e converse sobre sua aplicação na escola."
+      "tryIt": "Escolha um direito previsto no Estatuto da Criança e do Adolescente e converse sobre sua aplicação na escola.",
+      "searchTerms": [
+        "advocacia",
+        "advogado",
+        "advogada"
+      ]
     },
     {
       "id": "engenharia-florestal",
@@ -2220,7 +2463,12 @@
         "ufam-biologia-licenciatura",
         "estacio-biologia"
       ],
-      "tryIt": "Observe a biodiversidade de um espaço próximo sem coletar nem manipular animais ou plantas."
+      "tryIt": "Observe a biodiversidade de um espaço próximo sem coletar nem manipular animais ou plantas.",
+      "searchTerms": [
+        "biologia",
+        "biólogo",
+        "bióloga"
+      ]
     },
     {
       "id": "tecnico-meio-ambiente",
@@ -2417,6 +2665,43 @@
         "produção de vídeo"
       ],
       "tryIt": "Crie um roteiro de três cenas para explicar uma ideia da escola. Planeje o enquadramento e o som; se gravar pessoas, combine antes a participação e o uso das imagens."
+    },
+    {
+      "id": "odontologia",
+      "name": "Dentista",
+      "area": "saude",
+      "description": "Cuida da saúde da boca, dos dentes e das gengivas, com prevenção e atendimento odontológico.",
+      "activities": [
+        "Avaliar a saúde bucal e planejar atendimentos",
+        "Orientar ações educativas e de prevenção em saúde bucal",
+        "Realizar cuidados odontológicos e trabalhar com outras pessoas da equipe de saúde"
+      ],
+      "environments": [
+        "Consultórios, clínicas e serviços de saúde",
+        "Unidades públicas e projetos de atenção à saúde bucal",
+        "Instituições de ensino e pesquisa, conforme a formação"
+      ],
+      "training": "O bacharelado em Odontologia é a formação superior específica relacionada à profissão de cirurgião-dentista. Confira as exigências atuais para o exercício profissional e as condições de ingresso no curso. Cursos técnicos de saúde bucal têm objetivos e atribuições próprios; não equivalem ao bacharelado.",
+      "relatedCourses": [
+        "Odontologia — bacharelado"
+      ],
+      "offers": [
+        "ufam-odontologia",
+        "uea-odontologia",
+        "fametro-odontologia",
+        "niltonlins-odontologia",
+        "santateresa-odontologia",
+        "uninorte-odontologia"
+      ],
+      "searchTerms": [
+        "odontologia",
+        "cirurgião-dentista",
+        "cirurgiã-dentista",
+        "odontológico",
+        "odontológica",
+        "saúde bucal"
+      ],
+      "tryIt": "Conheça uma campanha educativa de saúde bucal e pense em uma forma de explicar a proposta para colegas. Se possível, converse com um profissional sobre sua rotina de estudos e trabalho."
     }
   ],
   "pending": [
@@ -2455,6 +2740,10 @@
     {
       "title": "UEA — Produção Audiovisual, oferta especial",
       "detail": "As resoluções 064/2023 e 044/2024 identificam um bacharelado de oferta especial na ESAT em Manaus; o PPC de 2024 descreve entrada única. O portal geral relaciona também uma formação tecnológica. Não tratamos esses registros como equivalentes nem confirmamos novas turmas. O cartão do bacharelado está sinalizado como referência histórica."
+    },
+    {
+      "title": "Odontologia: oferta e unidade para o período de ingresso",
+      "detail": "Foram incluídas referências em Manaus da UFAM, UEA, Fametro, Universidade Nilton Lins, Faculdade Santa Teresa e UNINORTE. Fametro/Sede e Santa Teresa/Vieiralves usam registros históricos do PBU 2026, sinalizados nos cartões. A presença de uma referência não confirma inscrição aberta, modalidade ou formação de turma. Outras instituições e cursos continuam fora deste recorte."
     }
   ]
 }

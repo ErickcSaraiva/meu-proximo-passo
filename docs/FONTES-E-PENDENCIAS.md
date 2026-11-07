@@ -1,6 +1,6 @@
 # Fontes oficiais e informações pendentes
 
-Consultas em **04/11/2026, 05/11/2026 e 07/11/2026**. Última ampliação: versão 1.3.0. O escopo da verificação é curso, grau e localização na fonte. Não confirma inscrições ou turmas abertas. Datas de consulta não são datas de publicação.
+Consultas em **04/11/2026, 05/11/2026 e 07/11/2026**. Última atualização: versão 1.3.1. O escopo da verificação é curso, grau e localização na fonte. Não confirma inscrições ou turmas abertas. Datas de consulta não são datas de publicação.
 
 ## Fontes utilizadas
 
@@ -481,3 +481,57 @@ Os vínculos da ESAT usam a seção e o endereço da unidade em Manaus. As licen
 **Limite:** Matrícula de uma chamada específica de 2026, já passada. Não foram reproduzidos dados pessoais, vagas ou calendários. Não confirma ingresso disponível hoje.
 
 **Pendências:** ingresso futuro, habilitações, regras da prova de habilidades e modalidade de cada formação. A oferta especial de Produção Audiovisual não confirma entrada anual. Outros cursos da UEA continuam fora do recorte. Algumas páginas individuais retornaram erro 502/tempo excedido; essas falhas não foram tratadas como confirmação de oferta. Foram usadas as páginas e os documentos oficiais acima. A graduação em Engenharia de Software da UNINORTE continua pendente.
+
+## Correção da busca e Odontologia — 07/11/2026
+
+Odontologia foi relacionada à nova profissão Dentista. As referências de Fametro/Sede e Santa Teresa/Vieiralves vêm do PBU 2026 de 2025 e mantêm aviso histórico. Nilton Lins/Parque das Laranjeiras e UNINORTE/Centro foram cruzadas com suas próprias seções no PBU 2027, publicado em 2026. A UEA ganhou também Enfermagem na ESA. As fontes anteriores mantêm seus registros e datas.
+
+### UFAM — Odontologia: apresentação e titulação
+
+[Fonte oficial](https://fao.ufam.edu.br/graduacao/sobre-o-curso.html) — consulta: 07/11/2026.
+
+**Identificado:** A Faculdade de Odontologia identifica o bacharelado em Odontologia e a formação de cirurgião-dentista. A localização foi cruzada com a tabela oficial do Campus Manaus já cadastrada.
+
+**Limite:** Página institucional atualizada em 2024; não é edital de ingresso. Confirme unidade de aulas, modalidade e condições atuais de seleção.
+
+### UEA — catálogo por unidade: Enfermagem e Odontologia na ESA
+
+[Fonte oficial](https://cursos1.uea.edu.br/index.php?mode=unidade) — consulta: 07/11/2026.
+
+**Identificado:** A seção Escola Superior de Ciências da Saúde relaciona Enfermagem e Odontologia como bacharelados. Os nomes foram cruzados com o endereço da ESA em Manaus e o edital de matrícula de 2026.
+
+**Limite:** A página também inclui municípios do interior. Apenas a seção da ESA foi usada para esses cursos. A listagem não confirma seleção aberta.
+
+### UEA — ESA: endereço da unidade em Manaus
+
+[Fonte oficial](https://uea.edu.br/index.php/escola-superior-de-ciencias-da-saude/) — consulta: 07/11/2026.
+
+**Identificado:** O endereço específico da ESA é Avenida Carvalho Leal, 1777, Cachoeirinha, Manaus. Cruzado com o catálogo por unidade e com o edital de matrícula de acesso 2026.
+
+**Limite:** A página da unidade, sozinha, não comprova todos os cursos de graduação: foram usadas as referências específicas de curso e grau. Não foi usado o endereço geral da reitoria como campus.
+
+### Fametro — Odontologia: página institucional do bacharelado
+
+[Fonte oficial](https://presencial.fametro.edu.br/cursos/odontologia/) — consulta: 07/11/2026.
+
+**Identificado:** A página identifica Odontologia como bacharelado. A referência da Sede/Chapada em Manaus foi cruzada na seção Fametro do PBU 2026, publicado em 2025.
+
+**Limite:** O vínculo de unidade usado no cartão é histórico. Confirme a oferta atual, modalidade e unidade efetiva das aulas. Não são reproduzidos valores, turnos ou vagas.
+
+### Santa Teresa — Odontologia: página institucional do curso
+
+[Fonte oficial](https://faculdadesantateresa.edu.br/curso/odontologia/) — consulta: 07/11/2026.
+
+**Identificado:** Página institucional de Odontologia, cruzada com bacharelado e unidade Vieiralves na seção Santa Teresa do PBU 2026 em Manaus.
+
+**Limite:** O portal reúne outras cidades; a referência local usada é a seção específica de Manaus do documento histórico. Confirme oferta e ingresso atuais.
+
+### PBU 2027 — Odontologia, UNINORTE/Centro, em Manaus
+
+[Fonte oficial](https://pbu.universidadeniltonlins.com.br/api/edital-pbu-2027) — consulta: 07/11/2026.
+
+**Identificado:** A seção UNINORTE/Centro do edital municipal publicado em 10/09/2026 relaciona Odontologia como bacharelado. O edital se refere a instituições estabelecidas em Manaus.
+
+**Limite:** Documento de processo específico para 2027; não confirma inscrições abertas, turma ou unidade de aulas atuais. O PDF reúne várias instituições e não foi atribuído integralmente à instituição que o hospeda. Não são reproduzidos valores ou vagas.
+
+As fontes já cadastradas `ufam-manaus`, `pbu-manaus-2026`, `pbu-manaus-2027`, `niltonlins-laranjeiras`, `niltonlins-pbu-2027` e `uea-matricula-2026` também foram usadas no cruzamento. Confirme oferta atual, modalidade, unidade efetiva, requisitos e ingresso. Outros cursos ou instituições podem estar ausentes do recorte.

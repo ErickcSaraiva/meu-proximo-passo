@@ -225,6 +225,7 @@ input:checked + .radio-decoration { border: 6px solid #3c8260; background: white
 .catalog-section { padding-block: 32px 55px; }
 .catalog-tools { display: grid; grid-template-columns: 1fr 330px; gap: 24px; }
 .catalog-tools label { display: block; font-size: .83rem; font-weight: 600; margin-bottom: 9px; }
+.search-help { font-size: .78rem; line-height: 1.7; margin: 10px 0 0; }
 .institution-select { margin-top: 20px; }
 .institution-select label { display: block; font-size: .83rem; font-weight: 600; margin-bottom: 9px; }
 .institution-select select { max-width: 420px; }

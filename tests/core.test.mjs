@@ -106,15 +106,15 @@ test('busca e área se combinam, filtros podem retornar zero e limpar retorna to
   assert.equal(filterProfessions(catalog.professions, 'técnico', 'natureza').length, 1);
   assert.equal(filterProfessions(catalog.professions, 'designer', 'saude').length, 0);
   assert.equal(filterProfessions(catalog.professions, 'zzzinexistente').length, 0);
-  assert.equal(filterProfessions(catalog.professions, '', 'todas').length, 23);
+  assert.equal(filterProfessions(catalog.professions, '', 'todas').length, 24);
   for (const area of AREAS) assert.ok(filterProfessions(catalog.professions, '', area.id).length >= 3);
 });
 
 test('catálogo contém conteúdo completo, fontes e relações consistentes', () => {
   assert.equal(validateCatalog(catalog), catalog);
-  assert.equal(catalog.professions.length, 23);
-  assert.equal(catalog.offers.length, 88);
-  assert.equal(catalog.sources.length, 51);
+  assert.equal(catalog.professions.length, 24);
+  assert.equal(catalog.offers.length, 95);
+  assert.equal(catalog.sources.length, 57);
   assert.deepEqual(new Set(catalog.offers.filter(o => o.status === 'verificado').map(o => o.type)), new Set(['Técnico', 'Tecnólogo', 'Bacharelado', 'Licenciatura']));
   assert.ok(catalog.offers.every(o => o.city === 'Manaus'));
   assert.ok(catalog.sources.every(s => ['2026-11-04', '2026-11-05', '2026-11-07'].includes(s.consultedAt)));
@@ -141,11 +141,11 @@ test('instituições vêm do catálogo, sem duplicatas, em ordem alfabética', (
 test('instituição combina com busca e área; referências históricas continuam identificáveis', () => {
   const filter = (query, area, name) => filterProfessions(catalog.professions, query, area, name, catalog.offers);
   assert.equal(filter('designer', 'comunicacao', 'Fametro')[0].id, 'design');
-  assert.equal(filter('', 'saude', 'Fametro').length, 3);
+  assert.equal(filter('', 'saude', 'Fametro').length, 4);
   assert.equal(filter('designer', 'saude', 'Fametro').length, 0);
   assert.equal(filter('', 'natureza', 'UNIP').length, 0);
   assert.equal(filter('', 'todas', 'Não cadastrada').length, 0);
-  assert.equal(filter('', 'todas', 'todas').length, 23);
+  assert.equal(filter('', 'todas', 'todas').length, 24);
   assert.equal(filter('biologo', 'natureza', 'Estácio')[0].id, 'biologia');
 });
 
@@ -157,9 +157,9 @@ test('oferta pendente não basta para associar profissão a uma instituição no
   assert.equal(filterProfessions(professions, '', 'todas', 'Instituição', offers).length, 1);
 });
 
-test('UEA tem sete profissões relacionadas; Artes aparecem em comunicação e educação', () => {
+test('UEA tem nove profissões relacionadas; Artes aparecem em comunicação e educação', () => {
   const filter = (query = '', area = 'todas') => filterProfessions(catalog.professions, query, area, 'UEA', catalog.offers);
-  assert.deepEqual(new Set(filter().map(p => p.id)), new Set(['direito', 'desenvolvimento-software', 'musica', 'teatro', 'danca', 'ensino-artes', 'producao-audiovisual']));
+  assert.deepEqual(new Set(filter().map(p => p.id)), new Set(['direito', 'desenvolvimento-software', 'musica', 'teatro', 'danca', 'ensino-artes', 'producao-audiovisual', 'enfermagem', 'odontologia']));
   assert.equal(filter('', 'comunicacao').length, 4);
   assert.equal(filter('', 'sociedade').length, 2);
   assert.equal(filter('', 'tecnologia')[0].id, 'desenvolvimento-software');

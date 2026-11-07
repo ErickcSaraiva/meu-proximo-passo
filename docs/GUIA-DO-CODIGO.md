@@ -90,7 +90,7 @@ O caso `[0, 0, 0, 0, 0, 0]` recebe tratamento específico: `allZero` é verdadei
 
 `normalizeText` transforma o texto em minúsculas, remove acentos e espaços externos. Assim, `tecnico` encontra `Técnico(a)`. A busca procura no **nome da profissão**, conforme o rótulo do campo.
 
-`filterProfessions` combina três condições: nome da profissão, área e instituição. Quando um seletor está em `todas`, essa condição não restringe a lista. Para filtrar por instituição, a função seleciona os IDs das referências identificadas daquela instituição e procura profissões ligadas a esses IDs. Referências pendentes, sozinhas, não bastam para entrar nesse filtro. Se não houver correspondência, o programa mostra uma mensagem e um botão para limpar os três campos.
+`filterProfessions` combina três condições: consulta de busca, área e instituição. Quando um seletor está em `todas`, essa condição não restringe a lista. Para filtrar por instituição, a função seleciona os IDs das referências identificadas daquela instituição e procura profissões ligadas a esses IDs. Referências pendentes, sozinhas, não bastam para entrar nesse filtro. Se não houver correspondência, o programa mostra uma mensagem e um botão para limpar os três campos.
 
 `getInstitutions` extrai nomes únicos das referências identificadas e os ordena alfabeticamente em português. O seletor acompanha o JSON: ao adicionar uma instituição com uma referência identificada e ligada a uma profissão, ela passa a aparecer sem editar uma lista de nomes no HTML. Referências históricas são sinalizadas com período e explicação; o filtro não significa oferta de matrícula disponível hoje.
 
@@ -129,3 +129,15 @@ Uma profissão pode ter o campo opcional `searchTerms`, uma lista de palavras us
 O total no cabeçalho do catálogo vem de `catalog.professions.length`. Assim, cadastrar outra profissão no JSON atualiza a contagem na tela. Isso não altera `QUESTIONS.length`: o catálogo tem 23 profissões e o questionário continua com 18 perguntas e seis áreas de 0 a 6 pontos.
 
 No vínculo `ensino-artes` → `uea-teatro-lic` → `uea-esat`, a profissão aponta para uma oferta de licenciatura, que aponta para uma fonte. O ator ou a atriz têm uma oferta de bacharelado em Teatro. Essa organização apresenta caminhos diferentes e não cria equivalência entre os diplomas.
+
+## Busca por palavras, cursos e siglas — versão 1.3.1
+
+O uso anterior de `includes` comparava um trecho com o texto inteiro: `ti` podia estar no meio de `artista`, sem relação com Informática. Ao mesmo tempo, o nome Enfermeiro(a) não contém a palavra Enfermagem.
+
+A função agora divide a consulta e os campos pesquisáveis em palavras normalizadas, sem diferenças de caixa ou acentos. Desconsidera conectivos como `de`, `da` e `e`. Cada palavra precisa corresponder ao início de uma palavra dos campos; as siglas curtas declaradas, como `TI` e `CC`, exigem palavra inteira. T.I. é normalizado para TI. As formas femininas indicadas por `(a)` também entram no índice.
+
+O índice contém nome e sinônimos da profissão. Quando todas as instituições estão selecionadas, inclui também os títulos dos cursos relacionados. As ofertas ligadas à profissão acrescentam seus nomes e `searchTerms` próprios. Quando uma instituição é escolhida, a parte de cursos usa somente suas ofertas identificadas; textos genéricos e ofertas de outras instituições não entram nessa parte da busca. Referências pendentes não servem para confirmar correspondência de curso na instituição selecionada.
+
+Siglas de cursos, como ADS, CC e SI, ficam no `searchTerms` da oferta. O termo TI fica nas duas profissões de Informática. Isso permite atualizar os dados no JSON, sem escrever exceções por instituição na função de busca. Todos os termos relevantes da consulta precisam combinar; depois, área e instituição também restringem a lista.
+
+O resultado continua sendo uma lista de profissões com caminhos de formação. A busca não consulta a internet nem deduz cursos que não foram cadastrados. As 18 perguntas e a pontuação permanecem independentes do tamanho do catálogo.
