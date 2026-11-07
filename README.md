@@ -2,7 +2,7 @@
 
 Plataforma educativa de exploração profissional para estudantes do ensino médio em Manaus. Primeira versão funcional em português do Brasil, feita com HTML, CSS e JavaScript, sem backend, banco de dados, cadastro, chaves de API ou dependências de execução.
 
-Inclui 18 perguntas, revisão das respostas, resultado transparente com empates, 18 profissões, 32 referências de formação (31 identificadas e uma pendente) e 27 fontes oficiais da UFAM, do IFAM, da UEA e da UNINORTE consultadas em **04/11/2026 e 05/11/2026**. É um recorte inicial, não um catálogo completo de Manaus.
+Inclui 18 perguntas, revisão das respostas, resultado transparente com empates, 18 profissões, 76 referências de formação (75 identificadas em fontes oficiais e uma pendente) e 43 fontes. O recorte reúne UFAM, IFAM, UEA, UNINORTE, Estácio, Fametro, UNIP, Universidade Nilton Lins e Faculdade Santa Teresa. Última ampliação em **07/11/2026**; as fontes anteriores mantêm as consultas de 04 e 05/11/2026. Não é um catálogo completo de Manaus, nem uma relação de inscrições abertas.
 
 > Este questionário é uma atividade educativa de exploração de interesses. Não é um teste psicológico ou diagnóstico vocacional e não define qual profissão você deve seguir.
 
@@ -141,7 +141,7 @@ Com Node.js 18 ou mais recente, sem instalar pacotes:
 node --test tests/core.test.mjs
 ```
 
-Ou use `npm test`. Os testes verificam cálculo, validação, distribuição das perguntas, empates, resultado zero, alterações, busca com acentos, combinação de filtros, integridade das fontes e compatibilidade dos caminhos relativos.
+Ou use `npm test`. Os testes verificam cálculo, validação, distribuição das perguntas, empates, resultado zero, alterações, busca com acentos, combinação de filtros, integridade das fontes e compatibilidade dos caminhos relativos. O filtro de instituição se combina com busca e área; considera referências identificadas, inclusive as históricas sinalizadas, e não considera uma oferta pendente como confirmada.
 
 O roteiro e os resultados de uso no navegador estão em `docs/VERIFICACAO.md`. Não há certificação formal de acessibilidade. As verificações de teclado e de layouts não substituem uma futura avaliação com leitores de tela e estudantes em dispositivos reais.
 
@@ -155,3 +155,11 @@ O roteiro e os resultados de uso no navegador estão em `docs/VERIFICACAO.md`. N
 | 10 minutos | Conversa sobre descobertas e dúvidas para pesquisar depois. |
 
 Não é necessário recolher ou projetar resultados individuais. A escola pode manter o endereço disponível após a oficina e revisar periodicamente as informações locais.
+
+## Ampliação de instituições — versão 1.2.0
+
+Foram acrescentadas 44 referências de formação e 16 fontes para cinco instituições. O filtro de instituição é criado a partir do JSON, em ordem alfabética; não há ranking nem parceria comercial. Cursos nacionais não foram associados automaticamente a Manaus.
+
+Estácio/Chapada, Fametro/Sede Chapada e Santa Teresa/Vieiralves usam registros do PBU 2026 de 2025, acompanhados de páginas institucionais quando disponíveis. Os cartões sinalizam **Referência histórica**. A UNIP foi conferida nas colunas Manaus do manual 2027/1; Nilton Lins, no Campus Parque das Laranjeiras. Confirme oferta, modalidade e ingresso atuais diretamente com cada instituição.
+
+A relação de fontes, critérios e aplicação desta atualização está em `docs/ATUALIZACAO-INSTITUICOES.md`. O campo opcional `historical: true` de uma oferta exige `referencePeriod` e `note`: não use apenas um selo para sugerir oferta atual. A graduação em Engenharia de Software da UNINORTE continua pendente de confirmação específica.

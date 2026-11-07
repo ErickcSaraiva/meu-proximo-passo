@@ -1,6 +1,6 @@
 # Fontes oficiais e informações pendentes
 
-Consulta realizada em **04/11/2026**. O escopo da verificação é curso, grau e localização na fonte. Não confirma inscrições ou turmas abertas. Datas de consulta não são datas de publicação.
+Consultas em **04/11/2026, 05/11/2026 e 07/11/2026**. Última ampliação: versão 1.2.0. O escopo da verificação é curso, grau e localização na fonte. Não confirma inscrições ou turmas abertas. Datas de consulta não são datas de publicação.
 
 ## Fontes utilizadas
 
@@ -275,3 +275,139 @@ A página encontrada descreve uma especialização em Engenharia de Software.
 
 Limite: Esta fonte confirma uma formação de pós-graduação, não uma graduação para ingresso após o ensino médio. Não foi usada para confirmar a graduação solicitada.
 
+
+## Ampliação: Estácio, Fametro, UNIP, Nilton Lins e Santa Teresa — 07/11/2026
+
+O recorte atual e os limites de cada registro estão em `ATUALIZACAO-INSTITUICOES.md`. Registros do PBU 2026, publicado em 2025, são sinalizados como históricos nos cartões. Referências do período 2027 também não confirmam inscrições abertas.
+
+### PBU 2026 — edital municipal de 17/09/2025: cursos, graus e unidades em Manaus
+
+[Fonte oficial](https://www.uninorte.com.br/wp-content/uploads/2025/09/Edital-PBU.pdf) — consulta: 07/11/2026.
+
+**Verificado:** Anexos por instituição: Estácio/Chapada (p. 9), Fametro/Sede Chapada (p. 11) e Santa Teresa/Vieiralves (p. 14). Nome, grau e unidade constam nas respectivas seções; o edital se refere a instituições de Manaus.
+
+**Limite:** Referência histórica, publicada em 2025 para o PBU 2026. Não confirma oferta atual, vagas ou bolsas abertas. O arquivo hospedado pela UNINORTE reúne várias instituições; cada curso foi atribuído à seção correta. Valores e quantitativos não são reproduzidos.
+
+### Estácio — unidade Constantino Nery, Chapada, Manaus
+
+[Fonte oficial](https://estacio.br/polos-e-unidades/unidade-estacio-chapada-manaus-am-86910) — consulta: 07/11/2026.
+
+**Verificado:** Endereço da unidade Constantino Nery no bairro Chapada, em Manaus. A localização foi cruzada com a seção Estácio/Chapada do PBU 2026.
+
+**Limite:** A relação de serviços da página não confirma, sozinha, modalidade e formação de turmas para cada curso. A associação local dos cursos se apoia também no documento histórico indicado.
+
+### Estácio — Ciência da Computação em Manaus
+
+[Fonte oficial](https://www.estacio.br/blog/graduacao/ciencia-da-computacao-em-manaus) — consulta: 07/11/2026.
+
+**Verificado:** Publicação institucional relaciona Ciência da Computação à unidade Constantino Nery em Manaus.
+
+**Limite:** Texto de divulgação, não edital de ingresso. Modalidade, local efetivo das aulas e oferta no período desejado precisam ser conferidos. Afirmações de mercado e promoções não foram incorporadas.
+
+### Fametro — Administração
+
+[Fonte oficial](https://presencial.fametro.edu.br/cursos/administracao/) — consulta: 07/11/2026.
+
+**Verificado:** Página institucional do curso e grau Bacharelado. Unidade Sede/Chapada em Manaus cruzada com a seção correspondente no PBU 2026.
+
+**Limite:** A página do curso não é confirmação de turma ou ingresso aberto. ADS menciona presencial e digital: confirme a modalidade e a unidade escolhidas. O registro da Sede no PBU é uma referência histórica.
+
+### Fametro — Sistemas de Informação
+
+[Fonte oficial](https://presencial.fametro.edu.br/cursos/sistemas-de-informacao/) — consulta: 07/11/2026.
+
+**Verificado:** Página institucional do curso e grau Bacharelado. Unidade Sede/Chapada em Manaus cruzada com a seção correspondente no PBU 2026.
+
+**Limite:** A página do curso não é confirmação de turma ou ingresso aberto. ADS menciona presencial e digital: confirme a modalidade e a unidade escolhidas. O registro da Sede no PBU é uma referência histórica.
+
+### Fametro — Análise e Desenvolvimento de Sistemas
+
+[Fonte oficial](https://presencial.fametro.edu.br/cursos/analise-e-desenvolvimento-de-sistemas/) — consulta: 07/11/2026.
+
+**Verificado:** Página institucional do curso e grau Tecnólogo. Unidade Sede/Chapada em Manaus cruzada com a seção correspondente no PBU 2026.
+
+**Limite:** A página do curso não é confirmação de turma ou ingresso aberto. ADS menciona presencial e digital: confirme a modalidade e a unidade escolhidas. O registro da Sede no PBU é uma referência histórica.
+
+### Fametro — Design Gráfico
+
+[Fonte oficial](https://presencial.fametro.edu.br/cursos/design-grafico/) — consulta: 07/11/2026.
+
+**Verificado:** Página institucional do curso e grau Tecnólogo. Informa localização na Unidade 1/2, Chapada; cruzada com o PBU 2026 de Manaus.
+
+**Limite:** A página do curso não é confirmação de turma ou ingresso aberto. ADS menciona presencial e digital: confirme a modalidade e a unidade escolhidas. O registro da Sede no PBU é uma referência histórica.
+
+### UNIP — Manual 2027/1, p. 8: bacharelados e licenciaturas por campus
+
+[Fonte oficial](https://www.unip.br/regulamentos/assets/download/estados2027-1/files/basic-html/page8.html) — consulta: 07/11/2026.
+
+**Verificado:** A coluna Manaus relaciona Ciência da Computação, Administração, Ciências Contábeis, Direito e Pedagogia. Pedagogia é licenciatura; os demais cursos incluídos são bacharelados.
+
+**Limite:** Manual do período 2027/1; outras colunas pertencem a Brasília e Goiânia. Não foram transferidas para Manaus. Consulte o manual e o processo seletivo atuais; não são reproduzidos turnos, duração ou vagas.
+
+### UNIP — Manual 2027/1, p. 9: cursos tecnológicos por campus
+
+[Fonte oficial](https://www.unip.br/regulamentos/assets/download/estados2027-1/files/basic-html/page9.html) — consulta: 07/11/2026.
+
+**Verificado:** Análise e Desenvolvimento de Sistemas aparece na coluna Manaus, na seção de graduação tecnológica presencial.
+
+**Limite:** A listagem inclui outros campi. Apenas a coluna Manaus foi utilizada. Formação de turma, regras e ingresso dependem do período e da confirmação institucional.
+
+### Universidade Nilton Lins — portal institucional e acesso à graduação
+
+[Fonte oficial](https://universidadeniltonlins.com.br/) — consulta: 07/11/2026.
+
+**Verificado:** O portal institucional direciona a graduação presencial para programadebolsasniltonlins.com.br, permitindo conferir a origem oficial do catálogo.
+
+**Limite:** O portal também apresenta referências de outros períodos e modalidades. A localização de cada curso foi conferida nas páginas de unidade e no documento local indicado.
+
+### Nilton Lins — cursos de graduação no Campus Parque das Laranjeiras
+
+[Fonte oficial](https://programadebolsasniltonlins.com.br/unidades/laranjeiras) — consulta: 07/11/2026.
+
+**Verificado:** Página de unidade do catálogo oficial relaciona os cursos incluídos, seus graus e o Campus Parque das Laranjeiras, em Manaus. Pedagogia é licenciatura; os demais cursos deste recorte são bacharelados.
+
+**Limite:** A página usa JavaScript e pode variar conforme o acesso. Curso e unidade foram cruzados com a relação institucional PBU 2027/1. Não são reproduzidos preços, salários, promoções ou quantitativos de bolsas. Confirme as condições atuais diretamente.
+
+### Nilton Lins — relação institucional PBU 2027/1 por unidade
+
+[Fonte oficial](https://pbu.universidadeniltonlins.com.br/) — consulta: 07/11/2026.
+
+**Verificado:** A seção Parque das Laranjeiras relaciona os dez cursos incluídos neste recorte e informa o endereço da unidade em Manaus.
+
+**Limite:** Página institucional de divulgação de um período específico. A relação serve para cruzar curso e unidade; não confirma inscrição aberta nem concessão de bolsa a qualquer estudante. Quantidades e condições financeiras não foram incorporadas.
+
+### Santa Teresa — Administração
+
+[Fonte oficial](https://faculdadesantateresa.edu.br/curso/administracao/) — consulta: 07/11/2026.
+
+**Verificado:** Página institucional do curso, cruzada com grau e unidade Vieiralves na seção Santa Teresa do PBU 2026, em Manaus.
+
+**Limite:** O site apresenta também outras unidades e cidades. A localização usada é a do documento específico de Manaus; esse registro é histórico e não confirma oferta atual ou ingresso aberto.
+
+### Santa Teresa — Ciências Contábeis
+
+[Fonte oficial](https://faculdadesantateresa.edu.br/curso/ciencias-contabeis/) — consulta: 07/11/2026.
+
+**Verificado:** Página institucional do curso, cruzada com grau e unidade Vieiralves na seção Santa Teresa do PBU 2026, em Manaus.
+
+**Limite:** O site apresenta também outras unidades e cidades. A localização usada é a do documento específico de Manaus; esse registro é histórico e não confirma oferta atual ou ingresso aberto.
+
+### Santa Teresa — Direito
+
+[Fonte oficial](https://faculdadesantateresa.edu.br/curso/direito/) — consulta: 07/11/2026.
+
+**Verificado:** Página institucional do curso, cruzada com grau e unidade Vieiralves na seção Santa Teresa do PBU 2026, em Manaus.
+
+**Limite:** O site apresenta também outras unidades e cidades. A localização usada é a do documento específico de Manaus; esse registro é histórico e não confirma oferta atual ou ingresso aberto.
+
+### PBU 2027 — edital municipal de 10/09/2026, seção Nilton Lins
+
+[Fonte oficial](https://pbu.universidadeniltonlins.com.br/api/edital-pbu-2027) — consulta: 07/11/2026.
+
+**Verificado:** A seção Nilton Lins/Parque das Laranjeiras, na página 11, relaciona os dez cursos deste recorte com seus graus. O objeto do edital se refere a instituições de ensino superior estabelecidas em Manaus.
+
+**Limite:** Documento do processo seletivo 2027, publicado em 2026 e disponibilizado no portal institucional. A existência do registro não significa inscrição aberta, bolsa garantida ou turma confirmada. Não reproduzimos valores, vagas, prazos de seleção ou percentuais de bolsas.
+
+### Pendências desta ampliação
+
+Confirmar oferta atual, modalidade, turma e unidade efetiva das aulas. Não basta a instituição ter endereço em Manaus: o curso precisa de vínculo local específico. Os cursos e instituições do recorte não esgotam a cidade. Páginas com informação inconsistente ou sem confirmação local não foram usadas, sozinhas, para criar ofertas confirmadas. A graduação em Engenharia de Software da UNINORTE continua pendente.

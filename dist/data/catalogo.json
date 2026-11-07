@@ -1,6 +1,6 @@
 {
-  "version": "1.1.2",
-  "updatedAt": "2026-11-05",
+  "version": "1.2.0",
+  "updatedAt": "2026-11-07",
   "scope": "Catálogo educativo e não exaustivo. Curso e localização identificados em fontes oficiais; não representa edital ou inscrição aberta.",
   "sources": [
     {
@@ -245,6 +245,150 @@
       "consultedAt": "2026-11-05",
       "confirms": "A página encontrada descreve uma especialização em Engenharia de Software.",
       "limitation": "Esta fonte confirma uma formação de pós-graduação, não uma graduação para ingresso após o ensino médio. Não foi usada para confirmar a graduação solicitada."
+    },
+    {
+      "id": "pbu-manaus-2026",
+      "institution": "Prefeitura de Manaus",
+      "title": "PBU 2026 — edital municipal de 17/09/2025: cursos, graus e unidades em Manaus",
+      "url": "https://www.uninorte.com.br/wp-content/uploads/2025/09/Edital-PBU.pdf",
+      "consultedAt": "2026-11-07",
+      "confirms": "Anexos por instituição: Estácio/Chapada (p. 9), Fametro/Sede Chapada (p. 11) e Santa Teresa/Vieiralves (p. 14). Nome, grau e unidade constam nas respectivas seções; o edital se refere a instituições de Manaus.",
+      "limitation": "Referência histórica, publicada em 2025 para o PBU 2026. Não confirma oferta atual, vagas ou bolsas abertas. O arquivo hospedado pela UNINORTE reúne várias instituições; cada curso foi atribuído à seção correta. Valores e quantitativos não são reproduzidos."
+    },
+    {
+      "id": "estacio-chapada",
+      "institution": "Estácio",
+      "title": "Estácio — unidade Constantino Nery, Chapada, Manaus",
+      "url": "https://estacio.br/polos-e-unidades/unidade-estacio-chapada-manaus-am-86910",
+      "consultedAt": "2026-11-07",
+      "confirms": "Endereço da unidade Constantino Nery no bairro Chapada, em Manaus. A localização foi cruzada com a seção Estácio/Chapada do PBU 2026.",
+      "limitation": "A relação de serviços da página não confirma, sozinha, modalidade e formação de turmas para cada curso. A associação local dos cursos se apoia também no documento histórico indicado."
+    },
+    {
+      "id": "estacio-computacao-manaus",
+      "institution": "Estácio",
+      "title": "Estácio — Ciência da Computação em Manaus",
+      "url": "https://www.estacio.br/blog/graduacao/ciencia-da-computacao-em-manaus",
+      "consultedAt": "2026-11-07",
+      "confirms": "Publicação institucional relaciona Ciência da Computação à unidade Constantino Nery em Manaus.",
+      "limitation": "Texto de divulgação, não edital de ingresso. Modalidade, local efetivo das aulas e oferta no período desejado precisam ser conferidos. Afirmações de mercado e promoções não foram incorporadas."
+    },
+    {
+      "id": "fametro-administracao",
+      "institution": "Fametro",
+      "title": "Fametro — Administração",
+      "url": "https://presencial.fametro.edu.br/cursos/administracao/",
+      "consultedAt": "2026-11-07",
+      "confirms": "Página institucional do curso e grau Bacharelado. Unidade Sede/Chapada em Manaus cruzada com a seção correspondente no PBU 2026.",
+      "limitation": "A página do curso não é confirmação de turma ou ingresso aberto. ADS menciona presencial e digital: confirme a modalidade e a unidade escolhidas. O registro da Sede no PBU é uma referência histórica."
+    },
+    {
+      "id": "fametro-sistemas",
+      "institution": "Fametro",
+      "title": "Fametro — Sistemas de Informação",
+      "url": "https://presencial.fametro.edu.br/cursos/sistemas-de-informacao/",
+      "consultedAt": "2026-11-07",
+      "confirms": "Página institucional do curso e grau Bacharelado. Unidade Sede/Chapada em Manaus cruzada com a seção correspondente no PBU 2026.",
+      "limitation": "A página do curso não é confirmação de turma ou ingresso aberto. ADS menciona presencial e digital: confirme a modalidade e a unidade escolhidas. O registro da Sede no PBU é uma referência histórica."
+    },
+    {
+      "id": "fametro-ads",
+      "institution": "Fametro",
+      "title": "Fametro — Análise e Desenvolvimento de Sistemas",
+      "url": "https://presencial.fametro.edu.br/cursos/analise-e-desenvolvimento-de-sistemas/",
+      "consultedAt": "2026-11-07",
+      "confirms": "Página institucional do curso e grau Tecnólogo. Unidade Sede/Chapada em Manaus cruzada com a seção correspondente no PBU 2026.",
+      "limitation": "A página do curso não é confirmação de turma ou ingresso aberto. ADS menciona presencial e digital: confirme a modalidade e a unidade escolhidas. O registro da Sede no PBU é uma referência histórica."
+    },
+    {
+      "id": "fametro-design",
+      "institution": "Fametro",
+      "title": "Fametro — Design Gráfico",
+      "url": "https://presencial.fametro.edu.br/cursos/design-grafico/",
+      "consultedAt": "2026-11-07",
+      "confirms": "Página institucional do curso e grau Tecnólogo. Informa localização na Unidade 1/2, Chapada; cruzada com o PBU 2026 de Manaus.",
+      "limitation": "A página do curso não é confirmação de turma ou ingresso aberto. ADS menciona presencial e digital: confirme a modalidade e a unidade escolhidas. O registro da Sede no PBU é uma referência histórica."
+    },
+    {
+      "id": "unip-manual-2027-tradicionais",
+      "institution": "UNIP",
+      "title": "UNIP — Manual 2027/1, p. 8: bacharelados e licenciaturas por campus",
+      "url": "https://www.unip.br/regulamentos/assets/download/estados2027-1/files/basic-html/page8.html",
+      "consultedAt": "2026-11-07",
+      "confirms": "A coluna Manaus relaciona Ciência da Computação, Administração, Ciências Contábeis, Direito e Pedagogia. Pedagogia é licenciatura; os demais cursos incluídos são bacharelados.",
+      "limitation": "Manual do período 2027/1; outras colunas pertencem a Brasília e Goiânia. Não foram transferidas para Manaus. Consulte o manual e o processo seletivo atuais; não são reproduzidos turnos, duração ou vagas."
+    },
+    {
+      "id": "unip-manual-2027-tecnologos",
+      "institution": "UNIP",
+      "title": "UNIP — Manual 2027/1, p. 9: cursos tecnológicos por campus",
+      "url": "https://www.unip.br/regulamentos/assets/download/estados2027-1/files/basic-html/page9.html",
+      "consultedAt": "2026-11-07",
+      "confirms": "Análise e Desenvolvimento de Sistemas aparece na coluna Manaus, na seção de graduação tecnológica presencial.",
+      "limitation": "A listagem inclui outros campi. Apenas a coluna Manaus foi utilizada. Formação de turma, regras e ingresso dependem do período e da confirmação institucional."
+    },
+    {
+      "id": "niltonlins-institucional",
+      "institution": "Universidade Nilton Lins",
+      "title": "Universidade Nilton Lins — portal institucional e acesso à graduação",
+      "url": "https://universidadeniltonlins.com.br/",
+      "consultedAt": "2026-11-07",
+      "confirms": "O portal institucional direciona a graduação presencial para programadebolsasniltonlins.com.br, permitindo conferir a origem oficial do catálogo.",
+      "limitation": "O portal também apresenta referências de outros períodos e modalidades. A localização de cada curso foi conferida nas páginas de unidade e no documento local indicado."
+    },
+    {
+      "id": "niltonlins-laranjeiras",
+      "institution": "Universidade Nilton Lins",
+      "title": "Nilton Lins — cursos de graduação no Campus Parque das Laranjeiras",
+      "url": "https://programadebolsasniltonlins.com.br/unidades/laranjeiras",
+      "consultedAt": "2026-11-07",
+      "confirms": "Página de unidade do catálogo oficial relaciona os cursos incluídos, seus graus e o Campus Parque das Laranjeiras, em Manaus. Pedagogia é licenciatura; os demais cursos deste recorte são bacharelados.",
+      "limitation": "A página usa JavaScript e pode variar conforme o acesso. Curso e unidade foram cruzados com a relação institucional PBU 2027/1. Não são reproduzidos preços, salários, promoções ou quantitativos de bolsas. Confirme as condições atuais diretamente."
+    },
+    {
+      "id": "niltonlins-pbu-2027",
+      "institution": "Universidade Nilton Lins",
+      "title": "Nilton Lins — relação institucional PBU 2027/1 por unidade",
+      "url": "https://pbu.universidadeniltonlins.com.br/",
+      "consultedAt": "2026-11-07",
+      "confirms": "A seção Parque das Laranjeiras relaciona os dez cursos incluídos neste recorte e informa o endereço da unidade em Manaus.",
+      "limitation": "Página institucional de divulgação de um período específico. A relação serve para cruzar curso e unidade; não confirma inscrição aberta nem concessão de bolsa a qualquer estudante. Quantidades e condições financeiras não foram incorporadas."
+    },
+    {
+      "id": "santateresa-administracao",
+      "institution": "Faculdade Santa Teresa",
+      "title": "Santa Teresa — Administração",
+      "url": "https://faculdadesantateresa.edu.br/curso/administracao/",
+      "consultedAt": "2026-11-07",
+      "confirms": "Página institucional do curso, cruzada com grau e unidade Vieiralves na seção Santa Teresa do PBU 2026, em Manaus.",
+      "limitation": "O site apresenta também outras unidades e cidades. A localização usada é a do documento específico de Manaus; esse registro é histórico e não confirma oferta atual ou ingresso aberto."
+    },
+    {
+      "id": "santateresa-contabilidade",
+      "institution": "Faculdade Santa Teresa",
+      "title": "Santa Teresa — Ciências Contábeis",
+      "url": "https://faculdadesantateresa.edu.br/curso/ciencias-contabeis/",
+      "consultedAt": "2026-11-07",
+      "confirms": "Página institucional do curso, cruzada com grau e unidade Vieiralves na seção Santa Teresa do PBU 2026, em Manaus.",
+      "limitation": "O site apresenta também outras unidades e cidades. A localização usada é a do documento específico de Manaus; esse registro é histórico e não confirma oferta atual ou ingresso aberto."
+    },
+    {
+      "id": "santateresa-direito",
+      "institution": "Faculdade Santa Teresa",
+      "title": "Santa Teresa — Direito",
+      "url": "https://faculdadesantateresa.edu.br/curso/direito/",
+      "consultedAt": "2026-11-07",
+      "confirms": "Página institucional do curso, cruzada com grau e unidade Vieiralves na seção Santa Teresa do PBU 2026, em Manaus.",
+      "limitation": "O site apresenta também outras unidades e cidades. A localização usada é a do documento específico de Manaus; esse registro é histórico e não confirma oferta atual ou ingresso aberto."
+    },
+    {
+      "id": "pbu-manaus-2027",
+      "institution": "Prefeitura de Manaus",
+      "title": "PBU 2027 — edital municipal de 10/09/2026, seção Nilton Lins",
+      "url": "https://pbu.universidadeniltonlins.com.br/api/edital-pbu-2027",
+      "consultedAt": "2026-11-07",
+      "confirms": "A seção Nilton Lins/Parque das Laranjeiras, na página 11, relaciona os dez cursos deste recorte com seus graus. O objeto do edital se refere a instituições de ensino superior estabelecidas em Manaus.",
+      "limitation": "Documento do processo seletivo 2027, publicado em 2026 e disponibilizado no portal institucional. A existência do registro não significa inscrição aberta, bolsa garantida ou turma confirmada. Não reproduzimos valores, vagas, prazos de seleção ou percentuais de bolsas."
     }
   ],
   "offers": [
@@ -683,6 +827,673 @@
         "uninorte-es-especializacao"
       ],
       "note": "Graduação sugerida para inclusão pelo estudante; curso, grau, modalidade e unidade em Manaus ainda precisam de confirmação em fonte oficial específica. Foi encontrada uma especialização em Engenharia de Software, que é pós-graduação e não equivale à graduação. Este cartão não confirma uma oferta disponível."
+    },
+    {
+      "id": "estacio-computacao",
+      "course": "Ciências da Computação",
+      "type": "Bacharelado",
+      "institution": "Estácio",
+      "campus": "Constantino Nery — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "estacio-chapada",
+        "estacio-computacao-manaus"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "estacio-civil",
+      "course": "Engenharia Civil",
+      "type": "Bacharelado",
+      "institution": "Estácio",
+      "campus": "Constantino Nery — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "estacio-chapada"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "estacio-enfermagem",
+      "course": "Enfermagem",
+      "type": "Bacharelado",
+      "institution": "Estácio",
+      "campus": "Constantino Nery — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "estacio-chapada"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "estacio-fisioterapia",
+      "course": "Fisioterapia",
+      "type": "Bacharelado",
+      "institution": "Estácio",
+      "campus": "Constantino Nery — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "estacio-chapada"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "estacio-farmacia",
+      "course": "Farmácia",
+      "type": "Bacharelado",
+      "institution": "Estácio",
+      "campus": "Constantino Nery — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "estacio-chapada"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "estacio-administracao",
+      "course": "Administração",
+      "type": "Bacharelado",
+      "institution": "Estácio",
+      "campus": "Constantino Nery — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "estacio-chapada"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "estacio-contabilidade",
+      "course": "Ciências Contábeis",
+      "type": "Bacharelado",
+      "institution": "Estácio",
+      "campus": "Constantino Nery — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "estacio-chapada"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "estacio-logistica",
+      "course": "Logística",
+      "type": "Tecnólogo",
+      "institution": "Estácio",
+      "campus": "Constantino Nery — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "estacio-chapada"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "estacio-pedagogia",
+      "course": "Pedagogia",
+      "type": "Licenciatura",
+      "institution": "Estácio",
+      "campus": "Constantino Nery — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "estacio-chapada"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "estacio-direito",
+      "course": "Direito",
+      "type": "Bacharelado",
+      "institution": "Estácio",
+      "campus": "Constantino Nery — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "estacio-chapada"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "estacio-biologia",
+      "course": "Ciências Biológicas",
+      "type": "Bacharelado",
+      "institution": "Estácio",
+      "campus": "Constantino Nery — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "estacio-chapada"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-ads",
+      "course": "Análise e Desenvolvimento de Sistemas",
+      "type": "Tecnólogo",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "fametro-ads"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-sistemas",
+      "course": "Sistemas de Informação",
+      "type": "Bacharelado",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "fametro-sistemas"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-civil",
+      "course": "Engenharia Civil",
+      "type": "Bacharelado",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-enfermagem",
+      "course": "Enfermagem",
+      "type": "Bacharelado",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-fisioterapia",
+      "course": "Fisioterapia",
+      "type": "Bacharelado",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-farmacia",
+      "course": "Farmácia",
+      "type": "Bacharelado",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-design",
+      "course": "Design Gráfico",
+      "type": "Tecnólogo",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "fametro-design"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-jornalismo",
+      "course": "Jornalismo",
+      "type": "Bacharelado",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-administracao",
+      "course": "Administração",
+      "type": "Bacharelado",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "fametro-administracao"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-contabilidade",
+      "course": "Ciências Contábeis",
+      "type": "Bacharelado",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-logistica",
+      "course": "Logística",
+      "type": "Tecnólogo",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-pedagogia",
+      "course": "Pedagogia",
+      "type": "Licenciatura",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-servico-social",
+      "course": "Serviço Social",
+      "type": "Bacharelado",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "fametro-direito",
+      "course": "Direito",
+      "type": "Bacharelado",
+      "institution": "Fametro",
+      "campus": "Sede — Chapada (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "unip-computacao",
+      "course": "Ciência da Computação",
+      "type": "Bacharelado",
+      "institution": "UNIP",
+      "campus": "Campus Manaus — manual 2027/1",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "unip-manual-2027-tradicionais"
+      ],
+      "note": "Curso e unidade identificados nas fontes oficiais indicadas. Confirme oferta, modalidade, local de aulas e ingresso para o período desejado."
+    },
+    {
+      "id": "unip-ads",
+      "course": "Análise e Desenvolvimento de Sistemas",
+      "type": "Tecnólogo",
+      "institution": "UNIP",
+      "campus": "Campus Manaus — manual 2027/1",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "unip-manual-2027-tecnologos"
+      ],
+      "note": "Curso e unidade identificados nas fontes oficiais indicadas. Confirme oferta, modalidade, local de aulas e ingresso para o período desejado."
+    },
+    {
+      "id": "unip-administracao",
+      "course": "Administração",
+      "type": "Bacharelado",
+      "institution": "UNIP",
+      "campus": "Campus Manaus — manual 2027/1",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "unip-manual-2027-tradicionais"
+      ],
+      "note": "Curso e unidade identificados nas fontes oficiais indicadas. Confirme oferta, modalidade, local de aulas e ingresso para o período desejado."
+    },
+    {
+      "id": "unip-contabilidade",
+      "course": "Ciências Contábeis",
+      "type": "Bacharelado",
+      "institution": "UNIP",
+      "campus": "Campus Manaus — manual 2027/1",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "unip-manual-2027-tradicionais"
+      ],
+      "note": "Curso e unidade identificados nas fontes oficiais indicadas. Confirme oferta, modalidade, local de aulas e ingresso para o período desejado."
+    },
+    {
+      "id": "unip-direito",
+      "course": "Direito",
+      "type": "Bacharelado",
+      "institution": "UNIP",
+      "campus": "Campus Manaus — manual 2027/1",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "unip-manual-2027-tradicionais"
+      ],
+      "note": "Curso e unidade identificados nas fontes oficiais indicadas. Confirme oferta, modalidade, local de aulas e ingresso para o período desejado."
+    },
+    {
+      "id": "unip-pedagogia",
+      "course": "Pedagogia",
+      "type": "Licenciatura",
+      "institution": "UNIP",
+      "campus": "Campus Manaus — manual 2027/1",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "unip-manual-2027-tradicionais"
+      ],
+      "note": "Curso e unidade identificados nas fontes oficiais indicadas. Confirme oferta, modalidade, local de aulas e ingresso para o período desejado."
+    },
+    {
+      "id": "niltonlins-civil",
+      "course": "Engenharia Civil",
+      "type": "Bacharelado",
+      "institution": "Universidade Nilton Lins",
+      "campus": "Campus Parque das Laranjeiras",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "niltonlins-laranjeiras",
+        "niltonlins-pbu-2027",
+        "pbu-manaus-2027"
+      ],
+      "note": "Curso, grau e unidade cruzados com o PBU 2027, publicado em 10/09/2026. O registro não significa inscrições abertas. Consulte oferta, modalidade e local efetivo de aulas para o período desejado."
+    },
+    {
+      "id": "niltonlins-enfermagem",
+      "course": "Enfermagem",
+      "type": "Bacharelado",
+      "institution": "Universidade Nilton Lins",
+      "campus": "Campus Parque das Laranjeiras",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "niltonlins-laranjeiras",
+        "niltonlins-pbu-2027",
+        "pbu-manaus-2027"
+      ],
+      "note": "Curso, grau e unidade cruzados com o PBU 2027, publicado em 10/09/2026. O registro não significa inscrições abertas. Consulte oferta, modalidade e local efetivo de aulas para o período desejado."
+    },
+    {
+      "id": "niltonlins-fisioterapia",
+      "course": "Fisioterapia",
+      "type": "Bacharelado",
+      "institution": "Universidade Nilton Lins",
+      "campus": "Campus Parque das Laranjeiras",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "niltonlins-laranjeiras",
+        "niltonlins-pbu-2027",
+        "pbu-manaus-2027"
+      ],
+      "note": "Curso, grau e unidade cruzados com o PBU 2027, publicado em 10/09/2026. O registro não significa inscrições abertas. Consulte oferta, modalidade e local efetivo de aulas para o período desejado."
+    },
+    {
+      "id": "niltonlins-farmacia",
+      "course": "Farmácia",
+      "type": "Bacharelado",
+      "institution": "Universidade Nilton Lins",
+      "campus": "Campus Parque das Laranjeiras",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "niltonlins-laranjeiras",
+        "niltonlins-pbu-2027",
+        "pbu-manaus-2027"
+      ],
+      "note": "Curso, grau e unidade cruzados com o PBU 2027, publicado em 10/09/2026. O registro não significa inscrições abertas. Consulte oferta, modalidade e local efetivo de aulas para o período desejado."
+    },
+    {
+      "id": "niltonlins-jornalismo",
+      "course": "Jornalismo",
+      "type": "Bacharelado",
+      "institution": "Universidade Nilton Lins",
+      "campus": "Campus Parque das Laranjeiras",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "niltonlins-laranjeiras",
+        "niltonlins-pbu-2027",
+        "pbu-manaus-2027"
+      ],
+      "note": "Curso, grau e unidade cruzados com o PBU 2027, publicado em 10/09/2026. O registro não significa inscrições abertas. Consulte oferta, modalidade e local efetivo de aulas para o período desejado."
+    },
+    {
+      "id": "niltonlins-administracao",
+      "course": "Administração",
+      "type": "Bacharelado",
+      "institution": "Universidade Nilton Lins",
+      "campus": "Campus Parque das Laranjeiras",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "niltonlins-laranjeiras",
+        "niltonlins-pbu-2027",
+        "pbu-manaus-2027"
+      ],
+      "note": "Curso, grau e unidade cruzados com o PBU 2027, publicado em 10/09/2026. O registro não significa inscrições abertas. Consulte oferta, modalidade e local efetivo de aulas para o período desejado."
+    },
+    {
+      "id": "niltonlins-contabilidade",
+      "course": "Ciências Contábeis",
+      "type": "Bacharelado",
+      "institution": "Universidade Nilton Lins",
+      "campus": "Campus Parque das Laranjeiras",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "niltonlins-laranjeiras",
+        "niltonlins-pbu-2027",
+        "pbu-manaus-2027"
+      ],
+      "note": "Curso, grau e unidade cruzados com o PBU 2027, publicado em 10/09/2026. O registro não significa inscrições abertas. Consulte oferta, modalidade e local efetivo de aulas para o período desejado."
+    },
+    {
+      "id": "niltonlins-pedagogia",
+      "course": "Pedagogia",
+      "type": "Licenciatura",
+      "institution": "Universidade Nilton Lins",
+      "campus": "Campus Parque das Laranjeiras",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "niltonlins-laranjeiras",
+        "niltonlins-pbu-2027",
+        "pbu-manaus-2027"
+      ],
+      "note": "Curso, grau e unidade cruzados com o PBU 2027, publicado em 10/09/2026. O registro não significa inscrições abertas. Consulte oferta, modalidade e local efetivo de aulas para o período desejado."
+    },
+    {
+      "id": "niltonlins-servico-social",
+      "course": "Serviço Social",
+      "type": "Bacharelado",
+      "institution": "Universidade Nilton Lins",
+      "campus": "Campus Parque das Laranjeiras",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "niltonlins-laranjeiras",
+        "niltonlins-pbu-2027",
+        "pbu-manaus-2027"
+      ],
+      "note": "Curso, grau e unidade cruzados com o PBU 2027, publicado em 10/09/2026. O registro não significa inscrições abertas. Consulte oferta, modalidade e local efetivo de aulas para o período desejado."
+    },
+    {
+      "id": "niltonlins-direito",
+      "course": "Direito",
+      "type": "Bacharelado",
+      "institution": "Universidade Nilton Lins",
+      "campus": "Campus Parque das Laranjeiras",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "niltonlins-laranjeiras",
+        "niltonlins-pbu-2027",
+        "pbu-manaus-2027"
+      ],
+      "note": "Curso, grau e unidade cruzados com o PBU 2027, publicado em 10/09/2026. O registro não significa inscrições abertas. Consulte oferta, modalidade e local efetivo de aulas para o período desejado."
+    },
+    {
+      "id": "santateresa-administracao",
+      "course": "Administração",
+      "type": "Bacharelado",
+      "institution": "Faculdade Santa Teresa",
+      "campus": "Vieiralves (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "santateresa-administracao"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "santateresa-contabilidade",
+      "course": "Ciências Contábeis",
+      "type": "Bacharelado",
+      "institution": "Faculdade Santa Teresa",
+      "campus": "Vieiralves (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "santateresa-contabilidade"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
+    },
+    {
+      "id": "santateresa-direito",
+      "course": "Direito",
+      "type": "Bacharelado",
+      "institution": "Faculdade Santa Teresa",
+      "campus": "Vieiralves (registro PBU 2026)",
+      "city": "Manaus",
+      "status": "verificado",
+      "sources": [
+        "pbu-manaus-2026",
+        "santateresa-direito"
+      ],
+      "note": "Curso, grau e unidade constam no PBU 2026, publicado em 17/09/2025. Referência histórica: confirme oferta atual, modalidade, unidade de aulas e ingresso no site da instituição.",
+      "historical": true,
+      "referencePeriod": "PBU 2026 · edital de 2025"
     }
   ],
   "professions": [
@@ -705,6 +1516,7 @@
       "relatedCourses": [
         "Ciência da Computação — bacharelado",
         "Análise e Desenvolvimento de Sistemas — tecnólogo",
+        "Sistemas de Informação — bacharelado",
         "Engenharia de Software — graduação da UNINORTE pendente de confirmação"
       ],
       "offers": [
@@ -712,7 +1524,12 @@
         "ifam-ads",
         "uninorte-computacao",
         "uninorte-ads",
-        "uninorte-engenharia-software"
+        "uninorte-engenharia-software",
+        "estacio-computacao",
+        "fametro-ads",
+        "fametro-sistemas",
+        "unip-computacao",
+        "unip-ads"
       ],
       "tryIt": "Desenhe em papel as telas de um aplicativo que ajudaria sua escola."
     },
@@ -737,7 +1554,10 @@
         "Edificações — técnico (formação relacionada, não equivalente)"
       ],
       "offers": [
-        "ufam-civil"
+        "ufam-civil",
+        "estacio-civil",
+        "fametro-civil",
+        "niltonlins-civil"
       ],
       "tryIt": "Observe uma praça e esboce uma melhoria para a circulação das pessoas."
     },
@@ -786,7 +1606,10 @@
       ],
       "offers": [
         "ufam-enfermagem",
-        "uninorte-enfermagem"
+        "uninorte-enfermagem",
+        "estacio-enfermagem",
+        "fametro-enfermagem",
+        "niltonlins-enfermagem"
       ],
       "tryIt": "Pesquise uma campanha pública de prevenção e identifique como ela orienta a população."
     },
@@ -811,7 +1634,10 @@
       ],
       "offers": [
         "ufam-fisioterapia",
-        "uninorte-fisioterapia"
+        "uninorte-fisioterapia",
+        "estacio-fisioterapia",
+        "fametro-fisioterapia",
+        "niltonlins-fisioterapia"
       ],
       "tryIt": "Converse com um profissional sobre como ele adapta o cuidado para diferentes pessoas."
     },
@@ -836,7 +1662,10 @@
       ],
       "offers": [
         "ufam-farmacia",
-        "uninorte-farmacia"
+        "uninorte-farmacia",
+        "estacio-farmacia",
+        "fametro-farmacia",
+        "niltonlins-farmacia"
       ],
       "tryIt": "Explore materiais educativos oficiais sobre descarte correto de medicamentos."
     },
@@ -862,7 +1691,8 @@
       ],
       "offers": [
         "ufam-design",
-        "uninorte-design"
+        "uninorte-design",
+        "fametro-design"
       ],
       "tryIt": "Redesenhe um cartaz da escola para deixá-lo mais fácil de ler."
     },
@@ -886,7 +1716,9 @@
         "Comunicação Social — Jornalismo — bacharelado"
       ],
       "offers": [
-        "ufam-jornalismo"
+        "ufam-jornalismo",
+        "fametro-jornalismo",
+        "niltonlins-jornalismo"
       ],
       "tryIt": "Escolha uma notícia sobre sua cidade e compare como duas fontes apresentam os fatos."
     },
@@ -935,7 +1767,12 @@
       ],
       "offers": [
         "ufam-administracao",
-        "uninorte-administracao"
+        "uninorte-administracao",
+        "estacio-administracao",
+        "fametro-administracao",
+        "unip-administracao",
+        "niltonlins-administracao",
+        "santateresa-administracao"
       ],
       "tryIt": "Planeje um evento escolar com tarefas, responsáveis e recursos necessários."
     },
@@ -960,7 +1797,12 @@
       ],
       "offers": [
         "ufam-contabeis",
-        "uninorte-contabeis"
+        "uninorte-contabeis",
+        "estacio-contabilidade",
+        "fametro-contabilidade",
+        "unip-contabilidade",
+        "niltonlins-contabilidade",
+        "santateresa-contabilidade"
       ],
       "tryIt": "Monte uma tabela fictícia de entradas e gastos de uma feira escolar."
     },
@@ -985,7 +1827,9 @@
       ],
       "offers": [
         "ifam-logistica",
-        "uninorte-logistica"
+        "uninorte-logistica",
+        "estacio-logistica",
+        "fametro-logistica"
       ],
       "tryIt": "Desenhe o caminho de um produto, desde a produção até chegar a uma loja de Manaus."
     },
@@ -1010,7 +1854,11 @@
       ],
       "offers": [
         "ufam-pedagogia",
-        "uninorte-pedagogia"
+        "uninorte-pedagogia",
+        "estacio-pedagogia",
+        "fametro-pedagogia",
+        "unip-pedagogia",
+        "niltonlins-pedagogia"
       ],
       "tryIt": "Prepare uma explicação de cinco minutos sobre algo que você sabe e ensine a um colega."
     },
@@ -1034,7 +1882,9 @@
         "Serviço Social — bacharelado"
       ],
       "offers": [
-        "ufam-servico-social"
+        "ufam-servico-social",
+        "fametro-servico-social",
+        "niltonlins-servico-social"
       ],
       "tryIt": "Pesquise quais serviços públicos de apoio à comunidade existem no seu bairro."
     },
@@ -1059,7 +1909,12 @@
       ],
       "offers": [
         "uea-direito",
-        "uninorte-direito"
+        "uninorte-direito",
+        "estacio-direito",
+        "fametro-direito",
+        "unip-direito",
+        "niltonlins-direito",
+        "santateresa-direito"
       ],
       "tryIt": "Escolha um direito previsto no Estatuto da Criança e do Adolescente e converse sobre sua aplicação na escola."
     },
@@ -1109,7 +1964,8 @@
       ],
       "offers": [
         "ufam-biologia",
-        "ufam-biologia-licenciatura"
+        "ufam-biologia-licenciatura",
+        "estacio-biologia"
       ],
       "tryIt": "Observe a biodiversidade de um espaço próximo sem coletar nem manipular animais ou plantas."
     },
@@ -1162,6 +2018,10 @@
     {
       "title": "UNINORTE — graduação em Engenharia de Software",
       "detail": "O curso foi solicitado pelo estudante e aparece no catálogo como pendente. Ainda não foi encontrada fonte oficial específica que confirme grau, modalidade e oferta local da graduação. A página de especialização encontrada é de pós-graduação e não foi tratada como equivalente. Um documento PBU hospedado pela UNINORTE reúne várias instituições: sua seção da UNINORTE não foi usada para confirmar Engenharia de Software, pois as ocorrências encontradas do nome estavam em outras seções. A pendência pode ser resolvida com página oficial do curso ou documento institucional específico."
+    },
+    {
+      "title": "Ampliação de instituições: confirmação para o período de ingresso",
+      "detail": "Estácio/Chapada, Fametro/Sede Chapada e Santa Teresa/Vieiralves têm registros locais no edital PBU 2026, publicado em 2025; os cartões sinalizam essa referência histórica. A UNIP foi conferida nas colunas Manaus do manual 2027/1. A Nilton Lins foi cruzada com páginas do Campus Parque das Laranjeiras e relação institucional do PBU 2027/1. Confirme diretamente a oferta atual, a modalidade, as turmas e o local efetivo de aulas. Não associamos automaticamente cursos nacionais nem ofertas do interior a Manaus. A lista é parcial e não indica preferência por instituição."
     }
   ]
 }

@@ -225,6 +225,11 @@ input:checked + .radio-decoration { border: 6px solid #3c8260; background: white
 .catalog-section { padding-block: 32px 55px; }
 .catalog-tools { display: grid; grid-template-columns: 1fr 330px; gap: 24px; }
 .catalog-tools label { display: block; font-size: .83rem; font-weight: 600; margin-bottom: 9px; }
+.institution-select { margin-top: 20px; }
+.institution-select label { display: block; font-size: .83rem; font-weight: 600; margin-bottom: 9px; }
+.institution-select select { max-width: 420px; }
+.institution-select p { font-size: .78rem; line-height: 1.7; margin: 10px 0 0; max-width: 850px; }
+.historical-reference { font-size: .72rem; font-weight: 650; margin-block: 12px; }
 .input-wrap { position: relative; }
 .input-wrap > .icon { position: absolute; top: 16px; left: 16px; width: 20px; height: 20px; color: #62776a; }
 input[type="search"], select { width: 100%; border: 1px solid #bdcec1; border-radius: 8px; background: white; color: var(--ink); height: 54px; font-size: .88rem; }

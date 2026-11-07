@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { AREAS, QUESTIONS, ANSWERS } from '../dist/js/questions.js';
-import { isAnswer, isComplete, calculateResult, filterProfessions, validateCatalog } from '../dist/js/core.js';
+import { isAnswer, isComplete, calculateResult, filterProfessions, getInstitutions, validateCatalog } from '../dist/js/core.js';
 
 const catalog = JSON.parse(readFileSync(new URL('../dist/data/catalogo.json', import.meta.url), 'utf8'));
 const uniform = value => Object.fromEntries(QUESTIONS.map(q => [q.id, value]));
@@ -113,12 +113,57 @@ test('busca e área se combinam, filtros podem retornar zero e limpar retorna to
 test('catálogo contém conteúdo completo, fontes e relações consistentes', () => {
   assert.equal(validateCatalog(catalog), catalog);
   assert.equal(catalog.professions.length, 18);
-  assert.equal(catalog.offers.length, 32);
-  assert.equal(catalog.sources.length, 27);
+  assert.equal(catalog.offers.length, 76);
+  assert.equal(catalog.sources.length, 43);
   assert.deepEqual(new Set(catalog.offers.filter(o => o.status === 'verificado').map(o => o.type)), new Set(['Técnico', 'Tecnólogo', 'Bacharelado', 'Licenciatura']));
   assert.ok(catalog.offers.every(o => o.city === 'Manaus'));
-  assert.ok(catalog.sources.every(s => ['2026-11-04', '2026-11-05'].includes(s.consultedAt)));
-  assert.ok(catalog.sources.every(s => /(^|\.)(?:(?:ufam|ifam|uea)\.edu\.br|uninorte\.com\.br)$/.test(new URL(s.url).hostname)));
+  assert.ok(catalog.sources.every(s => ['2026-11-04', '2026-11-05', '2026-11-07'].includes(s.consultedAt)));
+  assert.ok(catalog.sources.every(s => /(^|\.)(?:(?:ufam|ifam|uea|fametro|faculdadesantateresa)\.edu\.br|(?:uninorte|universidadeniltonlins|programadebolsasniltonlins)\.com\.br|(?:estacio|unip)\.br)$/.test(new URL(s.url).hostname)));
+});
+
+test('cinco novas instituições têm referências locais ligadas a profissões', () => {
+  const linkedIds = new Set(catalog.professions.flatMap(p => p.offers));
+  for (const name of ['Estácio', 'Fametro', 'UNIP', 'Universidade Nilton Lins', 'Faculdade Santa Teresa']) {
+    const offers = catalog.offers.filter(o => o.institution === name);
+    assert.ok(offers.length > 0, name);
+    assert.ok(offers.every(o => o.city === 'Manaus' && o.status === 'verificado' && linkedIds.has(o.id)), name);
+  }
+  assert.equal(catalog.offers.find(o => o.id === 'uninorte-engenharia-software').status, 'pendente');
+});
+
+test('instituições vêm do catálogo, sem duplicatas, em ordem alfabética', () => {
+  const names = getInstitutions(catalog.offers);
+  assert.equal(names.length, 9);
+  assert.deepEqual(names, [...names].sort((a, b) => a.localeCompare(b, 'pt-BR')));
+  assert.equal(getInstitutions([{ institution: 'A confirmar', status: 'pendente' }]).length, 0);
+});
+
+test('instituição combina com busca e área; referências históricas continuam identificáveis', () => {
+  const filter = (query, area, name) => filterProfessions(catalog.professions, query, area, name, catalog.offers);
+  assert.equal(filter('designer', 'comunicacao', 'Fametro')[0].id, 'design');
+  assert.equal(filter('', 'saude', 'Fametro').length, 3);
+  assert.equal(filter('designer', 'saude', 'Fametro').length, 0);
+  assert.equal(filter('', 'natureza', 'UNIP').length, 0);
+  assert.equal(filter('', 'todas', 'Não cadastrada').length, 0);
+  assert.equal(filter('', 'todas', 'todas').length, 18);
+  assert.equal(filter('biologo', 'natureza', 'Estácio')[0].id, 'biologia');
+});
+
+test('oferta pendente não basta para associar profissão a uma instituição no filtro', () => {
+  const professions = [{ name: 'Exemplo', area: 'tecnologia', offers: ['pendente'] }];
+  const offers = [{ id: 'pendente', institution: 'Instituição', status: 'pendente' }];
+  assert.equal(filterProfessions(professions, '', 'todas', 'Instituição', offers).length, 0);
+  offers[0].status = 'verificado';
+  assert.equal(filterProfessions(professions, '', 'todas', 'Instituição', offers).length, 1);
+});
+
+test('referência histórica exige período e explicação para não sugerir oferta atual', () => {
+  const historical = catalog.offers.filter(o => o.historical);
+  assert.ok(historical.length > 0);
+  assert.ok(historical.every(o => o.referencePeriod && o.note.includes('histórica')));
+  const broken = structuredClone(catalog);
+  delete broken.offers.find(o => o.historical).referencePeriod;
+  assert.throws(() => validateCatalog(broken));
 });
 
 test('recusa referência quebrada, IDs duplicados e curso de outra cidade', () => {

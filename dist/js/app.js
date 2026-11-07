@@ -1,11 +1,11 @@
 import { AREAS, ANSWERS, QUESTIONS, EDUCATIONAL_NOTICE } from './questions.js';
-import { isAnswer, isComplete, calculateResult, filterProfessions, validateCatalog } from './core.js';
+import { isAnswer, isComplete, calculateResult, filterProfessions, getInstitutions, validateCatalog } from './core.js';
 
 // Tudo que vem do estudante existe somente neste objeto, durante esta aba.
 // Não usamos cookies, armazenamento persistente nem requisições com respostas.
 const state = {
   answers: {}, index: 0, editing: false, result: null,
-  catalog: null, catalogError: false, query: '', area: 'todas'
+  catalog: null, catalogError: false, query: '', area: 'todas', institution: 'todas'
 };
 const main = document.querySelector('main');
 let firstRender = true;
@@ -130,9 +130,14 @@ function professionCard(profession) {
   return `<article class="profession-card"><div class="profession-top"><span class="area-icon ${area.color}">${icon(area.icon)}</span><span class="category-label">${area.name}</span></div><h3><a href="#profissao/${profession.id}">${esc(profession.name)}</a></h3><p>${esc(profession.description)}</p><div class="profession-bottom"><span>${icon('pin')} ${offers.length ? 'Formação em Manaus' : 'Oferta local a confirmar'}</span><a class="card-arrow" href="#profissao/${profession.id}" aria-label="Conhecer ${esc(profession.name)}">${icon('arrow')}</a></div></article>`;
 }
 
+function institutionOptions() {
+  return `<option value="todas">Todas as instituições</option>${getInstitutions(state.catalog?.offers || []).map(name => `<option value="${esc(name)}" ${name === state.institution ? 'selected' : ''}>${esc(name)}</option>`).join('')}`;
+}
+
 function catalogPage() {
   return `<section class="catalog-banner"><div class="container"><span class="eyebrow">POSSIBILIDADES PERTO DE VOCÊ</span><h1>Um mundo de profissões.<br>Um caminho que pode ser seu.</h1><p>Conheça o dia a dia de diferentes profissões e descubra onde começar a aprender em Manaus.</p><span class="pill white">${icon('book')} 18 profissões · 6 áreas de interesse</span></div></section><section class="container catalog-section">
     <div class="catalog-tools"><div class="search-field"><label for="profession-search">Buscar por nome da profissão</label><div class="input-wrap">${icon('search')}<input id="profession-search" type="search" placeholder="Ex.: designer, enfermeiro, técnico…" value="${esc(state.query)}" autocomplete="off" aria-controls="profession-results"></div></div><div class="area-select"><label for="area-filter">Área de interesse</label><select id="area-filter">${[{ id: 'todas', name: 'Todas as áreas' }, ...AREAS].map(area => `<option value="${area.id}" ${area.id === state.area ? 'selected' : ''}>${area.name}</option>`).join('')}</select></div></div>
+    <div class="institution-select"><label for="institution-filter">Instituição em Manaus</label><select id="institution-filter" aria-controls="profession-results" aria-describedby="institution-help" ${state.catalog ? '' : 'disabled'}>${institutionOptions()}</select><p id="institution-help">Instituições públicas e privadas em ordem alfabética. O filtro considera cursos identificados em fontes oficiais, inclusive as referências históricas sinalizadas. O catálogo é um recorte, sem ranking ou recomendação comercial.</p></div>
     <div class="filter-chips" role="group" aria-label="Filtrar catálogo por área">${[{ id: 'todas', name: 'Todas', color: '', icon: 'compass' }, ...AREAS].map(area => `<button class="filter-chip" aria-pressed="${state.area === area.id}" data-area="${area.id}">${area.id === 'todas' ? '' : icon(area.icon)}${area.name}</button>`).join('')}</div>
     <div class="results-topline"><p id="result-count" role="status" aria-live="polite" aria-atomic="true"></p><button class="text-button" data-action="clear-filters">Limpar filtros</button></div><div id="profession-results"></div>
     <aside class="catalog-caution">${icon('info')}<div><strong>Existem diferentes jeitos de se formar.</strong><p>Algumas profissões exigem formação específica. Cursos relacionados não são necessariamente equivalentes. Antes de escolher, confira o grau do curso, suas habilitações e as informações atuais nos sites oficiais.</p><a class="text-link" href="#fontes">Entender as formações e consultar fontes ${icon('arrow')}</a></div></aside>
@@ -147,18 +152,24 @@ function updateCatalogResults() {
     target.innerHTML = state.catalogError ? catalogMessage() : '<p class="loading" role="status">Carregando possibilidades…</p>';
     return;
   }
-  const professions = filterProfessions(state.catalog.professions, state.query, state.area);
+  const institutionSelect = document.getElementById('institution-filter');
+  if (institutionSelect.disabled) {
+    institutionSelect.innerHTML = institutionOptions();
+    institutionSelect.disabled = false;
+  }
+  institutionSelect.value = state.institution;
+  const professions = filterProfessions(state.catalog.professions, state.query, state.area, state.institution, state.catalog.offers);
   const count = document.getElementById('result-count');
-  const context = state.area === 'todas' ? '' : ` em ${areaById(state.area).name}`;
+  const context = (state.area === 'todas' ? '' : ` em ${areaById(state.area).name}`) + (state.institution === 'todas' ? '' : ` · ${state.institution}`);
   count.textContent = `${professions.length} ${professions.length === 1 ? 'profissão encontrada' : 'profissões encontradas'}${context}`;
-  target.innerHTML = professions.length ? `<div class="professions-grid">${professions.map(professionCard).join('')}</div>` : `<div class="empty-state">${icon('search')}<h2>Ainda não encontramos esse caminho.</h2><p>Tente outro nome, confira a escrita ou explore todas as áreas. Há muitas possibilidades para conhecer.</p><button class="button button-secondary" data-action="clear-filters">Limpar busca e filtros ${icon('refresh')}</button></div>`;
+  target.innerHTML = professions.length ? `<div class="professions-grid">${professions.map(professionCard).join('')}</div>` : `<div class="empty-state">${icon('search')}<h2>Ainda não encontramos esse caminho.</h2><p>Tente outro nome ou altere a área e a instituição. A ausência de resultados neste recorte não significa que a instituição não ofereça o curso.</p><button class="button button-secondary" data-action="clear-filters">Limpar busca e filtros ${icon('refresh')}</button></div>`;
   document.querySelectorAll('[data-area]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.area === state.area)));
   document.getElementById('area-filter').value = state.area;
 }
 
 function offerCard(offer) {
   const sources = offer.sources.map(id => state.catalog.sources.find(s => s.id === id));
-  return `<article class="offer-card"><div class="offer-heading"><span class="institution-mark">${esc(offer.institution)}</span><span class="pill ${offer.status === 'verificado' ? 'green' : 'orange'}">${icon(offer.status === 'verificado' ? 'check' : 'info')}${offer.status === 'verificado' ? 'Identificado em fonte oficial' : 'Pendente de confirmação'}</span></div><h3>${esc(offer.course)}</h3><p class="course-type">${esc(offer.type)} ${offer.status === 'pendente' ? '· Oferta não confirmada' : offer.type === 'Técnico' ? '· Nível médio' : '· Ensino superior'}</p><p>${icon('pin')} ${esc(offer.campus)} · ${esc(offer.city)}, AM</p>${offer.note ? `<p class="offer-note">${esc(offer.note)}</p>` : ''}<div class="offer-sources">${sources.map(source => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.title)} ${icon('external')}<span class="sr-only"> (abre em nova aba)</span></a><small>Consultado em ${date(source.consultedAt)}</small>`).join('')}</div></article>`;
+  return `<article class="offer-card"><div class="offer-heading"><span class="institution-mark">${esc(offer.institution)}</span><span class="pill ${offer.status === 'verificado' ? 'green' : 'orange'}">${icon(offer.status === 'verificado' ? 'check' : 'info')}${offer.status === 'verificado' ? 'Identificado em fonte oficial' : 'Pendente de confirmação'}</span></div>${offer.historical ? `<p class="historical-reference">${icon('clock')} Referência histórica · ${esc(offer.referencePeriod)}</p>` : ''}<h3>${esc(offer.course)}</h3><p class="course-type">${esc(offer.type)} ${offer.status === 'pendente' ? '· Oferta não confirmada' : offer.type === 'Técnico' ? '· Nível médio' : '· Ensino superior'}</p><p>${icon('pin')} ${esc(offer.campus)} · ${esc(offer.city)}, AM</p>${offer.note ? `<p class="offer-note">${esc(offer.note)}</p>` : ''}<div class="offer-sources">${sources.map(source => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.title)} ${icon('external')}<span class="sr-only"> (abre em nova aba)</span></a><small>Consultado em ${date(source.consultedAt)}</small>`).join('')}</div></article>`;
 }
 
 function professionPage(id) {
@@ -177,7 +188,7 @@ function formationTypes() {
 }
 
 function sourcesPage() {
-  return `<section class="container page-section"><div class="page-heading narrow"><span class="eyebrow">INFORMAÇÃO PARA ESCOLHER COM CALMA</span><h1>Fontes, cursos e instituições.</h1><p>Informações locais devem vir de quem oferece o curso. Aqui você pode conferir de onde veio cada referência e o que ainda precisa ser atualizado.</p></div><section><h2>Entenda os caminhos de formação</h2>${formationTypes()}</section><div class="sources-intro"><h2>Fontes oficiais consultadas</h2><p>Consultas realizadas em <strong>04/11/2026 e 05/11/2026</strong>. A data específica aparece em cada fonte. Verificamos a presença do curso e a localização em Manaus nas páginas e documentos indicados. A data de consulta não significa que o documento foi publicado ou atualizado nessa data.</p><p>Este é um recorte educativo de UFAM, IFAM, UEA e UNINORTE. Consulte os editais e projetos pedagógicos atuais antes de tomar decisões sobre matrícula.</p></div>
+  return `<section class="container page-section"><div class="page-heading narrow"><span class="eyebrow">INFORMAÇÃO PARA ESCOLHER COM CALMA</span><h1>Fontes, cursos e instituições.</h1><p>Informações locais devem vir de quem oferece o curso. Aqui você pode conferir de onde veio cada referência e o que ainda precisa ser atualizado.</p></div><section><h2>Entenda os caminhos de formação</h2>${formationTypes()}</section><div class="sources-intro"><h2>Fontes oficiais consultadas</h2><p>Última ampliação do catálogo: <strong>${state.catalog ? date(state.catalog.updatedAt) : 'carregando…'}</strong>. A data de cada consulta aparece na respectiva fonte; referências anteriores mantêm suas datas originais. Verificamos a presença do curso e a localização em Manaus nas páginas e documentos indicados. A data de consulta não significa que o documento foi publicado ou atualizado nessa data.</p><p>Este recorte reúne ${state.catalog ? getInstitutions(state.catalog.offers).map(esc).join(', ') : 'instituições de Manaus'}, em ordem alfabética e sem ranking. Algumas referências vêm de editais históricos, sinalizados nos cartões. Consulte os editais e projetos pedagógicos atuais antes de tomar decisões sobre matrícula.</p></div>
     ${state.catalog ? `<div class="source-list">${state.catalog.sources.map(source => `<article class="source-card"><div><span class="pill green">${esc(source.institution)}</span><span class="source-date">Consulta: ${date(source.consultedAt)}</span></div><h3><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.title)} ${icon('external')}<span class="sr-only"> (abre em nova aba)</span></a></h3><p><strong>O que verificamos:</strong> ${esc(source.confirms)}</p><p class="muted"><strong>Limite da informação:</strong> ${esc(source.limitation)}</p></article>`).join('')}</div><section class="pending-section"><span class="eyebrow">O QUE AINDA PRECISA SER CONFERIDO</span><h2>Transparência sobre as pendências</h2>${state.catalog.pending.map(item => `<article><h3>${esc(item.title)}</h3><p>${esc(item.detail)}</p></article>`).join('')}</section>` : catalogMessage()}
     <div class="actions">${buttonLink('#profissoes', 'Voltar às profissões', true)}</div></section>`;
 }
@@ -204,7 +215,7 @@ function render(focus = true) {
     return;
   }
   if (route === 'resultado' && !state.result) state.result = calculateResult(state.answers);
-  if (route === 'profissoes' && param && (param === 'todas' || AREAS.some(a => a.id === param))) { state.area = param; state.query = ''; }
+  if (route === 'profissoes' && param && (param === 'todas' || AREAS.some(a => a.id === param))) { state.area = param; state.query = ''; state.institution = 'todas'; }
   const pages = { inicio: homePage, questionario: quizPage, revisao: reviewPage, resultado: resultPage, profissoes: catalogPage, profissao: () => professionPage(param), fontes: sourcesPage, sobre: aboutPage };
   const titles = { inicio: 'Explore seus caminhos', questionario: 'Meus interesses', revisao: 'Revisar respostas', resultado: 'Minhas áreas', profissoes: 'Profissões e cursos', profissao: 'Conhecer uma profissão', fontes: 'Fontes oficiais', sobre: 'Sobre e privacidade' };
   main.innerHTML = (pages[route] || notFoundPage)();
@@ -269,6 +280,10 @@ main.addEventListener('change', event => {
     state.area = event.target.value;
     updateCatalogResults();
   }
+  if (event.target.id === 'institution-filter') {
+    state.institution = event.target.value;
+    updateCatalogResults();
+  }
 });
 
 main.addEventListener('input', event => {
@@ -297,7 +312,7 @@ main.addEventListener('click', event => {
     state.answers = {}; state.index = 0; state.result = null; state.editing = false; location.hash = 'questionario';
   }
   if (action === 'clear-filters') {
-    state.query = ''; state.area = 'todas';
+    state.query = ''; state.area = 'todas'; state.institution = 'todas';
     clearTimeout(filterTimer);
     const input = document.getElementById('profession-search'); input.value = '';
     updateCatalogResults(); input.focus();

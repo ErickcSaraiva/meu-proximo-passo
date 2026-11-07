@@ -31,11 +31,21 @@ export function normalizeText(value) {
   return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-BR').trim();
 }
 
-export function filterProfessions(professions, query = '', area = 'todas') {
+/** A ordem alfabética organiza a leitura; não indica qualidade da instituição. */
+export function getInstitutions(offers) {
+  return [...new Set(offers.filter(offer => offer.status === 'verificado').map(offer => offer.institution))]
+    .sort((a, b) => a.localeCompare(b, 'pt-BR'));
+}
+
+export function filterProfessions(professions, query = '', area = 'todas', institution = 'todas', offers = []) {
   const normalized = normalizeText(query);
+  const matchingOffers = new Set(offers
+    .filter(offer => offer.institution === institution && offer.status === 'verificado')
+    .map(offer => offer.id));
   return professions.filter(profession =>
     (area === 'todas' || profession.area === area) &&
-    normalizeText(profession.name).includes(normalized)
+    normalizeText(profession.name).includes(normalized) &&
+    (institution === 'todas' || profession.offers.some(id => matchingOffers.has(id)))
   );
 }
 
@@ -54,6 +64,7 @@ export function validateCatalog(data) {
   for (const offer of data.offers) {
     if (!offer.id || !offer.course || !offer.type || !offer.institution || !offer.campus || offer.city !== 'Manaus' || !offer.sources?.length || !offer.sources.every(id => sourceIds.has(id))) throw new Error('Oferta sem confirmação de curso, fonte ou localização em Manaus.');
     if (!['verificado', 'pendente'].includes(offer.status)) throw new Error('Status de oferta inválido.');
+    if (offer.historical && (!offer.referencePeriod || !offer.note)) throw new Error('Referência histórica sem período ou explicação.');
   }
   for (const profession of data.professions) {
     if (!areaIds.has(profession.area) || !profession.id || !profession.name || !profession.description || !profession.activities?.length || !profession.environments?.length || !profession.training || !profession.relatedCourses?.length || !profession.offers?.every(id => offerIds.has(id))) throw new Error('Profissão inválida ou relação inexistente.');

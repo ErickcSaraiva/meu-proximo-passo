@@ -1,5 +1,27 @@
 # Verificação da primeira versão
 
+## Ampliação de instituições — 07/11/2026, versão 1.2.0
+
+**20 testes automáticos passaram**, incluindo as regressões do questionário. O catálogo tem 18 profissões, 76 referências de formação (75 identificadas em fontes oficiais e uma pendente), nove instituições e 43 fontes. As verificações manuais desta atualização se concentraram no catálogo.
+
+| Verificação | Resultado observado no navegador |
+| --- | --- |
+| Novo seletor | Nove instituições em ordem alfabética, com rótulo, explicação e opção de todas. |
+| Cinco novas instituições | Estácio: 11 profissões relacionadas; Fametro: 13; UNIP: 5; Nilton Lins: 10; Santa Teresa: 3. A contagem de profissões difere da de referências, pois uma profissão pode ter vários cursos. |
+| Instituição + área | Fametro + Saúde e Cuidado mostrou Enfermagem, Fisioterapia e Farmácia. |
+| Busca + instituição + área | Acrescentar `designer` à combinação acima mostrou zero e o aviso amigável. |
+| Limpar busca e filtros | Limpou o texto, restaurou todas as áreas e instituições e mostrou as 18 profissões. |
+| Detalhes de Administração | Exibiu referências de Estácio, Fametro, UNIP, Nilton Lins e Santa Teresa, além das anteriores; links e notas presentes. |
+| Referências históricas | Cartões baseados no PBU 2026 exibiram o aviso e o período, além da orientação para confirmar oferta atual. |
+| Fontes | Página mostrou 43 cartões, última ampliação em 07/11/2026 e datas anteriores preservadas em cada fonte. |
+| Teclado | Home e seta no novo seletor mudaram para Estácio; Tab levou ao próximo controle. Foco visível conferido. |
+| Telas pequenas | Quadros de 320, 375 e 768 pixels acomodaram o seletor com “Universidade Nilton Lins” e os resultados. Não houve elementos do conteúdo ultrapassando a largura; pequena diferença de arredondamento de até 1 pixel no quadro menor. |
+| Tema | Enter alternou o botão para escuro no computador e no quadro de 320 pixels, com `aria-pressed=true`. Detalhes e avisos continuaram presentes. |
+
+Os quadros responsivos não substituem aparelhos físicos. Não foi realizada certificação de acessibilidade. Os arquivos temporários de verificação e a configuração interna da prévia foram retirados do pacote. Esta entrega prepara uma atualização local; a publicação na Vercel ocorre depois de aplicar os arquivos, conferir e enviar o commit ao GitHub.
+
+## Histórico da verificação inicial
+
 Verificação realizada em **04/11/2026**. Plataforma estática, versão 1.0.0.
 
 ## Resultado

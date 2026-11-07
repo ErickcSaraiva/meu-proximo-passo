@@ -90,7 +90,9 @@ O caso `[0, 0, 0, 0, 0, 0]` recebe tratamento específico: `allZero` é verdadei
 
 `normalizeText` transforma o texto em minúsculas, remove acentos e espaços externos. Assim, `tecnico` encontra `Técnico(a)`. A busca procura no **nome da profissão**, conforme o rótulo do campo.
 
-`filterProfessions` exige simultaneamente que a profissão corresponda ao texto e à área escolhida. Se a área for `todas`, só a busca restringe a lista. Se não houver correspondência, o programa mostra uma mensagem e um botão para limpar a busca e os filtros.
+`filterProfessions` combina três condições: nome da profissão, área e instituição. Quando um seletor está em `todas`, essa condição não restringe a lista. Para filtrar por instituição, a função seleciona os IDs das referências identificadas daquela instituição e procura profissões ligadas a esses IDs. Referências pendentes, sozinhas, não bastam para entrar nesse filtro. Se não houver correspondência, o programa mostra uma mensagem e um botão para limpar os três campos.
+
+`getInstitutions` extrai nomes únicos das referências identificadas e os ordena alfabeticamente em português. O seletor acompanha o JSON: ao adicionar uma instituição com uma referência identificada e ligada a uma profissão, ela passa a aparecer sem editar uma lista de nomes no HTML. Referências históricas são sinalizadas com período e explicação; o filtro não significa oferta de matrícula disponível hoje.
 
 A atualização mantém o foco do campo de busca. A contagem usa `role="status"` e `aria-live="polite"`, para que tecnologias assistivas possam anunciar mudanças.
 
