@@ -45,6 +45,7 @@
   html[data-theme="dark"] .answer-option:has(input:checked) { background: #214537; border-color: #9ed7ba; }
   html[data-theme="dark"] .radio-decoration { border-color: #b3c8c5; }
   html[data-theme="dark"] input:checked + .radio-decoration { border-color: #9ed7ba; background: #17292f; }
+  html[data-theme="dark"] .mission-layout :is(h1:focus-visible, .answer-option:has(input:focus-visible)) { outline-color: #8bc9ff; }
   html[data-theme="dark"] .form-error { color: #ffabb6; }
   html[data-theme="dark"] :is(.quiz-actions,.profession-bottom,.pending-section article + article) { border-color: var(--line); }
   html[data-theme="dark"] :is(.offer-sources a,.source-card h3 a,.tie-note .icon) { color: #acd4ff; }

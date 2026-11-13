@@ -1,8 +1,8 @@
 import { AREAS, ANSWERS, QUESTIONS, EDUCATIONAL_NOTICE } from './questions.js';
 import { isAnswer, isComplete, calculateResult, filterProfessions, getInstitutions, validateCatalog } from './core.js';
+import { SOFTWARE_MISSION_LINK, SOFTWARE_PROFESSION_ID, setupSoftwareMission } from './challenges/software-view.js';
 
-// Tudo que vem do estudante existe somente neste objeto, durante esta aba.
-// Não usamos cookies, armazenamento persistente nem requisições com respostas.
+// As respostas do questionário vivem em memória durante esta aba.
 const state = {
   answers: {}, index: 0, editing: false, result: null,
   catalog: null, catalogError: false, query: '', area: 'todas', institution: 'todas'
@@ -179,8 +179,12 @@ function professionPage(id) {
   if (!profession) return notFoundPage();
   const area = areaById(profession.area);
   const offers = state.catalog.offers.filter(offer => profession.offers.includes(offer.id));
-  return `<section class="container page-section"><a class="text-link" href="#profissoes">${icon('back')} Voltar ao catálogo</a><div class="profession-heading"><span class="area-icon ${area.color}">${icon(area.icon)}</span><span class="eyebrow">${area.name}</span><h1>${esc(profession.name)}</h1><p>${esc(profession.description)}</p></div><div class="detail-grid"><div><section class="detail-block"><h2>Como é o dia a dia?</h2>${list(profession.activities)}</section><section class="detail-block"><h2>Onde pode trabalhar?</h2>${list(profession.environments)}</section><section class="detail-block"><h2>Caminhos de formação</h2><p>${esc(profession.training)}</p><h3>Cursos relacionados</h3>${list(profession.relatedCourses)}<p class="muted">Os exemplos mostram caminhos de estudo. A atuação depende da formação, das habilitações e dos requisitos profissionais aplicáveis.</p></section></div><aside class="try-card">${icon('spark')}<span class="eyebrow">UM PEQUENO EXPERIMENTO</span><h2>Que tal experimentar?</h2><p>${esc(profession.tryIt)}</p><span class="small-tag">Curiosidade também se aprende na prática.</span></aside></div>
-    <section class="local-offers"><div class="section-heading"><div><span class="eyebrow">SEU PRÓXIMO PASSO PODE SER AQUI</span><h2>Onde estudar em Manaus</h2></div><span class="pill green">${icon('pin')} Manaus, Amazonas</span></div><p class="section-description">As ofertas identificadas têm referências de curso e localização nas fontes abaixo. Cartões marcados como pendentes ainda precisam de confirmação. Isso não significa que haja inscrições abertas. Consulte os sites oficiais para conferir ofertas e formas de ingresso atualizadas.</p><div class="offers-grid">${offers.length ? offers.map(offerCard).join('') : '<p>Não há oferta local verificada para este caminho. Consulte as instituições para confirmar.</p>'}</div></section>
+  const hasMission = profession.id === SOFTWARE_PROFESSION_ID;
+  const experiment = hasMission
+    ? `<p>Organize as reservas de um laboratório escolar e teste sua regra em uma missão de lógica de programação.</p>${buttonLink(SOFTWARE_MISSION_LINK, 'Iniciar desafio')}`
+    : `<p>${esc(profession.tryIt)}</p><span class="small-tag">Curiosidade também se aprende na prática.</span>`;
+  return `<section class="container page-section"><a class="text-link" href="#profissoes">${icon('back')} Voltar ao catálogo</a><div class="profession-heading"><span class="area-icon ${area.color}">${icon(area.icon)}</span><span class="eyebrow">${area.name}</span><h1>${esc(profession.name)}</h1><p>${esc(profession.description)}</p></div><div class="detail-grid"><div><section class="detail-block"><h2>Como é o dia a dia?</h2>${list(profession.activities)}</section><section class="detail-block"><h2>Onde pode trabalhar?</h2>${list(profession.environments)}</section><section class="detail-block"><h2>Caminhos de formação</h2><p>${esc(profession.training)}</p><h3>Cursos relacionados</h3>${list(profession.relatedCourses)}<p class="muted">Os exemplos mostram caminhos de estudo. A atuação depende da formação, das habilitações e dos requisitos profissionais aplicáveis.</p></section></div><aside class="try-card">${icon('spark')}<span class="eyebrow">UM PEQUENO EXPERIMENTO</span><h2>Que tal experimentar?</h2>${experiment}</aside></div>
+    <section class="local-offers"><div class="section-heading"><div><span class="eyebrow">SEU PRÓXIMO PASSO PODE SER AQUI</span><h2${hasMission ? ' id="local-offers-title" tabindex="-1"' : ''}>Onde estudar em Manaus</h2></div><span class="pill green">${icon('pin')} Manaus, Amazonas</span></div><p class="section-description">As ofertas identificadas têm referências de curso e localização nas fontes abaixo. Cartões marcados como pendentes ainda precisam de confirmação. Isso não significa que haja inscrições abertas. Consulte os sites oficiais para conferir ofertas e formas de ingresso atualizadas.</p><div class="offers-grid">${offers.length ? offers.map(offerCard).join('') : '<p>Não há oferta local verificada para este caminho. Consulte as instituições para confirmar.</p>'}</div></section>
     <aside class="catalog-caution">${icon('info')}<div><strong>Cursos relacionados têm objetivos e habilitações diferentes.</strong><p>Técnico, tecnólogo, bacharelado e licenciatura não são equivalentes. Algumas profissões exigem formação específica. Confira os requisitos no curso e nos órgãos profissionais.</p><a class="text-link" href="#fontes">Consultar fontes e pendências ${icon('arrow')}</a></div></aside>${notice()}</section>`;
 }
 
@@ -207,8 +211,10 @@ function notFoundPage() {
 
 function render(focus = true) {
   clearTimeout(filterTimer);
-  const [routePart, param] = location.hash.replace(/^#/, '').split('/');
+  const [routePart, param, section] = location.hash.replace(/^#/, '').split('/');
   const route = routePart || 'inicio';
+  const isSoftwareMission = route === 'desafio' && param === SOFTWARE_PROFESSION_ID && !section;
+  const isSoftwareCourses = route === 'profissao' && param === SOFTWARE_PROFESSION_ID && section === 'cursos';
   if ((route === 'revisao' || route === 'resultado') && !isComplete(state.answers)) {
     state.index = QUESTIONS.findIndex(q => !isAnswer(state.answers[q.id]));
     state.editing = false;
@@ -217,16 +223,20 @@ function render(focus = true) {
   }
   if (route === 'resultado' && !state.result) state.result = calculateResult(state.answers);
   if (route === 'profissoes' && param && (param === 'todas' || AREAS.some(a => a.id === param))) { state.area = param; state.query = ''; state.institution = 'todas'; }
-  const pages = { inicio: homePage, questionario: quizPage, revisao: reviewPage, resultado: resultPage, profissoes: catalogPage, profissao: () => professionPage(param), fontes: sourcesPage, sobre: aboutPage };
-  const titles = { inicio: 'Explore seus caminhos', questionario: 'Meus interesses', revisao: 'Revisar respostas', resultado: 'Minhas áreas', profissoes: 'Profissões e cursos', profissao: 'Conhecer uma profissão', fontes: 'Fontes oficiais', sobre: 'Sobre e privacidade' };
+  const pages = { inicio: homePage, questionario: quizPage, revisao: reviewPage, resultado: resultPage, profissoes: catalogPage, profissao: () => professionPage(param), desafio: isSoftwareMission ? renderSoftwareMission : notFoundPage, fontes: sourcesPage, sobre: aboutPage };
+  const titles = { inicio: 'Explore seus caminhos', questionario: 'Meus interesses', revisao: 'Revisar respostas', resultado: 'Minhas áreas', profissoes: 'Profissões e cursos', profissao: 'Conhecer uma profissão', desafio: isSoftwareMission ? 'Missão de Desenvolvimento de Software' : 'Página não encontrada', fontes: 'Fontes oficiais', sobre: 'Sobre e privacidade' };
   main.innerHTML = (pages[route] || notFoundPage)();
   document.title = `${titles[route] || 'Página não encontrada'} — Meu Próximo Passo`;
   document.querySelectorAll('[data-nav]').forEach(link => {
-    const active = link.dataset.nav === route || link.dataset.nav === 'questionario' && ['revisao', 'resultado'].includes(route) || link.dataset.nav === 'profissoes' && route === 'profissao';
+    const active = link.dataset.nav === route || link.dataset.nav === 'questionario' && ['revisao', 'resultado'].includes(route) || link.dataset.nav === 'profissoes' && (route === 'profissao' || isSoftwareMission);
     if (active) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
   });
   if (route === 'profissoes') updateCatalogResults();
-  if (focus && !firstRender) {
+  const coursesHeading = isSoftwareCourses ? main.querySelector('#local-offers-title') : null;
+  if (coursesHeading) {
+    coursesHeading.focus({ preventScroll: true });
+    coursesHeading.scrollIntoView({ block: 'start' });
+  } else if (focus && !firstRender) {
     const heading = main.querySelector('h1') || main;
     heading.setAttribute('tabindex', '-1');
     heading.focus({ preventScroll: true });
@@ -250,6 +260,8 @@ async function loadCatalog() {
     if (route === 'profissoes') updateCatalogResults(); else render(false);
   }
 }
+
+const renderSoftwareMission = setupSoftwareMission(main, icon, render);
 
 main.addEventListener('submit', event => {
   if (event.target.id !== 'quiz-form') return;

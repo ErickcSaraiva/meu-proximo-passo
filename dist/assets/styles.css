@@ -540,3 +540,28 @@ select { padding: 12px 14px; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
 @media (forced-colors: active) { .radio-decoration { forced-color-adjust: auto; } input:checked + .radio-decoration { outline: 3px solid Highlight; } .filter-chip[aria-pressed="true"] { outline: 2px solid Highlight; } }
 @media print { .site-header, .site-footer, .actions, .result-actions, .filter-chips, .card-arrow { display: none; } .container { width: 100%; } .score-grid, .professions-grid { grid-template-columns: repeat(2, 1fr); } .score-card, .profession-card, .source-card { break-inside: avoid; } body { color: black; } }
+
+/* A missão usa os cartões, controles e progresso do questionário. */
+.mission-layout .quiz-content { min-width: 0; }
+.mission-intro { padding-top: 0; }
+.mission-back-link { min-height: 44px; margin-bottom: 18px; }
+.mission-intro .mission-profession { color: var(--ink); font-size: clamp(1.12rem, 2.5vw, 1.75rem); font-weight: 700; line-height: 1.25; }
+.mission-layout .question-title { min-height: 0; }
+.mission-layout h1:focus-visible { outline: 3px solid #1369c3; outline-offset: 5px; }
+.mission-question { margin-bottom: 14px; font-weight: 650; line-height: 1.4; }
+.mission-code, .mission-feedback, .mission-test-case { padding: 16px; background: var(--soft); border: 1px solid var(--line); border-radius: 10px; }
+.mission-code { margin: 0 0 20px; font-size: .88rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.mission-feedback { border-inline-start: 4px solid var(--green); margin-bottom: 16px; }
+.mission-feedback h2, .mission-simulation h2 { font-size: 1.2rem; margin-bottom: 10px; }
+.mission-feedback p, .mission-test-case p { font-size: .9rem; }
+.mission-feedback p:last-child, .mission-test-case p:last-child { margin-bottom: 0; }
+.mission-feedback .text-button { color: var(--green); }
+.mission-test-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 18px; }
+.mission-test-case h3 { font-size: 1rem; margin-bottom: 10px; }
+.mission-layout .actions { margin-bottom: 10px; }
+#local-offers-title { scroll-margin-top: 18px; }
+@media (max-width: 600px) {
+  .mission-back-link { margin-bottom: 8px; }
+  .mission-test-grid { grid-template-columns: 1fr; }
+  .mission-layout .actions .button { width: 100%; text-align: center; }
+}
