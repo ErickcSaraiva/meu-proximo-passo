@@ -55,3 +55,5 @@
   html[data-theme="dark"] progress::-moz-progress-bar { background: var(--area-color,#9ed7ba); }
   html[data-theme="dark"] .skip-link { color: #101d24; background: #e1efee; }
 }
+
+html[data-theme="dark"] .feedback-error { color: #ffb3ba; }

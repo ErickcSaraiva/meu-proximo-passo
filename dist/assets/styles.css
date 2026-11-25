@@ -132,9 +132,9 @@ p { color: var(--text); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 30px; }
 .footer-inner p { margin: 0; font-size: .73rem; line-height: 1.8; }
 .footer-inner strong { color: var(--ink); font-size: .9rem; }
-.footer-inner nav { display: flex; gap: 24px; font-size: .75rem; color: #49675a; }
+.footer-inner nav { display: flex; flex-wrap: wrap; gap: 0 24px; font-size: .75rem; color: #49675a; }
 .footer-inner nav a { padding-block: 12px; }
-.footer-inner nav a:hover { text-decoration: underline; }
+.footer-inner nav a:hover, .footer-inner nav a[aria-current] { text-decoration: underline; }
 .footer-local { text-align: right; }
 .page-section { padding-block: 42px 55px; min-height: 65vh; }
 .page-heading { margin-block: 25px 36px; }
@@ -565,3 +565,22 @@ select { padding: 12px 14px; }
   .mission-test-grid { grid-template-columns: 1fr; }
   .mission-layout .actions .button { width: 100%; text-align: center; }
 }
+
+.feedback-page { max-width: 720px; }
+.feedback-form { padding: clamp(16px, 5vw, 32px); background: var(--soft); border: 1px solid var(--line); border-radius: var(--radius); }
+.feedback-form > p { margin-bottom: 16px; }
+.feedback-form fieldset { min-inline-size: 0; padding: 0; border: 0; margin: 0; }
+.feedback-form > fieldset { display: grid; justify-items: start; gap: 20px; }
+.feedback-categories { width: 100%; }
+.feedback-categories legend, .feedback-field label { font-weight: 650; }
+.feedback-category { display: flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer; }
+.feedback-category input { flex: 0 0 auto; width: 18px; height: 18px; margin: 0; accent-color: var(--green); }
+.feedback-field { display: grid; gap: 6px; width: 100%; }
+.feedback-field small { color: var(--muted); }
+.feedback-field :is(input, textarea) { width: 100%; min-width: 0; min-height: 44px; padding: 9px 12px; border: 1px solid var(--muted); border-radius: 8px; color: var(--ink); background: var(--paper); font: inherit; }
+.feedback-field textarea { resize: vertical; }
+.feedback-form .feedback-notice { margin: 0; }
+.feedback-form .feedback-notice:not(:empty) { margin-top: 12px; }
+.feedback-error { color: #a02b35; }
+.feedback-form [data-retry] { margin-top: 10px; }
+.feedback-form [hidden] { display: none; }

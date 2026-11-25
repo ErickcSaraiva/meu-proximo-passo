@@ -1,6 +1,7 @@
 import { AREAS, ANSWERS, QUESTIONS, EDUCATIONAL_NOTICE } from './questions.js';
 import { isAnswer, isComplete, calculateResult, filterProfessions, getInstitutions, validateCatalog } from './core.js';
 import { SOFTWARE_MISSION_LINK, SOFTWARE_PROFESSION_ID, setupSoftwareMission } from './challenges/software-view.js';
+import { feedbackPage, setupFeedbackForm } from './feedback-form.js';
 
 // As respostas do questionário vivem em memória durante esta aba.
 const state = {
@@ -200,7 +201,7 @@ function sourcesPage() {
 
 function aboutPage() {
   return `<section class="container page-section narrow"><div class="page-heading"><span class="eyebrow">DESCOBRIR É UM PROCESSO</span><h1>Seu próximo passo começa com curiosidade.</h1><p>O Meu Próximo Passo é um espaço educativo para estudantes do ensino médio explorarem interesses, profissões e caminhos de formação em Manaus.</p></div><div class="detail-block"><h2>Você não precisa decidir tudo agora.</h2><p>O questionário aproxima você de seis áreas a partir de situações do dia a dia. Ele foi criado para esta atividade, não é um instrumento psicológico validado. Os exemplos ajudam a iniciar conversas e não avaliam sua capacidade.</p><p>As áreas são uma forma de organizar o catálogo. Uma profissão pode se relacionar com vários temas, e nenhum resultado impede você de conhecer as demais.</p></div>${notice()}
-    <section class="privacy-card"><span class="area-icon green">${icon('lock')}</span><h2>Sua privacidade vem primeiro.</h2><p>Não pedimos nome, idade, escola, e-mail ou qualquer dado pessoal. Suas respostas são processadas no navegador e ficam apenas na memória desta aba. Ao recarregar ou fechar a página, elas são apagadas.</p><p>Não enviamos respostas a servidores. Não usamos cookies próprios, rastreadores, publicidade, ferramentas de análise ou armazenamento local. Para abrir a plataforma e o catálogo, o navegador solicita os arquivos estáticos ao serviço de hospedagem; esse serviço pode manter seus registros técnicos de acesso.</p><p>Links de instituições abrem sites externos, que têm suas próprias políticas de privacidade. Nenhuma resposta é acrescentada aos links.</p></section>
+    <section class="privacy-card"><span class="area-icon green">${icon('lock')}</span><h2>Sua privacidade vem primeiro.</h2><p>As respostas do questionário ficam na memória da aba e são apagadas ao fechar ou recarregar a página.</p><p>Ao enviar uma sugestão, armazenamos o tipo, a mensagem, a data, o status e o e-mail, caso você o informe. O administrador da plataforma pode consultar esses dados no painel para acompanhar a mensagem e, quando possível, responder.</p><p>Para limitar envios repetidos, o servidor usa um código temporário derivado do endereço IP. O endereço IP não é gravado junto à sugestão. A hospedagem pode manter registros técnicos de acesso. Os sites das instituições têm políticas próprias.</p></section>
     <section class="workshop"><span class="eyebrow">PARA A OFICINA DA ESCOLA</span><h2>40 minutos para abrir possibilidades.</h2><ol class="workshop-list"><li><strong>5 min</strong><span>Acolhida: o que desperta sua curiosidade?</span></li><li><strong>10 min</strong><span>Questionário, revisão e leitura do resultado.</span></li><li><strong>15 min</strong><span>Exploração de profissões, cursos e fontes oficiais.</span></li><li><strong>10 min</strong><span>Conversa: o que você descobriu e o que gostaria de investigar?</span></li></ol><p>Ninguém precisa compartilhar seu resultado. Depois da oficina, a escola pode continuar usando a plataforma para outras conversas.</p></section>
     <details class="explanation"><summary>Como funciona o cálculo?</summary><p>As 18 perguntas se dividem em 6 áreas com 3 perguntas cada, misturadas na apresentação. Cada resposta vale 0, 1 ou 2. A soma de cada área vai de 0 a 6. Não há pesos ocultos.</p><p>São mostradas as três áreas com mais pontos, incluindo todas as empatadas no limite do terceiro lugar. Se todas as respostas forem zero, não destacamos áreas e convidamos você a explorar o catálogo.</p></details><div class="actions">${buttonLink('#questionario', 'Explorar meus interesses')}${buttonLink('#fontes', 'Ver fontes oficiais', true)}</div></section>`;
 }
@@ -223,8 +224,8 @@ function render(focus = true) {
   }
   if (route === 'resultado' && !state.result) state.result = calculateResult(state.answers);
   if (route === 'profissoes' && param && (param === 'todas' || AREAS.some(a => a.id === param))) { state.area = param; state.query = ''; state.institution = 'todas'; }
-  const pages = { inicio: homePage, questionario: quizPage, revisao: reviewPage, resultado: resultPage, profissoes: catalogPage, profissao: () => professionPage(param), desafio: isSoftwareMission ? renderSoftwareMission : notFoundPage, fontes: sourcesPage, sobre: aboutPage };
-  const titles = { inicio: 'Explore seus caminhos', questionario: 'Meus interesses', revisao: 'Revisar respostas', resultado: 'Minhas áreas', profissoes: 'Profissões e cursos', profissao: 'Conhecer uma profissão', desafio: isSoftwareMission ? 'Missão de Desenvolvimento de Software' : 'Página não encontrada', fontes: 'Fontes oficiais', sobre: 'Sobre e privacidade' };
+  const pages = { inicio: homePage, questionario: quizPage, revisao: reviewPage, resultado: resultPage, profissoes: catalogPage, profissao: () => professionPage(param), desafio: isSoftwareMission ? renderSoftwareMission : notFoundPage, fontes: sourcesPage, sobre: aboutPage, sugestao: feedbackPage };
+  const titles = { inicio: 'Explore seus caminhos', questionario: 'Meus interesses', revisao: 'Revisar respostas', resultado: 'Minhas áreas', profissoes: 'Profissões e cursos', profissao: 'Conhecer uma profissão', desafio: isSoftwareMission ? 'Missão de Desenvolvimento de Software' : 'Página não encontrada', fontes: 'Fontes oficiais', sobre: 'Sobre e privacidade', sugestao: 'Enviar sugestão' };
   main.innerHTML = (pages[route] || notFoundPage)();
   document.title = `${titles[route] || 'Página não encontrada'} — Meu Próximo Passo`;
   document.querySelectorAll('[data-nav]').forEach(link => {
@@ -232,6 +233,7 @@ function render(focus = true) {
     if (active) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
   });
   if (route === 'profissoes') updateCatalogResults();
+  if (route === 'sugestao') setupFeedbackForm(main.querySelector('#feedback-form'));
   const coursesHeading = isSoftwareCourses ? main.querySelector('#local-offers-title') : null;
   if (coursesHeading) {
     coursesHeading.focus({ preventScroll: true });

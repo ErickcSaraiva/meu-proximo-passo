@@ -1,6 +1,6 @@
 # Meu Próximo Passo
 
-Plataforma educativa de exploração profissional para estudantes do ensino médio em Manaus. Primeira versão funcional em português do Brasil, feita com HTML, CSS e JavaScript, sem backend, banco de dados, cadastro, chaves de API ou dependências de execução.
+Plataforma educativa de exploração profissional para estudantes do ensino médio em Manaus. A área pública usa HTML, CSS e JavaScript e pode ser acessada sem cadastro. O canal de sugestões e o painel administrativo usam Vercel Functions em Node.js e PostgreSQL.
 
 Inclui 18 perguntas, revisão das respostas, resultado transparente com empates, 24 profissões, 95 referências de formação (94 identificadas em fontes oficiais e uma pendente) e 57 fontes. O recorte reúne UFAM, IFAM, UEA, UNINORTE, Estácio, Fametro, UNIP, Universidade Nilton Lins e Faculdade Santa Teresa. Última ampliação em **07/11/2026**; as fontes anteriores mantêm as consultas de 04 e 05/11/2026. Não é um catálogo completo de Manaus, nem uma relação de inscrições abertas.
 
@@ -19,11 +19,43 @@ python3 -m http.server 5500 --directory dist
 4. Acesse **http://localhost:5500** no navegador.
 5. Para encerrar, use `Ctrl+C` no terminal.
 
-No Windows, o comando pode ser `py -m http.server 5500 --directory dist`. Quem já usa a extensão Live Server pode abrir `dist/index.html` com ela. Node.js não é necessário para usar a plataforma. O servidor do Python só entrega arquivos estáticos; não recebe nem processa respostas.
+No Windows, o comando pode ser `py -m http.server 5500 --directory dist`. Quem já usa a extensão Live Server pode abrir `dist/index.html` com ela. Esse modo entrega o questionário, o catálogo e a missão guiada. Ao abrir **Enviar sugestão**, o visitante recebe uma indicação de que o envio está disponível na versão hospedada na Vercel.
 
 Não abra o HTML com duplo clique (`file://`). Os módulos JavaScript e o carregamento do JSON precisam de um servidor HTTP. Nenhuma instalação de pacote ou `npm install` é necessária.
 
 Para testar em um celular na mesma rede, use o IP local do computador, por exemplo `http://IP-DO-COMPUTADOR:5500`, com o servidor em execução. Depois de publicado no GitHub Pages, basta abrir o endereço do site.
+
+## Executar o canal de sugestões e o painel
+
+Use Node.js 24, npm, o cliente PostgreSQL `psql` e a CLI da Vercel. É possível usar PostgreSQL local ou um banco de desenvolvimento no Neon.
+
+1. Execute `npm ci` e copie `.env.example` para `.env.local`.
+2. Preencha as quatro variáveis abaixo em `.env.local`. Gere cada um dos três segredos com uma execução própria de `openssl rand -hex 32`.
+3. Aplique a migration ao banco de desenvolvimento. No exemplo, `DATABASE_URL` já está exportada no terminal. Guarde a URL de conexão fora do repositório.
+
+```bash
+psql "$DATABASE_URL" -X -v ON_ERROR_STOP=1 -f db/001_feedback.sql
+```
+
+4. Execute `vercel dev --local --listen 127.0.0.1:3000`. A CLI lê a configuração local e inicia o site e as funções.
+5. Abra `http://127.0.0.1:3000/#sugestao` e envie uma mensagem de teste. Abra `http://127.0.0.1:3000/admin`, entre com o usuário `administrador` e a senha configurada, confira a mensagem e mude seu status. A sessão dura uma hora e **Sair** remove o cookie do navegador.
+
+| Variável | Uso |
+| --- | --- |
+| `DATABASE_URL` | Conexão PostgreSQL. No Neon, use a URL com pooling na aplicação e mantenha a verificação TLS com `sslmode=verify-full`. A migration pode ser aplicada com a URL direta. |
+| `ADMIN_PASSWORD` | Senha da conta `administrador`, entre 32 e 256 caracteres. |
+| `ADMIN_SESSION_SECRET` | Chave de assinatura da sessão, com pelo menos 32 caracteres e diferente da senha. Trocar a chave ou a senha invalida sessões existentes. |
+| `FEEDBACK_RATE_LIMIT_SECRET` | Chave de pelo menos 32 caracteres, distinta das anteriores, usada para derivar a chave temporária da cota de envio. |
+
+O formulário aceita até cinco novas mensagens por IP a cada janela de uma hora do relógio. A cota fica no PostgreSQL e funciona entre instâncias da Vercel. A tabela de cotas guarda um código calculado a partir do IP e da hora, e envios posteriores limpam as janelas anteriores. Uma nova tentativa com a mesma mensagem e o mesmo identificador de envio reaproveita a confirmação anterior.
+
+### Preparar a publicação na Vercel
+
+1. Confirme que o projeto usa a raiz deste repositório. O `vercel.json` serve os arquivos de `dist/` e encaminha `/admin` à função correspondente.
+2. Para validar uma prévia, use um banco PostgreSQL exclusivo de testes. Aplique a migration e cadastre as quatro variáveis no ambiente **Preview** da Vercel. Guarde senhas, chaves e URLs como segredos.
+3. Quando a publicação estiver autorizada, verifique nessa prévia o envio público, o login, a alteração do status e as páginas existentes. Para produção, aplique a migration no banco correspondente e configure os segredos do ambiente **Production** antes de publicar.
+
+Um push para a branch de produção do projeto conectado pode iniciar a publicação automaticamente. [Integração Git da Vercel](https://vercel.com/docs/git)
 
 ## Publicar gratuitamente no GitHub Pages
 
@@ -52,7 +84,7 @@ O `.nojekyll` na raiz do projeto desativa o processamento Jekyll. A cópia dentr
 
 Você pode copiar o conteúdo de `dist/` para uma pasta como `oficina/` em um site existente. O endereço termina em `/oficina/` e a estrutura interna precisa ser preservada. HTML, CSS, módulos e JSON usam caminhos relativos; as telas usam fragmentos como `#questionario`, sem exigir redirecionamento do servidor.
 
-As definições em `.openai/` servem à prévia entregue neste ambiente e não são necessárias no GitHub Pages. Não há login dentro do aplicativo. A prévia hospedada neste ambiente pode ter controle de acesso da própria hospedagem; para disponibilizar à escola sem conta, use a publicação estática no GitHub Pages.
+O GitHub Pages oferece o questionário, o catálogo e a missão guiada. O link **Enviar sugestão** mostra a informação de disponibilidade. O envio e o painel são servidos pela publicação da Vercel.
 
 ## Estrutura do código
 
@@ -64,6 +96,9 @@ As definições em `.openai/` servem à prévia entregue neste ambiente e não s
 | `dist/js/questions.js` | Seis áreas, 18 perguntas, escala única e aviso educativo. |
 | `dist/js/core.js` | Funções puras: validação das respostas, cálculo, busca, filtros e validação do catálogo. |
 | `dist/js/app.js` | Estado em memória, telas, rotas por fragmento e eventos dos controles. |
+| `dist/js/feedback-form.js` e `dist/js/admin-feedback.js` | Formulário público e gestão de mensagens no painel. |
+| `api/admin.js` e `api/feedback.js` | Login, página administrativa e API de feedback. |
+| `server/` e `db/001_feedback.sql` | Sessão, validação, consultas parametrizadas e estrutura do PostgreSQL. |
 | `dist/data/catalogo.json` | Profissões, cursos/ofertas, fontes, datas e pendências. |
 | `docs/GUIA-DO-CODIGO.md` | Explicação didática e roteiro para apresentar o funcionamento. |
 | `docs/FONTES-E-PENDENCIAS.md` | Lista legível das fontes oficiais e limites da verificação. |
@@ -125,23 +160,21 @@ Não inclua vagas, preços, salários, notas de corte ou promessas de emprego se
 
 ## Privacidade e operação
 
-- Respostas existem apenas no objeto `state.answers` em memória, nesta aba.
-- Recarregar ou fechar a página apaga as respostas. Abrir o catálogo pelo menu preserva as respostas enquanto a aba continua aberta.
-- A única chamada `fetch` do aplicativo carrega o JSON local e não contém respostas.
-- Não há cookies próprios, `localStorage`, `sessionStorage`, rastreadores, análises, anúncios ou formulários pessoais.
-- O provedor estático pode registrar acessos técnicos aos arquivos, como qualquer hospedagem. A plataforma não acrescenta respostas a esses acessos ou aos links externos.
-- Os sites oficiais externos precisam de internet e têm políticas próprias.
-- Não há serviço de cache offline. Em uma rede local sem internet, o site e o JSON podem ser servidos pelo computador da escola; links oficiais continuarão dependendo de internet.
+- As respostas do questionário ficam na memória da aba e são apagadas ao recarregar ou fechar a página. Abrir o catálogo pelo menu preserva as respostas na aba.
+- O formulário envia o tipo, a mensagem e, quando informado, o e-mail. O banco também registra um identificador de envio, data, hora e status. O administrador pode consultar os dados para acompanhar a mensagem e, quando possível, responder.
+- O IP serve para calcular uma chave temporária de cota, guardada em tabela própria. A hospedagem pode manter registros técnicos de acesso. Os sites das instituições têm políticas próprias.
+- O painel usa um cookie de sessão para manter o acesso do administrador autenticado.
 
 ## Testes
 
-Com Node.js 18 ou mais recente, sem instalar pacotes:
+Com Node.js 24, instale as dependências e rode a suíte:
 
 ```bash
-node --test tests/*.test.mjs
+npm ci
+npm test
 ```
 
-Ou use `npm test`. Os testes verificam cálculo, validação, distribuição das perguntas, empates, resultado zero, alterações, busca com acentos, combinação de filtros, integridade das fontes e compatibilidade dos caminhos relativos. O filtro de instituição se combina com busca e área; considera referências identificadas, inclusive as históricas sinalizadas, e não considera uma oferta pendente como confirmada.
+Os testes cobrem questionário, catálogo, missão guiada, autenticação e regras da API de feedback. Para executar também a integração com o PostgreSQL, exporte `FEEDBACK_TEST_DATABASE_URL` com uma conexão direta a um banco descartável e use `npm test`. O teste aplica a migration em um esquema temporário, verifica persistência, ordenação, filtros, paginação, concorrência e status, e remove o esquema ao terminar.
 
 O roteiro e os resultados de uso no navegador estão em `docs/VERIFICACAO.md`. Não há certificação formal de acessibilidade. As verificações de teclado e de layouts não substituem uma futura avaliação com leitores de tela e estudantes em dispositivos reais.
 
